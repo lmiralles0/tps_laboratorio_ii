@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MCvitani\\Desktop\\tps_laboratorio_ii-main\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\Entidades.csproj": {}
+    "C:\\Users\\MCvitani\\Desktop\\tps_laboratorio_ii-main\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\MiCalculadora\\MiCalculadora.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MCvitani\\Desktop\\tps_laboratorio_ii-main\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\MCvitani\\Desktop\\tps_laboratorio_ii-main\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\MiCalculadora\\MiCalculadora.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MCvitani\\Desktop\\tps_laboratorio_ii-main\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\Entidades.csproj",
-        "projectName": "Entidades",
-        "projectPath": "C:\\Users\\MCvitani\\Desktop\\tps_laboratorio_ii-main\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\MCvitani\\Desktop\\tps_laboratorio_ii-main\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\MiCalculadora\\MiCalculadora.csproj",
+        "projectName": "MiCalculadora",
+        "projectPath": "C:\\Users\\MCvitani\\Desktop\\tps_laboratorio_ii-main\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\MiCalculadora\\MiCalculadora.csproj",
         "packagesPath": "C:\\Users\\MCvitani\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MCvitani\\Desktop\\tps_laboratorio_ii-main\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\obj\\",
+        "outputPath": "C:\\Users\\MCvitani\\Desktop\\tps_laboratorio_ii-main\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\MiCalculadora\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MCvitani\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net5.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
             "projectReferences": {}
           }
         },
@@ -37,8 +37,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
           "imports": [
             "net461",
             "net462",
@@ -52,6 +52,9 @@
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
