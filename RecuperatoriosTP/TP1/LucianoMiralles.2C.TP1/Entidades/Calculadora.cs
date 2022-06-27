@@ -16,10 +16,5 @@ namespace Entidades
                 return operador;
         }
 
-        public static double Operar(Operando num1, Operando num2, char operador)
-        {
-            
-     
-        }
     }
 }

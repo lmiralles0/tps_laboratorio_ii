@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>MiCalculadora</id>
+    <version>1.0.0</version>
+    <authors>MiCalculadora</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net5.0-windows7.0" />
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net5.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\RecuperatoriosTP\TP1\LucianoMiralles.2C.TP1\MiCalculadora\bin\Debug\net5.0-windows\MiCalculadora.runtimeconfig.json" target="lib\net5.0-windows7.0\MiCalculadora.runtimeconfig.json" />
+    <file src="C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\RecuperatoriosTP\TP1\LucianoMiralles.2C.TP1\MiCalculadora\bin\Debug\net5.0-windows\MiCalculadora.dll" target="lib\net5.0-windows7.0\MiCalculadora.dll" />
+  </files>
+</package>
