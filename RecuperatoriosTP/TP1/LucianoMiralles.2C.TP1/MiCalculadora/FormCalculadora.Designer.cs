@@ -29,29 +29,31 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCalculadora));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnOperar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.cmbOperador = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnConvertirABinario = new System.Windows.Forms.Button();
+            this.btnConvertirADecimal = new System.Windows.Forms.Button();
             this.txtNumero1 = new System.Windows.Forms.TextBox();
             this.txtNumero2 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lstOperaciones = new System.Windows.Forms.ListBox();
+            this.lblResultado = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // btnOperar
             // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.btnOperar, "btnOperar");
+            this.btnOperar.Name = "btnOperar";
+            this.btnOperar.UseVisualStyleBackColor = true;
+            this.btnOperar.Click += new System.EventHandler(this.btnOperar_Click);
             // 
-            // button2
+            // btnLimpiar
             // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.btnLimpiar, "btnLimpiar");
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // cmbOperador
             // 
@@ -66,23 +68,26 @@
             resources.GetString("cmbOperador.Items3")});
             this.cmbOperador.Name = "cmbOperador";
             // 
-            // button3
+            // btnCerrar
             // 
-            resources.ApplyResources(this.button3, "button3");
-            this.button3.Name = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.btnCerrar, "btnCerrar");
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // button4
+            // btnConvertirABinario
             // 
-            resources.ApplyResources(this.button4, "button4");
-            this.button4.Name = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.btnConvertirABinario, "btnConvertirABinario");
+            this.btnConvertirABinario.Name = "btnConvertirABinario";
+            this.btnConvertirABinario.UseVisualStyleBackColor = true;
+            this.btnConvertirABinario.Click += new System.EventHandler(this.btnConvertirABinario_Click);
             // 
-            // button5
+            // btnConvertirADecimal
             // 
-            resources.ApplyResources(this.button5, "button5");
-            this.button5.Name = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.btnConvertirADecimal, "btnConvertirADecimal");
+            this.btnConvertirADecimal.Name = "btnConvertirADecimal";
+            this.btnConvertirADecimal.UseVisualStyleBackColor = true;
+            this.btnConvertirADecimal.Click += new System.EventHandler(this.btnConvertirADecimal_Click);
             // 
             // txtNumero1
             // 
@@ -94,35 +99,36 @@
             resources.ApplyResources(this.txtNumero2, "txtNumero2");
             this.txtNumero2.Name = "txtNumero2";
             // 
-            // listBox1
+            // lstOperaciones
             // 
-            this.listBox1.FormattingEnabled = true;
-            resources.ApplyResources(this.listBox1, "listBox1");
-            this.listBox1.Name = "listBox1";
+            resources.ApplyResources(this.lstOperaciones, "lstOperaciones");
+            this.lstOperaciones.FormattingEnabled = true;
+            this.lstOperaciones.Name = "lstOperaciones";
             // 
-            // label1
+            // lblResultado
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.lblResultado, "lblResultado");
+            this.lblResultado.Name = "lblResultado";
             // 
             // FormCalculadora
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lblResultado);
+            this.Controls.Add(this.lstOperaciones);
             this.Controls.Add(this.txtNumero2);
             this.Controls.Add(this.txtNumero1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnConvertirADecimal);
+            this.Controls.Add(this.btnConvertirABinario);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.cmbOperador);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.btnOperar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormCalculadora";
+            this.Load += new System.EventHandler(this.FormCalculadora_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,15 +136,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnOperar;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnConvertirABinario;
+        private System.Windows.Forms.Button btnConvertirADecimal;
         private System.Windows.Forms.TextBox txtNumero1;
         private System.Windows.Forms.TextBox txtNumero2;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox lstOperaciones;
+        private System.Windows.Forms.Label lblResultado;
         public System.Windows.Forms.ComboBox cmbOperador;
     }
 }
