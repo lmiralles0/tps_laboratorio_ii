@@ -19,3 +19,6 @@ C:\Users\MCvitani\Desktop\tps_laboratorio_ii-main\RecuperatoriosTP\TP1\LucianoMi
 C:\Users\MCvitani\Desktop\tps_laboratorio_ii-main\RecuperatoriosTP\TP1\LucianoMiralles.2C.TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.pdb
 C:\Users\MCvitani\Desktop\tps_laboratorio_ii-main\RecuperatoriosTP\TP1\LucianoMiralles.2C.TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.genruntimeconfig.cache
 C:\Users\MCvitani\Desktop\tps_laboratorio_ii-main\RecuperatoriosTP\TP1\LucianoMiralles.2C.TP1\MiCalculadora\obj\Debug\net5.0-windows\ref\MiCalculadora.dll
+C:\Users\MCvitani\Desktop\tps_laboratorio_ii-main\RecuperatoriosTP\TP1\LucianoMiralles.2C.TP1\MiCalculadora\bin\Debug\net5.0-windows\Entidades.dll
+C:\Users\MCvitani\Desktop\tps_laboratorio_ii-main\RecuperatoriosTP\TP1\LucianoMiralles.2C.TP1\MiCalculadora\bin\Debug\net5.0-windows\Entidades.pdb
+C:\Users\MCvitani\Desktop\tps_laboratorio_ii-main\RecuperatoriosTP\TP1\LucianoMiralles.2C.TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.csproj.CopyComplete

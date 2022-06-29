@@ -7,6 +7,9 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "MiCalculadora/1.0.0": {
+        "dependencies": {
+          "Entidades": "1.0.0"
+        },
         "runtime": {
           "MiCalculadora.dll": {}
         },
@@ -15,11 +18,21 @@
             "locale": "aa"
           }
         }
+      },
+      "Entidades/1.0.0": {
+        "runtime": {
+          "Entidades.dll": {}
+        }
       }
     }
   },
   "libraries": {
     "MiCalculadora/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Entidades/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

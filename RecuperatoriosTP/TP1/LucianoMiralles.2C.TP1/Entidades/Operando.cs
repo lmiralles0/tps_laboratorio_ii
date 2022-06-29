@@ -1,9 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Entidades
 {
     public class Operando
     {
+        
         private double numero;
         public Operando()
         {
@@ -23,7 +28,7 @@ namespace Entidades
         private double ValidarOperando(string StrNumero)
         {
             bool pase = true;
-            if (string.IsNullOrEmpty(StrNumero))
+            if (!(string.IsNullOrEmpty(StrNumero)))
             {
                 foreach (char digito in StrNumero)
                 {
@@ -34,7 +39,7 @@ namespace Entidades
                     }
                 }
                 if (pase)
-                    return Convert.ToDouble(StrNumero);
+                    return double.Parse(StrNumero);
             }
             return 0;
         }
@@ -64,7 +69,6 @@ namespace Entidades
             }
             return respuesta;
         }
-
 
         public string BinarioDecimal(string binario)
         {
@@ -109,8 +113,6 @@ namespace Entidades
         }
 
 
-
-
         public static double operator +(Operando n1, Operando n2)
         {
             return n1.numero + n2.numero;
@@ -132,8 +134,6 @@ namespace Entidades
                 return n1.numero / n2.numero;
             return double.MinValue;
         }
-
-
 
 
     }

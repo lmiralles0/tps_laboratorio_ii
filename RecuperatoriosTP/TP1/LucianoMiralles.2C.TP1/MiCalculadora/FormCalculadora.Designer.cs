@@ -39,6 +39,7 @@
             this.txtNumero2 = new System.Windows.Forms.TextBox();
             this.lstOperaciones = new System.Windows.Forms.ListBox();
             this.lblResultado = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnOperar
@@ -65,8 +66,10 @@
             resources.GetString("cmbOperador.Items"),
             resources.GetString("cmbOperador.Items1"),
             resources.GetString("cmbOperador.Items2"),
-            resources.GetString("cmbOperador.Items3")});
+            resources.GetString("cmbOperador.Items3"),
+            resources.GetString("cmbOperador.Items4")});
             this.cmbOperador.Name = "cmbOperador";
+            this.cmbOperador.SelectedIndexChanged += new System.EventHandler(this.cmbOperador_SelectedIndexChanged);
             // 
             // btnCerrar
             // 
@@ -107,8 +110,14 @@
             // 
             // lblResultado
             // 
+            this.lblResultado.AutoEllipsis = true;
             resources.ApplyResources(this.lblResultado, "lblResultado");
             this.lblResultado.Name = "lblResultado";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // FormCalculadora
             // 
@@ -146,5 +155,6 @@
         private System.Windows.Forms.ListBox lstOperaciones;
         private System.Windows.Forms.Label lblResultado;
         public System.Windows.Forms.ComboBox cmbOperador;
+        private System.Windows.Forms.Label label1;
     }
 }

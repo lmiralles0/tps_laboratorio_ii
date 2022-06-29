@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
+
+
 
 namespace MiCalculadora
 {
@@ -15,6 +18,7 @@ namespace MiCalculadora
         public FormCalculadora()
         {
             InitializeComponent();
+            
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -34,17 +38,36 @@ namespace MiCalculadora
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-
+            Limpiar();
         }
+        
 
         private void btnOperar_Click(object sender, EventArgs e)
         {
-
+            Operando num1 = new Operando(this.txtNumero1.Text);
+            Operando num2 = new Operando(this.txtNumero2.Text);
+            double n = Calculadora.Operar(num1, num2, );
+            this.lblResultado.Text = n.ToString();
         }
 
         private void FormCalculadora_Load(object sender, EventArgs e)
         {
+            Operando num1 = new Operando(this.txtNumero1.Text);
+            Operando num2 = new Operando(this.txtNumero2.Text);
 
+        }
+
+        private void Limpiar ()
+        {
+            this.txtNumero1.Text = string.Empty;
+            this.txtNumero2.Text = string.Empty;
+            this.cmbOperador.SelectedIndex = 0;
+
+        }
+
+        private void cmbOperador_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            char operador = this.cmbOperador.ProductName;
         }
     }
 }
