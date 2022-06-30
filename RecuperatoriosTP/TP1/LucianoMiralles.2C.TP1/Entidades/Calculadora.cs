@@ -11,28 +11,34 @@ namespace Entidades
         private static char ValidarOperador(char operador)
         {
             if (operador != '+' && operador != '-' && operador != '/' && operador != '*')
-                return '+';
+                return 'x';
             else
                 return operador;
         }
 
         public static double Operar(Operando num1, Operando num2, char operador)
         {
-            if (operador == '+' && ValidarOperador(operador) != '+')
+            double result = 0;
+            if (ValidarOperador(operador) != 'x')
             {
                 switch(operador)
                 {
                     case '+':
-                        return num1 + num2;
+                        result = num1 + num2;
+                        break;
                     case '-':
-                        return num1 - num2;
+                        result = num1 - num2;
+                        break;
                     case '/':
-                        return num1 / num2;
+                        result = num1 / num2;
+                        break;
                     case '*':
-                        return num1 * num2;
+                        result = num1 * num2;
+                        break;
                 }
+                
             }
-            return 0;
+            return result;
         }
 
     }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MCvitani\\Desktop\\tps_laboratorio_ii-main\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\MiCalculadora\\MiCalculadora.csproj": {}
+    "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\MiCalculadora\\MiCalculadora.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MCvitani\\Desktop\\tps_laboratorio_ii-main\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MCvitani\\Desktop\\tps_laboratorio_ii-main\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Users\\MCvitani\\Desktop\\tps_laboratorio_ii-main\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\Entidades.csproj",
-        "packagesPath": "C:\\Users\\MCvitani\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MCvitani\\Desktop\\tps_laboratorio_ii-main\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\obj\\",
+        "projectPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\Entidades.csproj",
+        "packagesPath": "C:\\Users\\Luciano Miralles\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MCvitani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Luciano Miralles\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,17 +58,17 @@
         }
       }
     },
-    "C:\\Users\\MCvitani\\Desktop\\tps_laboratorio_ii-main\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\MiCalculadora\\MiCalculadora.csproj": {
+    "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\MiCalculadora\\MiCalculadora.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MCvitani\\Desktop\\tps_laboratorio_ii-main\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\MiCalculadora\\MiCalculadora.csproj",
+        "projectUniqueName": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\MiCalculadora\\MiCalculadora.csproj",
         "projectName": "MiCalculadora",
-        "projectPath": "C:\\Users\\MCvitani\\Desktop\\tps_laboratorio_ii-main\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\MiCalculadora\\MiCalculadora.csproj",
-        "packagesPath": "C:\\Users\\MCvitani\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MCvitani\\Desktop\\tps_laboratorio_ii-main\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\MiCalculadora\\obj\\",
+        "projectPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\MiCalculadora\\MiCalculadora.csproj",
+        "packagesPath": "C:\\Users\\Luciano Miralles\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\MiCalculadora\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MCvitani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Luciano Miralles\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,8 +82,8 @@
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
             "projectReferences": {
-              "C:\\Users\\MCvitani\\Desktop\\tps_laboratorio_ii-main\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\MCvitani\\Desktop\\tps_laboratorio_ii-main\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\Entidades.csproj"
+              "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\Entidades.csproj"
               }
             }
           }

@@ -152,9 +152,9 @@
         private System.Windows.Forms.Button btnConvertirADecimal;
         private System.Windows.Forms.TextBox txtNumero1;
         private System.Windows.Forms.TextBox txtNumero2;
-        private System.Windows.Forms.ListBox lstOperaciones;
-        private System.Windows.Forms.Label lblResultado;
         public System.Windows.Forms.ComboBox cmbOperador;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.ListBox lstOperaciones;
+        public System.Windows.Forms.Label lblResultado;
     }
 }

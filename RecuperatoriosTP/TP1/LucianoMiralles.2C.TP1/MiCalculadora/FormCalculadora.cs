@@ -46,7 +46,8 @@ namespace MiCalculadora
         {
             Operando num1 = new Operando(this.txtNumero1.Text);
             Operando num2 = new Operando(this.txtNumero2.Text);
-            double n = Calculadora.Operar(num1, num2, );
+            string operador = this.cmbOperador.ProductName;
+            double n = Calculadora.Operar(num1, num2, '+');
             this.lblResultado.Text = n.ToString();
         }
 
@@ -67,7 +68,7 @@ namespace MiCalculadora
 
         private void cmbOperador_SelectedIndexChanged(object sender, EventArgs e)
         {
-            char operador = this.cmbOperador.ProductName;
+            string operador = this.cmbOperador.ProductName;
         }
     }
 }

@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entidades", "Entidades\Enti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiCalculadora", "MiCalculadora\MiCalculadora.csproj", "{2E10ED1A-FFF2-466F-992A-05B28C8F3F49}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleQ", "ConsoleQ\ConsoleQ.csproj", "{26235FE0-B877-4FAA-BD88-94B4916B147B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2E10ED1A-FFF2-466F-992A-05B28C8F3F49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E10ED1A-FFF2-466F-992A-05B28C8F3F49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E10ED1A-FFF2-466F-992A-05B28C8F3F49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26235FE0-B877-4FAA-BD88-94B4916B147B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26235FE0-B877-4FAA-BD88-94B4916B147B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26235FE0-B877-4FAA-BD88-94B4916B147B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26235FE0-B877-4FAA-BD88-94B4916B147B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
