@@ -15,15 +15,15 @@ namespace Entidades
         int espacioDisponible;
         public enum ETipo
         {
-            Moto, Automovil, Camioneta, Todos
+            Ciclomotor , Sedan, SUV, Todos
         }
 
         #region "Constructores"
-        private Taller()
+        public Taller()
         {
             this.vehiculos = new List<Vehiculo>();
         }
-        public Taller(int espacioDisponible)
+        public Taller(int espacioDisponible) : base()
         {
             this.espacioDisponible = espacioDisponible;
         }
@@ -34,9 +34,9 @@ namespace Entidades
         /// Muestro el estacionamiento y TODOS los vehículos
         /// </summary>
         /// <returns></returns>
-        public string ToString()
+        public new string ToString()
         {
-            return Taller.Listar(this, ETipo.Todos);
+            return this.Listar(this, ETipo.Todos);
         }
         #endregion
 
@@ -59,13 +59,13 @@ namespace Entidades
             {
                 switch (tipo)
                 {
-                    case ETipo.Camioneta:
+                    case ETipo.SUV:
                         sb.AppendLine(v.Mostrar());
                         break;
-                    case ETipo.Moto:
+                    case ETipo.Ciclomotor:
                         sb.AppendLine(v.Mostrar());
                         break;
-                    case ETipo.Automovil:
+                    case ETipo.Sedan:
                         sb.AppendLine(v.Mostrar());
                         break;
                     default:
@@ -87,7 +87,7 @@ namespace Entidades
         /// <returns></returns>
         public static Taller operator +(Taller taller, Vehiculo vehiculo)
         {
-            foreach (Vehiculo v in taller)
+            foreach (Vehiculo v in taller.vehiculos)
             {
                 if (v == vehiculo)
                     return taller;
@@ -104,14 +104,14 @@ namespace Entidades
         /// <returns></returns>
         public static Taller operator -(Taller taller, Vehiculo vehiculo)
         {
-            foreach (Vehiculo v in taller)
+            foreach (Vehiculo v in taller.vehiculos)
             {
                 if (v == vehiculo)
                 {
                     break;
                 }
             }
-
+            taller.vehiculos.Remove(vehiculo);
             return taller;
         }
         #endregion

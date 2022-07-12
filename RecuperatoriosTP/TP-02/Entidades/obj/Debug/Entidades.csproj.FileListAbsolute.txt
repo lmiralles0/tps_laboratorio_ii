@@ -15,3 +15,9 @@ C:\Users\MCvitani\Desktop\RecuperatoriosTP\TP-02\Entidades\obj\Debug\Entidades.c
 C:\Users\MCvitani\Desktop\RecuperatoriosTP\TP-02\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\MCvitani\Desktop\RecuperatoriosTP\TP-02\Entidades\obj\Debug\Entidades.dll
 C:\Users\MCvitani\Desktop\RecuperatoriosTP\TP-02\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\RecuperatoriosTP\TP-02\Entidades\bin\Debug\Entidades.dll
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\RecuperatoriosTP\TP-02\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\RecuperatoriosTP\TP-02\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\RecuperatoriosTP\TP-02\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\RecuperatoriosTP\TP-02\Entidades\obj\Debug\Entidades.dll
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\RecuperatoriosTP\TP-02\Entidades\obj\Debug\Entidades.pdb

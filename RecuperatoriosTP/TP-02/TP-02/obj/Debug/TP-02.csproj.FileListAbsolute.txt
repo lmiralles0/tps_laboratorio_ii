@@ -25,3 +25,14 @@ C:\Users\MCvitani\Desktop\RecuperatoriosTP\TP-02\TP-02\obj\Debug\TP-02.csproj.As
 C:\Users\MCvitani\Desktop\RecuperatoriosTP\TP-02\TP-02\obj\Debug\TP-02.csproj.SuggestedBindingRedirects.cache
 C:\Users\MCvitani\Desktop\RecuperatoriosTP\TP-02\TP-02\obj\Debug\TP-02.csproj.CoreCompileInputs.cache
 C:\Users\MCvitani\Desktop\RecuperatoriosTP\TP-02\TP-02\obj\Debug\TP-02.exe
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\RecuperatoriosTP\TP-02\TP-02\bin\Debug\TP-02.exe.config
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\RecuperatoriosTP\TP-02\TP-02\bin\Debug\TP-02.exe
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\RecuperatoriosTP\TP-02\TP-02\bin\Debug\TP-02.pdb
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\RecuperatoriosTP\TP-02\TP-02\bin\Debug\Entidades.dll
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\RecuperatoriosTP\TP-02\TP-02\bin\Debug\Entidades.pdb
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\RecuperatoriosTP\TP-02\TP-02\obj\Debug\TP-02.csproj.AssemblyReference.cache
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\RecuperatoriosTP\TP-02\TP-02\obj\Debug\TP-02.csproj.SuggestedBindingRedirects.cache
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\RecuperatoriosTP\TP-02\TP-02\obj\Debug\TP-02.csproj.CoreCompileInputs.cache
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\RecuperatoriosTP\TP-02\TP-02\obj\Debug\TP-02.csproj.CopyComplete
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\RecuperatoriosTP\TP-02\TP-02\obj\Debug\TP-02.exe
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\RecuperatoriosTP\TP-02\TP-02\obj\Debug\TP-02.pdb
