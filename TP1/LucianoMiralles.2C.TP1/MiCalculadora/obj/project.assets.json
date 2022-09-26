@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\MiCalculadora\\MiCalculadora.csproj",
+      "projectUniqueName": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\LucianoMiralles.2C.TP1\\MiCalculadora\\MiCalculadora.csproj",
       "projectName": "MiCalculadora",
-      "projectPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\MiCalculadora\\MiCalculadora.csproj",
+      "projectPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\LucianoMiralles.2C.TP1\\MiCalculadora\\MiCalculadora.csproj",
       "packagesPath": "C:\\Users\\Luciano Miralles\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\MiCalculadora\\obj\\",
+      "outputPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\LucianoMiralles.2C.TP1\\MiCalculadora\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Luciano Miralles\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\Entidades.csproj": {
-              "projectPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\Entidades.csproj"
+            "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\Entidades.csproj": {
+              "projectPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\Entidades.csproj"
             }
           }
         }
@@ -86,7 +86,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

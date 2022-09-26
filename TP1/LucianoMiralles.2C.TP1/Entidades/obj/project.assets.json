@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\Entidades.csproj",
+      "projectUniqueName": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\Entidades.csproj",
       "projectName": "Entidades",
-      "projectPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\Entidades.csproj",
+      "projectPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\Entidades.csproj",
       "packagesPath": "C:\\Users\\Luciano Miralles\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\RecuperatoriosTP\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\obj\\",
+      "outputPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\LucianoMiralles.2C.TP1\\Entidades\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Luciano Miralles\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

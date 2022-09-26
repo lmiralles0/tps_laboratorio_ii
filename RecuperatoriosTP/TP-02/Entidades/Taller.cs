@@ -9,7 +9,7 @@ namespace Entidades
     /// <summary>
     /// No podrá tener clases heredadas.
     /// </summary>
-    public sealed class Taller
+    public sealed class Taller 
     {
         List<Vehiculo> vehiculos;
         int espacioDisponible;
