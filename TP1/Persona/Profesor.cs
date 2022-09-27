@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Persona
 {
-    internal sealed class Profesor : Persona
+    public sealed class Profesor : Persona
     {
         internal Profesor(int dni, string nombre, string apellido) : base()
         {
@@ -17,5 +17,10 @@ namespace Persona
                 this.nombre = nombre;
             }
         }
+
+        public override int Dni { get => dni; }
+        public override string Nombre { get => nombre; }
+        public override string Apellido { get => apellido; }
+        public override string Passwd { get => passwd; set => this.passwd = value; }
     }
 }
