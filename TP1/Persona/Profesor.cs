@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Persona
 {
-    public sealed class Profesor : Persona
+    internal sealed class Profesor : Persona
     {
         internal Profesor(int dni, string nombre, string apellido) : base()
         {

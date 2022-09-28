@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\TP1",
-    "\\TP1\\LucianoMiralles.2C.TP1",
-    "\\TP1\\LucianoMiralles.2C.TP1\\MiCalculadora"
+    "\\TP1\\Persona"
   ],
-  "SelectedNode": "\\TP1\\LucianoMiralles.2C.TP1\\MiCalculadora\\FormCalculadora.cs",
+  "SelectedNode": "\\TP1\\Persona\\Admin.cs",
   "PreviewInSolutionExplorer": false
 }

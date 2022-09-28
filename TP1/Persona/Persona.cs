@@ -4,14 +4,14 @@ using System.Net.Mail;
 
 namespace Persona
 {
-    public abstract class Persona
+    public class Persona
     {
         internal int dni;
         internal string nombre;
         internal string apellido;
         internal string passwd;
 
-        internal Persona()
+        public Persona()
         {
             dni = 0;
             nombre = "";
@@ -19,10 +19,10 @@ namespace Persona
             passwd = "";
         }
 
-        public abstract int Dni { get;}
-        public abstract string Nombre { get;}
-        public abstract string Apellido { get;}
-        public abstract string Passwd { get; set; }
+        public virtual int Dni { get;}
+        public virtual string Nombre { get;}
+        public virtual string Apellido { get;}
+        public virtual string Passwd { get; set; }
 
         public virtual bool lookAt(List<Persona> ad, Persona a)
         {

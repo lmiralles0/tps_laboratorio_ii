@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Persona
 {
-    public sealed class Alumno : Persona
+    internal sealed class Alumno : Persona
     {
         internal Alumno(int dni, string nombre, string apellido) : base()
         {
@@ -33,7 +33,7 @@ namespace Persona
             }
         }
 
-        public static
+        
     }
 
 

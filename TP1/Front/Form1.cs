@@ -13,14 +13,15 @@ namespace Front
 {
     public partial class Ingreso : Form
     {
-        public List<Admin> administradores;
-        public List<Alumno> alumnos;
-        public List<Profesor> profesores;
+        
+        public List<Persona.Persona> administradores;
+        public List<Persona.Persona> alumnos;
+        public List<Persona.Persona> profesores;
         public Ingreso()
         {
             InitializeComponent();
-            administradores = new List<Admin>();
-            Admin ad = new Admin(37882165, "Luciano", "Miralles");
+            administradores = new List<Persona.Persona>();
+            Persona.Persona ad = new Admin(37882165, "Luciano", "Miralles");
             ad.Passwd = "123";
 
         }
