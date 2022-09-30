@@ -24,10 +24,7 @@ namespace Persona
         public virtual string Apellido { get;}
         public virtual string Passwd { get; set; }
 
-        public virtual bool lookAt(List<Persona> ad, Persona a)
-        {
-            return true;
-        }
+
 
     }
 }

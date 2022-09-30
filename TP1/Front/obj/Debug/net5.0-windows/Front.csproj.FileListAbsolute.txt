@@ -16,3 +16,8 @@ C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\obj\Debug\net5.0
 C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\obj\Debug\net5.0-windows\Front.pdb
 C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\obj\Debug\net5.0-windows\Front.genruntimeconfig.cache
 C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\obj\Debug\net5.0-windows\ref\Front.dll
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\bin\Debug\net5.0-windows\Persona.dll
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\bin\Debug\net5.0-windows\Persona.pdb
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\obj\Debug\net5.0-windows\Front.Form2.resources
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\obj\Debug\net5.0-windows\Front.Properties.Resources.resources
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\obj\Debug\net5.0-windows\Front.csproj.CopyComplete

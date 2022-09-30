@@ -8,6 +8,10 @@ namespace Persona
 {
     public class Admin : Persona
     {
+        public Admin() : base()
+        {
+            
+        }
         public Admin(int dni, string nombre, string apellido) : base()
         {
             if(dni > 999999 && !(string.IsNullOrEmpty(nombre)) && !(string.IsNullOrEmpty(apellido)))
@@ -37,26 +41,54 @@ namespace Persona
 
         public bool AddUsuario(List <Alumno> al, Alumno a)
         {
-            bool retorno = false;
+            bool result = false;
             if(al != null && !(al.Contains(a)))
             {
                 al.Add(a);
-                retorno = true;   
+                result = true;   
             }
-            return retorno;
+            return result;
         }
 
         public bool AddUsuario(List<Profesor> la, Profesor pa)
         {
-            bool retorno = false;
+            bool result = false;
             if(la != null && !(la.Contains(pa)))
             {
                 la.Add(pa);
-                retorno = true;
+                result = true;
             }
-            return retorno;
+            return result;
         }
 
+        public bool AddUsuario(List<Admin> p, Admin op)
+        {
+            bool result = false;
+            if(p != null && !(p.Contains(op)))
+            {
+                p.Add(op);
+                result = true;
+            }
+            return result;
+        }
+
+        public Admin LookUp(List<Admin> ad, int dni, string passwd)
+        {
+            Admin result = null;
+            if(ad != null && dni > 999999 && !(string.IsNullOrWhiteSpace(passwd)))
+            {
+                foreach(Admin a in ad)
+                {
+                    if(a.dni == dni && a.passwd == passwd)
+                    {
+                        result = a;
+                        break;
+                    }
+                }
+                
+            }
+            return result;
+        }
 
     }
 }

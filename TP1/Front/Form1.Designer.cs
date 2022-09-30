@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBoxPasswd = new System.Windows.Forms.TextBox();
             this.KindUser = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBoxDNI = new System.Windows.Forms.TextBox();
             this.TagUser = new System.Windows.Forms.Label();
             this.TagPasswd = new System.Windows.Forms.Label();
             this.TagType = new System.Windows.Forms.Label();
             this.Acceder = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtBoxPasswd
             // 
-            this.textBox1.Location = new System.Drawing.Point(223, 242);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 23);
-            this.textBox1.TabIndex = 0;
+            this.txtBoxPasswd.Location = new System.Drawing.Point(223, 242);
+            this.txtBoxPasswd.Name = "txtBoxPasswd";
+            this.txtBoxPasswd.Size = new System.Drawing.Size(146, 23);
+            this.txtBoxPasswd.TabIndex = 3;
             // 
             // KindUser
             // 
@@ -56,12 +56,12 @@
             this.KindUser.Size = new System.Drawing.Size(146, 23);
             this.KindUser.TabIndex = 1;
             // 
-            // textBox2
+            // txtBoxDNI
             // 
-            this.textBox2.Location = new System.Drawing.Point(223, 167);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(146, 23);
-            this.textBox2.TabIndex = 2;
+            this.txtBoxDNI.Location = new System.Drawing.Point(223, 167);
+            this.txtBoxDNI.Name = "txtBoxDNI";
+            this.txtBoxDNI.Size = new System.Drawing.Size(146, 23);
+            this.txtBoxDNI.TabIndex = 2;
             // 
             // TagUser
             // 
@@ -95,9 +95,10 @@
             this.Acceder.Location = new System.Drawing.Point(433, 287);
             this.Acceder.Name = "Acceder";
             this.Acceder.Size = new System.Drawing.Size(141, 28);
-            this.Acceder.TabIndex = 6;
+            this.Acceder.TabIndex = 4;
             this.Acceder.Text = "Iniciar sesion";
             this.Acceder.UseVisualStyleBackColor = true;
+            this.Acceder.Click += new System.EventHandler(this.Acceder_Click);
             // 
             // Ingreso
             // 
@@ -108,9 +109,9 @@
             this.Controls.Add(this.TagType);
             this.Controls.Add(this.TagPasswd);
             this.Controls.Add(this.TagUser);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtBoxDNI);
             this.Controls.Add(this.KindUser);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBoxPasswd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Ingreso";
             this.Text = "Sistema de Gestion UTN";
@@ -121,9 +122,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBoxPasswd;
         private System.Windows.Forms.ComboBox KindUser;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBoxDNI;
         private System.Windows.Forms.Label TagUser;
         private System.Windows.Forms.Label TagPasswd;
         private System.Windows.Forms.Label TagType;
