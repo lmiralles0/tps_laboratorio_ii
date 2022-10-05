@@ -32,13 +32,19 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.linkLabelAltaUsers = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.linkLabelRa = new System.Windows.Forms.LinkLabel();
+            this.linkLabelAm = new System.Windows.Forms.LinkLabel();
+            this.linkLabelAp = new System.Windows.Forms.LinkLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.groupBoxLinkbRa = new System.Windows.Forms.GroupBox();
+            this.linkLabelRa2 = new System.Windows.Forms.LinkLabel();
+            this.groupBoxAlta2 = new System.Windows.Forms.GroupBox();
+            this.linkLabelAu2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabelAu = new System.Windows.Forms.LinkLabel();
             this.groupBoxAlta = new System.Windows.Forms.GroupBox();
+            this.groupBoxRa = new System.Windows.Forms.GroupBox();
+            this.buttonAgregarAlta = new System.Windows.Forms.Button();
+            this.buttonCerrarAlta = new System.Windows.Forms.Button();
             this.labelUser = new System.Windows.Forms.Label();
             this.labelPasswd = new System.Windows.Forms.Label();
             this.AltaTextBoxUserPasswd = new System.Windows.Forms.TextBox();
@@ -49,13 +55,11 @@
             this.AltaUserComboBox = new System.Windows.Forms.ComboBox();
             this.labelDni = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
-            this.groupBoxAlta2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBoxAlta.SuspendLayout();
+            this.groupBoxLinkbRa.SuspendLayout();
             this.groupBoxAlta2.SuspendLayout();
+            this.groupBoxAlta.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -94,74 +98,110 @@
             this.toolStripMenuItem3.Size = new System.Drawing.Size(167, 22);
             this.toolStripMenuItem3.Text = "Cerrar sesion";
             // 
-            // linkLabelAltaUsers
+            // linkLabelRa
             // 
-            this.linkLabelAltaUsers.AutoSize = true;
-            this.linkLabelAltaUsers.Location = new System.Drawing.Point(6, 34);
-            this.linkLabelAltaUsers.Name = "linkLabelAltaUsers";
-            this.linkLabelAltaUsers.Size = new System.Drawing.Size(75, 15);
-            this.linkLabelAltaUsers.TabIndex = 1;
-            this.linkLabelAltaUsers.TabStop = true;
-            this.linkLabelAltaUsers.Text = "Alta usuarios";
+            this.linkLabelRa.AutoSize = true;
+            this.linkLabelRa.Location = new System.Drawing.Point(6, 109);
+            this.linkLabelRa.Name = "linkLabelRa";
+            this.linkLabelRa.Size = new System.Drawing.Size(119, 15);
+            this.linkLabelRa.TabIndex = 2;
+            this.linkLabelRa.TabStop = true;
+            this.linkLabelRa.Text = "Regularidad alumnos";
+            this.linkLabelRa.Visible = false;
+            this.linkLabelRa.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRa_LinkClicked);
             // 
-            // linkLabel2
+            // linkLabelAm
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(6, 109);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(119, 15);
-            this.linkLabel2.TabIndex = 2;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Regularidad alumnos";
+            this.linkLabelAm.AutoSize = true;
+            this.linkLabelAm.Location = new System.Drawing.Point(6, 185);
+            this.linkLabelAm.Name = "linkLabelAm";
+            this.linkLabelAm.Size = new System.Drawing.Size(76, 15);
+            this.linkLabelAm.TabIndex = 3;
+            this.linkLabelAm.TabStop = true;
+            this.linkLabelAm.Text = "Alta materias";
             // 
-            // linkLabel3
+            // linkLabelAp
             // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(6, 185);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(76, 15);
-            this.linkLabel3.TabIndex = 3;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Alta materias";
-            // 
-            // linkLabel4
-            // 
-            this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Location = new System.Drawing.Point(6, 247);
-            this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(124, 15);
-            this.linkLabel4.TabIndex = 4;
-            this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "Asignacion profesores";
+            this.linkLabelAp.AutoSize = true;
+            this.linkLabelAp.Location = new System.Drawing.Point(6, 247);
+            this.linkLabelAp.Name = "linkLabelAp";
+            this.linkLabelAp.Size = new System.Drawing.Size(124, 15);
+            this.linkLabelAp.TabIndex = 4;
+            this.linkLabelAp.TabStop = true;
+            this.linkLabelAp.Text = "Asignacion profesores";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.linkLabel1);
+            this.groupBox1.Controls.Add(this.groupBoxAlta2);
+            this.groupBox1.Controls.Add(this.linkLabelAu);
             this.groupBox1.Controls.Add(this.groupBoxAlta);
-            this.groupBox1.Controls.Add(this.linkLabel4);
-            this.groupBox1.Controls.Add(this.linkLabel2);
-            this.groupBox1.Controls.Add(this.linkLabel3);
-            this.groupBox1.Location = new System.Drawing.Point(82, 44);
+            this.groupBox1.Controls.Add(this.linkLabelAp);
+            this.groupBox1.Controls.Add(this.linkLabelRa);
+            this.groupBox1.Controls.Add(this.linkLabelAm);
+            this.groupBox1.Location = new System.Drawing.Point(76, 27);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(470, 299);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
-            // linkLabel1
+            // groupBoxLinkbRa
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(6, 34);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(75, 15);
-            this.linkLabel1.TabIndex = 1;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Alta usuarios";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked_1);
+            this.groupBoxLinkbRa.Controls.Add(this.linkLabelRa2);
+            this.groupBoxLinkbRa.Location = new System.Drawing.Point(0, 100);
+            this.groupBoxLinkbRa.Name = "groupBoxLinkbRa";
+            this.groupBoxLinkbRa.Size = new System.Drawing.Size(220, 100);
+            this.groupBoxLinkbRa.TabIndex = 23;
+            this.groupBoxLinkbRa.TabStop = false;
+            this.groupBoxLinkbRa.Visible = false;
+            // 
+            // linkLabelRa2
+            // 
+            this.linkLabelRa2.AutoSize = true;
+            this.linkLabelRa2.Location = new System.Drawing.Point(6, 22);
+            this.linkLabelRa2.Name = "linkLabelRa2";
+            this.linkLabelRa2.Size = new System.Drawing.Size(119, 15);
+            this.linkLabelRa2.TabIndex = 21;
+            this.linkLabelRa2.TabStop = true;
+            this.linkLabelRa2.Text = "Regularidad alumnos";
+            // 
+            // groupBoxAlta2
+            // 
+            this.groupBoxAlta2.Controls.Add(this.groupBoxLinkbRa);
+            this.groupBoxAlta2.Controls.Add(this.linkLabelAu2);
+            this.groupBoxAlta2.Location = new System.Drawing.Point(0, 0);
+            this.groupBoxAlta2.Name = "groupBoxAlta2";
+            this.groupBoxAlta2.Size = new System.Drawing.Size(220, 100);
+            this.groupBoxAlta2.TabIndex = 20;
+            this.groupBoxAlta2.TabStop = false;
+            this.groupBoxAlta2.Visible = false;
+            // 
+            // linkLabelAu2
+            // 
+            this.linkLabelAu2.AutoSize = true;
+            this.linkLabelAu2.Location = new System.Drawing.Point(6, 34);
+            this.linkLabelAu2.Name = "linkLabelAu2";
+            this.linkLabelAu2.Size = new System.Drawing.Size(75, 15);
+            this.linkLabelAu2.TabIndex = 6;
+            this.linkLabelAu2.TabStop = true;
+            this.linkLabelAu2.Text = "Alta usuarios";
+            this.linkLabelAu2.Visible = false;
+            // 
+            // linkLabelAu
+            // 
+            this.linkLabelAu.AutoSize = true;
+            this.linkLabelAu.Location = new System.Drawing.Point(6, 34);
+            this.linkLabelAu.Name = "linkLabelAu";
+            this.linkLabelAu.Size = new System.Drawing.Size(75, 15);
+            this.linkLabelAu.TabIndex = 1;
+            this.linkLabelAu.TabStop = true;
+            this.linkLabelAu.Text = "Alta usuarios";
+            this.linkLabelAu.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelAu2_LinkClicked_1);
             // 
             // groupBoxAlta
             // 
-            this.groupBoxAlta.Controls.Add(this.button2);
-            this.groupBoxAlta.Controls.Add(this.button1);
+            this.groupBoxAlta.Controls.Add(this.groupBoxRa);
+            this.groupBoxAlta.Controls.Add(this.buttonAgregarAlta);
+            this.groupBoxAlta.Controls.Add(this.buttonCerrarAlta);
             this.groupBoxAlta.Controls.Add(this.labelUser);
             this.groupBoxAlta.Controls.Add(this.labelPasswd);
             this.groupBoxAlta.Controls.Add(this.AltaTextBoxUserPasswd);
@@ -179,6 +219,37 @@
             this.groupBoxAlta.TabIndex = 19;
             this.groupBoxAlta.TabStop = false;
             this.groupBoxAlta.Visible = false;
+            // 
+            // groupBoxRa
+            // 
+            this.groupBoxRa.Location = new System.Drawing.Point(0, 0);
+            this.groupBoxRa.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.groupBoxRa.Name = "groupBoxRa";
+            this.groupBoxRa.Size = new System.Drawing.Size(250, 299);
+            this.groupBoxRa.TabIndex = 21;
+            this.groupBoxRa.TabStop = false;
+            this.groupBoxRa.Visible = false;
+            // 
+            // buttonAgregarAlta
+            // 
+            this.buttonAgregarAlta.Location = new System.Drawing.Point(10, 270);
+            this.buttonAgregarAlta.Name = "buttonAgregarAlta";
+            this.buttonAgregarAlta.Size = new System.Drawing.Size(91, 23);
+            this.buttonAgregarAlta.TabIndex = 20;
+            this.buttonAgregarAlta.Text = "Agregar ";
+            this.buttonAgregarAlta.UseVisualStyleBackColor = true;
+            this.buttonAgregarAlta.Visible = false;
+            // 
+            // buttonCerrarAlta
+            // 
+            this.buttonCerrarAlta.Location = new System.Drawing.Point(158, 270);
+            this.buttonCerrarAlta.Name = "buttonCerrarAlta";
+            this.buttonCerrarAlta.Size = new System.Drawing.Size(86, 23);
+            this.buttonCerrarAlta.TabIndex = 19;
+            this.buttonCerrarAlta.Text = "Cerrar";
+            this.buttonCerrarAlta.UseVisualStyleBackColor = true;
+            this.buttonCerrarAlta.Visible = false;
+            this.buttonCerrarAlta.Click += new System.EventHandler(this.buttonCerrarAlta_Click);
             // 
             // labelUser
             // 
@@ -279,42 +350,11 @@
             this.labelName.Text = "Nombre : ";
             this.labelName.Visible = false;
             // 
-            // groupBoxAlta2
-            // 
-            this.groupBoxAlta2.Controls.Add(this.linkLabelAltaUsers);
-            this.groupBoxAlta2.Location = new System.Drawing.Point(82, 44);
-            this.groupBoxAlta2.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
-            this.groupBoxAlta2.Name = "groupBoxAlta2";
-            this.groupBoxAlta2.Padding = new System.Windows.Forms.Padding(3, 3, 0, 3);
-            this.groupBoxAlta2.Size = new System.Drawing.Size(220, 106);
-            this.groupBoxAlta2.TabIndex = 20;
-            this.groupBoxAlta2.TabStop = false;
-            this.groupBoxAlta2.Visible = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(169, 270);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(10, 270);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(619, 355);
-            this.Controls.Add(this.groupBoxAlta2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.KeyPreview = true;
@@ -325,10 +365,12 @@
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBoxAlta.ResumeLayout(false);
-            this.groupBoxAlta.PerformLayout();
+            this.groupBoxLinkbRa.ResumeLayout(false);
+            this.groupBoxLinkbRa.PerformLayout();
             this.groupBoxAlta2.ResumeLayout(false);
             this.groupBoxAlta2.PerformLayout();
+            this.groupBoxAlta.ResumeLayout(false);
+            this.groupBoxAlta.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,10 +382,9 @@
         public System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         public System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.LinkLabel linkLabelAltaUsers;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkLabel3;
-        private System.Windows.Forms.LinkLabel linkLabel4;
+        private System.Windows.Forms.LinkLabel linkLabelRa;
+        private System.Windows.Forms.LinkLabel linkLabelAm;
+        private System.Windows.Forms.LinkLabel linkLabelAp;
         private System.Windows.Forms.GroupBox groupBox1;
         public System.Windows.Forms.ComboBox AltaUserComboBox;
         public System.Windows.Forms.TextBox AltaTextBoxUserPasswd;
@@ -356,9 +397,13 @@
         private System.Windows.Forms.Label labelLastName;
         private System.Windows.Forms.Label labelDni;
         private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.LinkLabel linkLabelAu;
         public System.Windows.Forms.GroupBox groupBoxAlta2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.LinkLabel linkLabelAu2;
+        public System.Windows.Forms.Button buttonAgregarAlta;
+        public System.Windows.Forms.Button buttonCerrarAlta;
+        public System.Windows.Forms.GroupBox groupBoxLinkbRa;
+        private System.Windows.Forms.LinkLabel linkLabelRa2;
+        public System.Windows.Forms.GroupBox groupBoxRa;
     }
 }

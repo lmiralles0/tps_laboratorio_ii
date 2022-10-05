@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\TP1",
-    "\\TP1\\Front"
+    "\\TP1\\Front",
+    "\\TP1\\Materias"
   ],
-  "SelectedNode": "\\TP1\\Front\\Form2.Designer.cs",
+  "SelectedNode": "\\TP1\\Front\\Form2.cs",
   "PreviewInSolutionExplorer": false
 }

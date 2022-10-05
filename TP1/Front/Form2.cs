@@ -25,7 +25,7 @@ namespace Front
         {
             this.toolStripMenuItem1.ShowDropDown() ;
         }
-        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabelAu2_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.groupBoxAlta2.Visible = true;
             this.groupBoxAlta.Visible = true;
@@ -39,10 +39,41 @@ namespace Front
             this.AltaTextBoxUserName.Visible = true;
             this.AltaTextBoxUserDni.Visible = true;
             this.AltaTextBoxUserPasswd.Visible = true;
-            this.linkLabel1.Visible = false;
-            this.linkLabel2.Visible = false;
-            this.linkLabel3.Visible = false;
-            this.linkLabel4.Visible = false;
+            this.linkLabelAu.Visible = false;
+            this.linkLabelRa.Visible = false;
+            this.linkLabelAm.Visible = false;
+            this.linkLabelAp.Visible = false;
+            this.linkLabelAu2.Visible = true;
+            this.buttonCerrarAlta.Visible = true;
+            this.buttonAgregarAlta.Visible = true;
+        }
+
+        private void buttonCerrarAlta_Click(object sender, EventArgs e)
+        {
+            this.groupBoxAlta2.Visible = false;
+            this.groupBoxAlta.Visible = false;
+            this.labelUser.Visible = false;
+            this.labelLastName.Visible = false;
+            this.labelName.Visible = false;
+            this.labelDni.Visible = false;
+            this.labelPasswd.Visible = false;
+            this.AltaUserComboBox.Visible = false;
+            this.AltaTextBoxUserSureName.Visible = false;
+            this.AltaTextBoxUserName.Visible = false;
+            this.AltaTextBoxUserDni.Visible = false;
+            this.AltaTextBoxUserPasswd.Visible = false;
+            this.linkLabelAu.Visible = true;
+            this.linkLabelRa.Visible = true;
+            this.linkLabelAm.Visible = true;
+            this.linkLabelAp.Visible = true;
+            this.linkLabelAu2.Visible = false;
+            this.buttonCerrarAlta.Visible = false;
+            this.buttonAgregarAlta.Visible = false;
+        }
+
+        private void linkLabelRa_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
         }
     }
 }
