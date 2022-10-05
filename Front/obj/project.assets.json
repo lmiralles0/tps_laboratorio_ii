@@ -1,0 +1,94 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0-windows7.0": {
+      "Persona/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Persona.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Persona.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Persona/1.0.0": {
+      "type": "project",
+      "path": "../Persona/Persona.csproj",
+      "msbuildProject": "../Persona/Persona.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0-windows7.0": [
+      "Persona >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\MCvitani\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\MCvitani\\Desktop\\Pro\\tps_laboratorio_ii-main\\TP1\\Front\\Front.csproj",
+      "projectName": "Front",
+      "projectPath": "C:\\Users\\MCvitani\\Desktop\\Pro\\tps_laboratorio_ii-main\\TP1\\Front\\Front.csproj",
+      "packagesPath": "C:\\Users\\MCvitani\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MCvitani\\Desktop\\Pro\\tps_laboratorio_ii-main\\TP1\\Front\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\MCvitani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "projectReferences": {
+            "C:\\Users\\MCvitani\\Desktop\\Pro\\tps_laboratorio_ii-main\\TP1\\Persona\\Persona.csproj": {
+              "projectPath": "C:\\Users\\MCvitani\\Desktop\\Pro\\tps_laboratorio_ii-main\\TP1\\Persona\\Persona.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0-windows7.0": {
+        "targetAlias": "net5.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
