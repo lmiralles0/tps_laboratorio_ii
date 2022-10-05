@@ -25,7 +25,7 @@ namespace Front
         {
             this.toolStripMenuItem1.ShowDropDown() ;
         }
-        private void linkLabelAu2_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabelAu_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.groupBoxAlta2.Visible = true;
             this.groupBoxAlta.Visible = true;
@@ -66,13 +66,36 @@ namespace Front
             this.linkLabelRa.Visible = true;
             this.linkLabelAm.Visible = true;
             this.linkLabelAp.Visible = true;
-            this.linkLabelAu2.Visible = false;
             this.buttonCerrarAlta.Visible = false;
             this.buttonAgregarAlta.Visible = false;
+
         }
 
         private void linkLabelRa_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.groupBoxLinkLabelRa.Visible = true;
+            this.checkedListBox1.Visible = true;
+            this.buttonCerrarRa.Visible = true;
+            this.groupBoxRa.Visible = true;
+            this.linkLabelRa2.Visible = true;
+            this.linkLabelRa.Visible = false;
+            this.linkLabelAp.Visible = false;
+            this.linkLabelAm.Visible = false;
+            this.linkLabelAu.Visible = false;
+            
+        }
+
+        private void buttonCerrarRa_Click(object sender, EventArgs e)
+        {
+            this.groupBoxLinkLabelRa.Visible = false;
+            this.groupBoxRa.Visible = false;
+            this.linkLabelRa2.Visible = false;
+            this.linkLabelRa.Visible = true;
+            this.checkedListBox1.Visible = false;
+            this.buttonCerrarRa.Visible = false;
+            this.linkLabelAp.Visible = true;
+            this.linkLabelAm.Visible = true;
+            this.linkLabelAu.Visible = true;
             
         }
     }
