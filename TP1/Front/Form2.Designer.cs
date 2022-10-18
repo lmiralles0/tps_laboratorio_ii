@@ -40,9 +40,9 @@
             this.buttonCerrarRa = new System.Windows.Forms.Button();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.groupBoxAlta2 = new System.Windows.Forms.GroupBox();
-            this.linkLabelAu2 = new System.Windows.Forms.LinkLabel();
             this.groupBoxLinkLabelRa = new System.Windows.Forms.GroupBox();
             this.linkLabelRa2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabelAu2 = new System.Windows.Forms.LinkLabel();
             this.groupBoxAlta = new System.Windows.Forms.GroupBox();
             this.buttonAgregarAlta = new System.Windows.Forms.Button();
             this.buttonCerrarAlta = new System.Windows.Forms.Button();
@@ -177,7 +177,6 @@
             // 
             // groupBoxAlta2
             // 
-            this.groupBoxAlta2.Controls.Add(this.groupBoxLinkLabelRa);
             this.groupBoxAlta2.Controls.Add(this.linkLabelAu2);
             this.groupBoxAlta2.Location = new System.Drawing.Point(0, 0);
             this.groupBoxAlta2.Name = "groupBoxAlta2";
@@ -185,6 +184,27 @@
             this.groupBoxAlta2.TabIndex = 20;
             this.groupBoxAlta2.TabStop = false;
             this.groupBoxAlta2.Visible = false;
+            // 
+            // groupBoxLinkLabelRa
+            // 
+            this.groupBoxLinkLabelRa.Controls.Add(this.linkLabelRa2);
+            this.groupBoxLinkLabelRa.Location = new System.Drawing.Point(0, 91);
+            this.groupBoxLinkLabelRa.Name = "groupBoxLinkLabelRa";
+            this.groupBoxLinkLabelRa.Size = new System.Drawing.Size(220, 91);
+            this.groupBoxLinkLabelRa.TabIndex = 23;
+            this.groupBoxLinkLabelRa.TabStop = false;
+            this.groupBoxLinkLabelRa.Visible = false;
+            // 
+            // linkLabelRa2
+            // 
+            this.linkLabelRa2.AutoSize = true;
+            this.linkLabelRa2.Location = new System.Drawing.Point(4, 15);
+            this.linkLabelRa2.Name = "linkLabelRa2";
+            this.linkLabelRa2.Size = new System.Drawing.Size(119, 15);
+            this.linkLabelRa2.TabIndex = 21;
+            this.linkLabelRa2.TabStop = true;
+            this.linkLabelRa2.Text = "Regularidad alumnos";
+            this.linkLabelRa2.Visible = false;
             // 
             // linkLabelAu2
             // 
@@ -196,27 +216,6 @@
             this.linkLabelAu2.TabStop = true;
             this.linkLabelAu2.Text = "Alta usuarios";
             this.linkLabelAu2.Visible = false;
-            // 
-            // groupBoxLinkLabelRa
-            // 
-            this.groupBoxLinkLabelRa.Controls.Add(this.linkLabelRa2);
-            this.groupBoxLinkLabelRa.Location = new System.Drawing.Point(0, 91);
-            this.groupBoxLinkLabelRa.Name = "groupBoxLinkLabelRa";
-            this.groupBoxLinkLabelRa.Size = new System.Drawing.Size(223, 91);
-            this.groupBoxLinkLabelRa.TabIndex = 23;
-            this.groupBoxLinkLabelRa.TabStop = false;
-            this.groupBoxLinkLabelRa.Visible = false;
-            // 
-            // linkLabelRa2
-            // 
-            this.linkLabelRa2.AutoSize = true;
-            this.linkLabelRa2.Location = new System.Drawing.Point(6, 15);
-            this.linkLabelRa2.Name = "linkLabelRa2";
-            this.linkLabelRa2.Size = new System.Drawing.Size(119, 15);
-            this.linkLabelRa2.TabIndex = 21;
-            this.linkLabelRa2.TabStop = true;
-            this.linkLabelRa2.Text = "Regularidad alumnos";
-            this.linkLabelRa2.Visible = false;
             // 
             // groupBoxAlta
             // 
