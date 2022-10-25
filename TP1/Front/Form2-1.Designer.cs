@@ -28,61 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBoxAlta = new System.Windows.Forms.GroupBox();
-            this.groupBoxAlta2 = new System.Windows.Forms.GroupBox();
-            this.linkLabelRa = new System.Windows.Forms.LinkLabel();
-            this.groupBoxAlta2.SuspendLayout();
+            this.groupBoxAm2 = new System.Windows.Forms.GroupBox();
+            this.groupBoxLinkAm2 = new System.Windows.Forms.GroupBox();
+            this.linkLabelAm2 = new System.Windows.Forms.LinkLabel();
+            this.groupBoxLinkAm2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBoxAlta
+            // groupBoxAm2
             // 
-            this.groupBoxAlta.Location = new System.Drawing.Point(467, 82);
-            this.groupBoxAlta.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.groupBoxAlta.Name = "groupBoxAlta";
-            this.groupBoxAlta.Size = new System.Drawing.Size(250, 299);
-            this.groupBoxAlta.TabIndex = 20;
-            this.groupBoxAlta.TabStop = false;
-            this.groupBoxAlta.Visible = false;
+            this.groupBoxAm2.Location = new System.Drawing.Point(467, 82);
+            this.groupBoxAm2.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.groupBoxAm2.Name = "groupBoxAm2";
+            this.groupBoxAm2.Size = new System.Drawing.Size(256, 300);
+            this.groupBoxAm2.TabIndex = 20;
+            this.groupBoxAm2.TabStop = false;
+            this.groupBoxAm2.Visible = false;
             // 
-            // groupBoxAlta2
+            // groupBoxLinkAm2
             // 
-            this.groupBoxAlta2.Controls.Add(this.linkLabelRa);
-            this.groupBoxAlta2.Location = new System.Drawing.Point(145, 143);
-            this.groupBoxAlta2.Name = "groupBoxAlta2";
-            this.groupBoxAlta2.Size = new System.Drawing.Size(220, 100);
-            this.groupBoxAlta2.TabIndex = 22;
-            this.groupBoxAlta2.TabStop = false;
-            this.groupBoxAlta2.Visible = false;
+            this.groupBoxLinkAm2.Controls.Add(this.linkLabelAm2);
+            this.groupBoxLinkAm2.Location = new System.Drawing.Point(145, 143);
+            this.groupBoxLinkAm2.Name = "groupBoxLinkAm2";
+            this.groupBoxLinkAm2.Size = new System.Drawing.Size(220, 91);
+            this.groupBoxLinkAm2.TabIndex = 22;
+            this.groupBoxLinkAm2.TabStop = false;
+            this.groupBoxLinkAm2.Visible = false;
             // 
-            // linkLabelRa
+            // linkLabelAm2
             // 
-            this.linkLabelRa.AutoSize = true;
-            this.linkLabelRa.Location = new System.Drawing.Point(6, 22);
-            this.linkLabelRa.Name = "linkLabelRa";
-            this.linkLabelRa.Size = new System.Drawing.Size(119, 15);
-            this.linkLabelRa.TabIndex = 21;
-            this.linkLabelRa.TabStop = true;
-            this.linkLabelRa.Text = "Regularidad alumnos";
+            this.linkLabelAm2.AutoSize = true;
+            this.linkLabelAm2.Location = new System.Drawing.Point(6, 22);
+            this.linkLabelAm2.Name = "linkLabelAm2";
+            this.linkLabelAm2.Size = new System.Drawing.Size(76, 15);
+            this.linkLabelAm2.TabIndex = 21;
+            this.linkLabelAm2.TabStop = true;
+            this.linkLabelAm2.Text = "Alta materias";
             // 
             // Form2_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBoxAlta2);
-            this.Controls.Add(this.groupBoxAlta);
+            this.Controls.Add(this.groupBoxLinkAm2);
+            this.Controls.Add(this.groupBoxAm2);
             this.Name = "Form2_1";
             this.Text = "Form2_1";
-            this.groupBoxAlta2.ResumeLayout(false);
-            this.groupBoxAlta2.PerformLayout();
+            this.groupBoxLinkAm2.ResumeLayout(false);
+            this.groupBoxLinkAm2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        public System.Windows.Forms.GroupBox groupBoxAlta;
-        public System.Windows.Forms.GroupBox groupBoxAlta2;
-        private System.Windows.Forms.LinkLabel linkLabelRa;
+        public System.Windows.Forms.GroupBox groupBoxAm2;
+        public System.Windows.Forms.GroupBox groupBoxLinkAm2;
+        private System.Windows.Forms.LinkLabel linkLabelAm2;
     }
 }

@@ -27,7 +27,7 @@ namespace Front
         }
         private void linkLabelAu_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.groupBoxAlta2.Visible = true;
+            this.groupBoxAltaU2.Visible = true;
             this.groupBoxAlta.Visible = true;
             this.labelUser.Visible = true;
             this.labelLastName.Visible = true;
@@ -50,7 +50,7 @@ namespace Front
 
         private void buttonCerrarAlta_Click(object sender, EventArgs e)
         {
-            this.groupBoxAlta2.Visible = false;
+            this.groupBoxAltaU2.Visible = false;
             this.groupBoxAlta.Visible = false;
             this.labelUser.Visible = false;
             this.labelLastName.Visible = false;
