@@ -27,7 +27,7 @@ namespace Front
         }
         private void linkLabelAu_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.groupBoxAltaU2.Visible = true;
+            this.groupBoxAltaULinkLabel.Visible = true;
             this.groupBoxAlta.Visible = true;
             this.labelUser.Visible = true;
             this.labelLastName.Visible = true;
@@ -50,7 +50,7 @@ namespace Front
 
         private void buttonCerrarAlta_Click(object sender, EventArgs e)
         {
-            this.groupBoxAltaU2.Visible = false;
+            this.groupBoxAltaULinkLabel.Visible = false;
             this.groupBoxAlta.Visible = false;
             this.labelUser.Visible = false;
             this.labelLastName.Visible = false;
@@ -71,11 +71,17 @@ namespace Front
 
         }
 
+        private void buttonAgregarAlta_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void linkLabelRa_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.groupBoxLinkLabelRa.Visible = true;
             this.checkedListBox1.Visible = true;
             this.buttonCerrarRa.Visible = true;
+            this.buttonAgregarRA.Visible = true;
             this.groupBoxRa.Visible = true;
             this.linkLabelRa2.Visible = true;
             this.linkLabelRa.Visible = false;
@@ -92,11 +98,18 @@ namespace Front
             this.linkLabelRa2.Visible = false;
             this.linkLabelRa.Visible = true;
             this.checkedListBox1.Visible = false;
+            this.buttonAgregarRA.Visible = false;
             this.buttonCerrarRa.Visible = false;
             this.linkLabelAp.Visible = true;
             this.linkLabelAm.Visible = true;
             this.linkLabelAu.Visible = true;
             
+        }
+
+
+        private void buttonAgregarRA_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

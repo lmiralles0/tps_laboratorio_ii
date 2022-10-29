@@ -28,31 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBoxAm2 = new System.Windows.Forms.GroupBox();
-            this.groupBoxLinkAm2 = new System.Windows.Forms.GroupBox();
+            this.groupBoxAm = new System.Windows.Forms.GroupBox();
+            this.groupBoxLinkAm = new System.Windows.Forms.GroupBox();
             this.linkLabelAm2 = new System.Windows.Forms.LinkLabel();
-            this.groupBoxLinkAm2.SuspendLayout();
+            this.groupBoxLinkAm.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBoxAm2
+            // groupBoxAm
             // 
-            this.groupBoxAm2.Location = new System.Drawing.Point(467, 82);
-            this.groupBoxAm2.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.groupBoxAm2.Name = "groupBoxAm2";
-            this.groupBoxAm2.Size = new System.Drawing.Size(256, 300);
-            this.groupBoxAm2.TabIndex = 20;
-            this.groupBoxAm2.TabStop = false;
-            this.groupBoxAm2.Visible = false;
+            this.groupBoxAm.Location = new System.Drawing.Point(467, 82);
+            this.groupBoxAm.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.groupBoxAm.Name = "groupBoxAm";
+            this.groupBoxAm.Size = new System.Drawing.Size(256, 300);
+            this.groupBoxAm.TabIndex = 20;
+            this.groupBoxAm.TabStop = false;
+            this.groupBoxAm.Visible = false;
             // 
-            // groupBoxLinkAm2
+            // groupBoxLinkAm
             // 
-            this.groupBoxLinkAm2.Controls.Add(this.linkLabelAm2);
-            this.groupBoxLinkAm2.Location = new System.Drawing.Point(145, 143);
-            this.groupBoxLinkAm2.Name = "groupBoxLinkAm2";
-            this.groupBoxLinkAm2.Size = new System.Drawing.Size(220, 91);
-            this.groupBoxLinkAm2.TabIndex = 22;
-            this.groupBoxLinkAm2.TabStop = false;
-            this.groupBoxLinkAm2.Visible = false;
+            this.groupBoxLinkAm.Controls.Add(this.linkLabelAm2);
+            this.groupBoxLinkAm.Location = new System.Drawing.Point(145, 143);
+            this.groupBoxLinkAm.Name = "groupBoxLinkAm";
+            this.groupBoxLinkAm.Size = new System.Drawing.Size(220, 91);
+            this.groupBoxLinkAm.TabIndex = 22;
+            this.groupBoxLinkAm.TabStop = false;
+            this.groupBoxLinkAm.Visible = false;
             // 
             // linkLabelAm2
             // 
@@ -69,20 +69,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBoxLinkAm2);
-            this.Controls.Add(this.groupBoxAm2);
+            this.Controls.Add(this.groupBoxLinkAm);
+            this.Controls.Add(this.groupBoxAm);
             this.Name = "Form2_1";
             this.Text = "Form2_1";
-            this.groupBoxLinkAm2.ResumeLayout(false);
-            this.groupBoxLinkAm2.PerformLayout();
+            this.groupBoxLinkAm.ResumeLayout(false);
+            this.groupBoxLinkAm.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        public System.Windows.Forms.GroupBox groupBoxAm2;
-        public System.Windows.Forms.GroupBox groupBoxLinkAm2;
+        public System.Windows.Forms.GroupBox groupBoxAm;
+        public System.Windows.Forms.GroupBox groupBoxLinkAm;
         private System.Windows.Forms.LinkLabel linkLabelAm2;
     }
 }
