@@ -1,0 +1,48 @@
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\bin\Debug\net5.0-windows\Front.exe
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\bin\Debug\net5.0-windows\Front.deps.json
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\bin\Debug\net5.0-windows\Front.runtimeconfig.json
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\bin\Debug\net5.0-windows\Front.runtimeconfig.dev.json
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\bin\Debug\net5.0-windows\Front.dll
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\bin\Debug\net5.0-windows\Front.pdb
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\obj\Debug\net5.0-windows\Front.csproj.AssemblyReference.cache
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\obj\Debug\net5.0-windows\Front.Ingreso.resources
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\obj\Debug\net5.0-windows\Front.csproj.GenerateResource.cache
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\obj\Debug\net5.0-windows\Front.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\obj\Debug\net5.0-windows\Front.AssemblyInfoInputs.cache
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\obj\Debug\net5.0-windows\Front.AssemblyInfo.cs
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\obj\Debug\net5.0-windows\Front.csproj.CoreCompileInputs.cache
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\obj\Debug\net5.0-windows\Front.dll
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\obj\Debug\net5.0-windows\refint\Front.dll
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\obj\Debug\net5.0-windows\Front.pdb
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\obj\Debug\net5.0-windows\Front.genruntimeconfig.cache
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\obj\Debug\net5.0-windows\ref\Front.dll
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\bin\Debug\net5.0-windows\Persona.dll
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\bin\Debug\net5.0-windows\Persona.pdb
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\obj\Debug\net5.0-windows\Front.Form2.resources
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\obj\Debug\net5.0-windows\Front.Properties.Resources.resources
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\obj\Debug\net5.0-windows\Front.csproj.CopyComplete
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Front.exe
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Front.deps.json
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Front.runtimeconfig.json
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Front.runtimeconfig.dev.json
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Front.dll
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Front.pdb
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Persona.dll
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Persona.pdb
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\Front.csproj.AssemblyReference.cache
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\Front.Ingreso.resources
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\Front.Form2.resources
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\Front.Properties.Resources.resources
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\Front.csproj.GenerateResource.cache
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\Front.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\Front.AssemblyInfoInputs.cache
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\Front.AssemblyInfo.cs
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\Front.csproj.CoreCompileInputs.cache
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\Front.csproj.CopyComplete
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\Front.dll
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\refint\Front.dll
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\Front.pdb
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\Front.genruntimeconfig.cache
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\ref\Front.dll
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\Front.Form2_1.resources
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\obj\Debug\net5.0-windows\Front.Form2_1.resources
