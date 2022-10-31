@@ -115,6 +115,7 @@
             this.Controls.Add(this.txtBoxPasswd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Ingreso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Gestion UTN";
             this.ResumeLayout(false);
             this.PerformLayout();

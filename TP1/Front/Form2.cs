@@ -27,7 +27,7 @@ namespace Front
         }
         private void linkLabelAu_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.groupBoxAltaULinkLabel.Visible = true;
+            this.groupBoxLinkLabelAltaU.Visible = true;
             this.groupBoxAlta.Visible = true;
             this.labelUser.Visible = true;
             this.labelLastName.Visible = true;
@@ -50,7 +50,7 @@ namespace Front
 
         private void buttonCerrarAlta_Click(object sender, EventArgs e)
         {
-            this.groupBoxAltaULinkLabel.Visible = false;
+            this.groupBoxLinkLabelAltaU.Visible = false;
             this.groupBoxAlta.Visible = false;
             this.labelUser.Visible = false;
             this.labelLastName.Visible = false;
@@ -70,7 +70,6 @@ namespace Front
             this.buttonAgregarAlta.Visible = false;
 
         }
-
         private void buttonAgregarAlta_Click(object sender, EventArgs e)
         {
 
@@ -79,15 +78,17 @@ namespace Front
         private void linkLabelRa_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.groupBoxLinkLabelRa.Visible = true;
-            this.checkedListBox1.Visible = true;
+            this.buttonAgregarRa.Visible = true;
             this.buttonCerrarRa.Visible = true;
-            this.buttonAgregarRA.Visible = true;
             this.groupBoxRa.Visible = true;
             this.linkLabelRa2.Visible = true;
             this.linkLabelRa.Visible = false;
             this.linkLabelAp.Visible = false;
             this.linkLabelAm.Visible = false;
             this.linkLabelAu.Visible = false;
+            this.comboBoxAlumnosRa.Visible = true;
+            this.comboBoxMateriasRa.Visible = true;
+            this.comboBoxRegularRa.Visible = true;
             
         }
 
@@ -97,19 +98,59 @@ namespace Front
             this.groupBoxRa.Visible = false;
             this.linkLabelRa2.Visible = false;
             this.linkLabelRa.Visible = true;
-            this.checkedListBox1.Visible = false;
-            this.buttonAgregarRA.Visible = false;
+            this.buttonAgregarRa.Visible = false;
             this.buttonCerrarRa.Visible = false;
             this.linkLabelAp.Visible = true;
             this.linkLabelAm.Visible = true;
             this.linkLabelAu.Visible = true;
-            
+            this.comboBoxAlumnosRa.Visible = false;
+            this.comboBoxMateriasRa.Visible = false;
+            this.comboBoxRegularRa.Visible = false;
+
         }
 
-
-        private void buttonAgregarRA_Click(object sender, EventArgs e)
+        private void buttonAgregarRa_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void linkLabelAm_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.linkLabelRa.Visible = false;
+            this.linkLabelAp.Visible = false;
+            this.linkLabelAm.Visible = false;
+            this.linkLabelAu.Visible = false;
+            this.groupBoxLinkAm.Visible = true;
+            this.linkLabelAm2.Visible = true;
+            this.groupBoxAm.Visible = true;
+            this.textBoxNombreAm.Visible = true;
+            this.comboBoxSeleccionarMateriaAm.Visible = true;
+            this.buttonAgregarAm.Visible = true;
+            this.buttonCerrarAm.Visible = true;
+            this.labelNombreMateriaAm.Visible = true;
+        }
+
+
+        private void buttonCerrarAm_Click(object sender, EventArgs e)
+        {
+            this.linkLabelRa.Visible = true;
+            this.linkLabelAp.Visible = true;
+            this.linkLabelAm.Visible = true;
+            this.linkLabelAu.Visible = true;
+            this.groupBoxLinkAm.Visible = false;
+            this.linkLabelAm2.Visible = false;
+            this.groupBoxAm.Visible = false;
+            this.textBoxNombreAm.Visible = false;
+            this.comboBoxSeleccionarMateriaAm.Visible = false;
+            this.buttonAgregarAm.Visible = false;
+            this.buttonCerrarAm.Visible = false;
+
+        }
+
+        private void buttonAgregarAm_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

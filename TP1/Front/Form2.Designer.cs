@@ -37,13 +37,17 @@
             this.linkLabelAp = new System.Windows.Forms.LinkLabel();
             this.linkLabelAu = new System.Windows.Forms.LinkLabel();
             this.groupBoxRa = new System.Windows.Forms.GroupBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.buttonAgregarRA = new System.Windows.Forms.Button();
+            this.groupBoxAm = new System.Windows.Forms.GroupBox();
+            this.comboBoxSeleccionarMateriaAm = new System.Windows.Forms.ComboBox();
+            this.labelNombreMateriaAm = new System.Windows.Forms.Label();
+            this.buttonCerrarAm = new System.Windows.Forms.Button();
+            this.buttonAgregarAm = new System.Windows.Forms.Button();
+            this.textBoxNombreAm = new System.Windows.Forms.TextBox();
+            this.comboBoxMateriasRa = new System.Windows.Forms.ComboBox();
+            this.comboBoxRegularRa = new System.Windows.Forms.ComboBox();
+            this.comboBoxAlumnosRa = new System.Windows.Forms.ComboBox();
+            this.buttonAgregarRa = new System.Windows.Forms.Button();
             this.buttonCerrarRa = new System.Windows.Forms.Button();
-            this.groupBoxAltaULinkLabel = new System.Windows.Forms.GroupBox();
-            this.linkLabelAu2 = new System.Windows.Forms.LinkLabel();
-            this.groupBoxLinkLabelRa = new System.Windows.Forms.GroupBox();
-            this.linkLabelRa2 = new System.Windows.Forms.LinkLabel();
             this.groupBoxAlta = new System.Windows.Forms.GroupBox();
             this.buttonCerrarAlta = new System.Windows.Forms.Button();
             this.labelUser = new System.Windows.Forms.Label();
@@ -57,13 +61,21 @@
             this.labelDni = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.buttonAgregarAlta = new System.Windows.Forms.Button();
+            this.groupBoxLinkLabelAltaU = new System.Windows.Forms.GroupBox();
+            this.linkLabelAu2 = new System.Windows.Forms.LinkLabel();
+            this.groupBoxLinkLabelRa = new System.Windows.Forms.GroupBox();
+            this.linkLabelRa2 = new System.Windows.Forms.LinkLabel();
             this.groupBoxGeneral = new System.Windows.Forms.GroupBox();
+            this.groupBoxLinkAm = new System.Windows.Forms.GroupBox();
+            this.linkLabelAm2 = new System.Windows.Forms.LinkLabel();
             this.menuStrip1.SuspendLayout();
             this.groupBoxRa.SuspendLayout();
-            this.groupBoxAltaULinkLabel.SuspendLayout();
-            this.groupBoxLinkLabelRa.SuspendLayout();
+            this.groupBoxAm.SuspendLayout();
             this.groupBoxAlta.SuspendLayout();
+            this.groupBoxLinkLabelAltaU.SuspendLayout();
+            this.groupBoxLinkLabelRa.SuspendLayout();
             this.groupBoxGeneral.SuspendLayout();
+            this.groupBoxLinkAm.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripMenuItem1
@@ -122,6 +134,7 @@
             this.linkLabelAm.TabIndex = 3;
             this.linkLabelAm.TabStop = true;
             this.linkLabelAm.Text = "Alta materias";
+            this.linkLabelAm.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelAm_LinkClicked);
             // 
             // linkLabelAp
             // 
@@ -146,8 +159,10 @@
             // 
             // groupBoxRa
             // 
-            this.groupBoxRa.Controls.Add(this.checkedListBox1);
-            this.groupBoxRa.Controls.Add(this.buttonAgregarRA);
+            this.groupBoxRa.Controls.Add(this.comboBoxMateriasRa);
+            this.groupBoxRa.Controls.Add(this.comboBoxRegularRa);
+            this.groupBoxRa.Controls.Add(this.comboBoxAlumnosRa);
+            this.groupBoxRa.Controls.Add(this.buttonAgregarRa);
             this.groupBoxRa.Controls.Add(this.buttonCerrarRa);
             this.groupBoxRa.Location = new System.Drawing.Point(220, 0);
             this.groupBoxRa.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
@@ -157,25 +172,107 @@
             this.groupBoxRa.TabStop = false;
             this.groupBoxRa.Visible = false;
             // 
-            // checkedListBox1
+            // groupBoxAm
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(62, 81);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(120, 94);
-            this.checkedListBox1.TabIndex = 0;
-            this.checkedListBox1.Visible = false;
+            this.groupBoxAm.Controls.Add(this.comboBoxSeleccionarMateriaAm);
+            this.groupBoxAm.Controls.Add(this.labelNombreMateriaAm);
+            this.groupBoxAm.Controls.Add(this.buttonCerrarAm);
+            this.groupBoxAm.Controls.Add(this.buttonAgregarAm);
+            this.groupBoxAm.Controls.Add(this.textBoxNombreAm);
+            this.groupBoxAm.Location = new System.Drawing.Point(220, 0);
+            this.groupBoxAm.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.groupBoxAm.Name = "groupBoxAm";
+            this.groupBoxAm.Size = new System.Drawing.Size(256, 300);
+            this.groupBoxAm.TabIndex = 21;
+            this.groupBoxAm.TabStop = false;
+            this.groupBoxAm.Visible = false;
             // 
-            // buttonAgregarRA
+            // comboBoxSeleccionarMateriaAm
             // 
-            this.buttonAgregarRA.Location = new System.Drawing.Point(26, 270);
-            this.buttonAgregarRA.Name = "buttonAgregarRA";
-            this.buttonAgregarRA.Size = new System.Drawing.Size(75, 23);
-            this.buttonAgregarRA.TabIndex = 2;
-            this.buttonAgregarRA.Text = "Agregar";
-            this.buttonAgregarRA.UseVisualStyleBackColor = true;
-            this.buttonAgregarRA.Visible = false;
-            this.buttonAgregarRA.Click += new System.EventHandler(this.buttonAgregarRA_Click);
+            this.comboBoxSeleccionarMateriaAm.FormattingEnabled = true;
+            this.comboBoxSeleccionarMateriaAm.Location = new System.Drawing.Point(56, 156);
+            this.comboBoxSeleccionarMateriaAm.Name = "comboBoxSeleccionarMateriaAm";
+            this.comboBoxSeleccionarMateriaAm.Size = new System.Drawing.Size(159, 23);
+            this.comboBoxSeleccionarMateriaAm.TabIndex = 5;
+            this.comboBoxSeleccionarMateriaAm.Visible = false;
+            // 
+            // labelNombreMateriaAm
+            // 
+            this.labelNombreMateriaAm.AutoSize = true;
+            this.labelNombreMateriaAm.Location = new System.Drawing.Point(56, 54);
+            this.labelNombreMateriaAm.Name = "labelNombreMateriaAm";
+            this.labelNombreMateriaAm.Size = new System.Drawing.Size(100, 15);
+            this.labelNombreMateriaAm.TabIndex = 4;
+            this.labelNombreMateriaAm.Text = "Nombre Materia: ";
+            this.labelNombreMateriaAm.Visible = false;
+            // 
+            // buttonCerrarAm
+            // 
+            this.buttonCerrarAm.Location = new System.Drawing.Point(175, 260);
+            this.buttonCerrarAm.Name = "buttonCerrarAm";
+            this.buttonCerrarAm.Size = new System.Drawing.Size(75, 23);
+            this.buttonCerrarAm.TabIndex = 3;
+            this.buttonCerrarAm.Text = "Cerrar";
+            this.buttonCerrarAm.UseVisualStyleBackColor = true;
+            this.buttonCerrarAm.Visible = false;
+            this.buttonCerrarAm.Click += new System.EventHandler(this.buttonCerrarAm_Click);
+            // 
+            // buttonAgregarAm
+            // 
+            this.buttonAgregarAm.Location = new System.Drawing.Point(19, 260);
+            this.buttonAgregarAm.Name = "buttonAgregarAm";
+            this.buttonAgregarAm.Size = new System.Drawing.Size(75, 23);
+            this.buttonAgregarAm.TabIndex = 2;
+            this.buttonAgregarAm.Text = "Agregar";
+            this.buttonAgregarAm.UseVisualStyleBackColor = true;
+            this.buttonAgregarAm.Visible = false;
+            this.buttonAgregarAm.Click += new System.EventHandler(this.buttonAgregarAm_Click);
+            // 
+            // textBoxNombreAm
+            // 
+            this.textBoxNombreAm.Location = new System.Drawing.Point(56, 80);
+            this.textBoxNombreAm.Name = "textBoxNombreAm";
+            this.textBoxNombreAm.Size = new System.Drawing.Size(159, 23);
+            this.textBoxNombreAm.TabIndex = 0;
+            this.textBoxNombreAm.Visible = false;
+            // 
+            // comboBoxMateriasRa
+            // 
+            this.comboBoxMateriasRa.FormattingEnabled = true;
+            this.comboBoxMateriasRa.Location = new System.Drawing.Point(33, 101);
+            this.comboBoxMateriasRa.Name = "comboBoxMateriasRa";
+            this.comboBoxMateriasRa.Size = new System.Drawing.Size(200, 23);
+            this.comboBoxMateriasRa.TabIndex = 4;
+            this.comboBoxMateriasRa.Visible = false;
+            // 
+            // comboBoxRegularRa
+            // 
+            this.comboBoxRegularRa.FormattingEnabled = true;
+            this.comboBoxRegularRa.Location = new System.Drawing.Point(33, 185);
+            this.comboBoxRegularRa.Name = "comboBoxRegularRa";
+            this.comboBoxRegularRa.Size = new System.Drawing.Size(200, 23);
+            this.comboBoxRegularRa.TabIndex = 5;
+            this.comboBoxRegularRa.Visible = false;
+            // 
+            // comboBoxAlumnosRa
+            // 
+            this.comboBoxAlumnosRa.FormattingEnabled = true;
+            this.comboBoxAlumnosRa.Location = new System.Drawing.Point(33, 28);
+            this.comboBoxAlumnosRa.Name = "comboBoxAlumnosRa";
+            this.comboBoxAlumnosRa.Size = new System.Drawing.Size(200, 23);
+            this.comboBoxAlumnosRa.TabIndex = 3;
+            this.comboBoxAlumnosRa.Visible = false;
+            // 
+            // buttonAgregarRa
+            // 
+            this.buttonAgregarRa.Location = new System.Drawing.Point(33, 270);
+            this.buttonAgregarRa.Name = "buttonAgregarRa";
+            this.buttonAgregarRa.Size = new System.Drawing.Size(75, 23);
+            this.buttonAgregarRa.TabIndex = 2;
+            this.buttonAgregarRa.Text = "Modificar";
+            this.buttonAgregarRa.UseVisualStyleBackColor = true;
+            this.buttonAgregarRa.Visible = false;
+            this.buttonAgregarRa.Click += new System.EventHandler(this.buttonAgregarRa_Click);
             // 
             // buttonCerrarRa
             // 
@@ -187,48 +284,6 @@
             this.buttonCerrarRa.UseVisualStyleBackColor = true;
             this.buttonCerrarRa.Visible = false;
             this.buttonCerrarRa.Click += new System.EventHandler(this.buttonCerrarRa_Click);
-            // 
-            // groupBoxAltaULinkLabel
-            // 
-            this.groupBoxAltaULinkLabel.Controls.Add(this.linkLabelAu2);
-            this.groupBoxAltaULinkLabel.Location = new System.Drawing.Point(0, 0);
-            this.groupBoxAltaULinkLabel.Name = "groupBoxAltaULinkLabel";
-            this.groupBoxAltaULinkLabel.Size = new System.Drawing.Size(220, 96);
-            this.groupBoxAltaULinkLabel.TabIndex = 20;
-            this.groupBoxAltaULinkLabel.TabStop = false;
-            this.groupBoxAltaULinkLabel.Visible = false;
-            // 
-            // linkLabelAu2
-            // 
-            this.linkLabelAu2.AutoSize = true;
-            this.linkLabelAu2.Location = new System.Drawing.Point(6, 28);
-            this.linkLabelAu2.Name = "linkLabelAu2";
-            this.linkLabelAu2.Size = new System.Drawing.Size(75, 15);
-            this.linkLabelAu2.TabIndex = 6;
-            this.linkLabelAu2.TabStop = true;
-            this.linkLabelAu2.Text = "Alta usuarios";
-            this.linkLabelAu2.Visible = false;
-            // 
-            // groupBoxLinkLabelRa
-            // 
-            this.groupBoxLinkLabelRa.Controls.Add(this.linkLabelRa2);
-            this.groupBoxLinkLabelRa.Location = new System.Drawing.Point(68, 111);
-            this.groupBoxLinkLabelRa.Name = "groupBoxLinkLabelRa";
-            this.groupBoxLinkLabelRa.Size = new System.Drawing.Size(220, 91);
-            this.groupBoxLinkLabelRa.TabIndex = 23;
-            this.groupBoxLinkLabelRa.TabStop = false;
-            this.groupBoxLinkLabelRa.Visible = false;
-            // 
-            // linkLabelRa2
-            // 
-            this.linkLabelRa2.AutoSize = true;
-            this.linkLabelRa2.Location = new System.Drawing.Point(6, 25);
-            this.linkLabelRa2.Name = "linkLabelRa2";
-            this.linkLabelRa2.Size = new System.Drawing.Size(119, 15);
-            this.linkLabelRa2.TabIndex = 21;
-            this.linkLabelRa2.TabStop = true;
-            this.linkLabelRa2.Text = "Regularidad alumnos";
-            this.linkLabelRa2.Visible = false;
             // 
             // groupBoxAlta
             // 
@@ -364,7 +419,7 @@
             // 
             // buttonAgregarAlta
             // 
-            this.buttonAgregarAlta.Location = new System.Drawing.Point(10, 270);
+            this.buttonAgregarAlta.Location = new System.Drawing.Point(6, 270);
             this.buttonAgregarAlta.Name = "buttonAgregarAlta";
             this.buttonAgregarAlta.Size = new System.Drawing.Size(91, 23);
             this.buttonAgregarAlta.TabIndex = 20;
@@ -373,44 +428,126 @@
             this.buttonAgregarAlta.Visible = false;
             this.buttonAgregarAlta.Click += new System.EventHandler(this.buttonAgregarAlta_Click);
             // 
+            // groupBoxLinkLabelAltaU
+            // 
+            this.groupBoxLinkLabelAltaU.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxLinkLabelAltaU.Controls.Add(this.linkLabelAu2);
+            this.groupBoxLinkLabelAltaU.Location = new System.Drawing.Point(0, 0);
+            this.groupBoxLinkLabelAltaU.Name = "groupBoxLinkLabelAltaU";
+            this.groupBoxLinkLabelAltaU.Size = new System.Drawing.Size(220, 96);
+            this.groupBoxLinkLabelAltaU.TabIndex = 20;
+            this.groupBoxLinkLabelAltaU.TabStop = false;
+            this.groupBoxLinkLabelAltaU.Visible = false;
+            // 
+            // linkLabelAu2
+            // 
+            this.linkLabelAu2.AutoSize = true;
+            this.linkLabelAu2.Location = new System.Drawing.Point(6, 28);
+            this.linkLabelAu2.Name = "linkLabelAu2";
+            this.linkLabelAu2.Size = new System.Drawing.Size(75, 15);
+            this.linkLabelAu2.TabIndex = 6;
+            this.linkLabelAu2.TabStop = true;
+            this.linkLabelAu2.Text = "Alta usuarios";
+            this.linkLabelAu2.Visible = false;
+            // 
+            // groupBoxLinkLabelRa
+            // 
+            this.groupBoxLinkLabelRa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxLinkLabelRa.Controls.Add(this.linkLabelRa2);
+            this.groupBoxLinkLabelRa.Location = new System.Drawing.Point(0, 83);
+            this.groupBoxLinkLabelRa.Name = "groupBoxLinkLabelRa";
+            this.groupBoxLinkLabelRa.Size = new System.Drawing.Size(220, 96);
+            this.groupBoxLinkLabelRa.TabIndex = 23;
+            this.groupBoxLinkLabelRa.TabStop = false;
+            this.groupBoxLinkLabelRa.Visible = false;
+            // 
+            // linkLabelRa2
+            // 
+            this.linkLabelRa2.AutoSize = true;
+            this.linkLabelRa2.Location = new System.Drawing.Point(6, 26);
+            this.linkLabelRa2.Name = "linkLabelRa2";
+            this.linkLabelRa2.Size = new System.Drawing.Size(119, 15);
+            this.linkLabelRa2.TabIndex = 21;
+            this.linkLabelRa2.TabStop = true;
+            this.linkLabelRa2.Text = "Regularidad alumnos";
+            this.linkLabelRa2.Visible = false;
+            // 
             // groupBoxGeneral
             // 
+            this.groupBoxGeneral.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxGeneral.Controls.Add(this.groupBoxAlta);
+            this.groupBoxGeneral.Controls.Add(this.groupBoxAm);
+            this.groupBoxGeneral.Controls.Add(this.groupBoxLinkLabelAltaU);
+            this.groupBoxGeneral.Controls.Add(this.groupBoxLinkLabelRa);
             this.groupBoxGeneral.Controls.Add(this.groupBoxRa);
             this.groupBoxGeneral.Controls.Add(this.linkLabelAu);
-            this.groupBoxGeneral.Controls.Add(this.groupBoxAltaULinkLabel);
             this.groupBoxGeneral.Controls.Add(this.linkLabelAp);
             this.groupBoxGeneral.Controls.Add(this.linkLabelAm);
             this.groupBoxGeneral.Controls.Add(this.linkLabelRa);
-            this.groupBoxGeneral.Location = new System.Drawing.Point(68, 27);
+            this.groupBoxGeneral.Location = new System.Drawing.Point(91, 27);
             this.groupBoxGeneral.Name = "groupBoxGeneral";
             this.groupBoxGeneral.Size = new System.Drawing.Size(476, 299);
             this.groupBoxGeneral.TabIndex = 5;
             this.groupBoxGeneral.TabStop = false;
+            // 
+            // groupBoxLinkAm
+            // 
+            this.groupBoxLinkAm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxLinkAm.Controls.Add(this.linkLabelAm2);
+            this.groupBoxLinkAm.Location = new System.Drawing.Point(91, 197);
+            this.groupBoxLinkAm.Name = "groupBoxLinkAm";
+            this.groupBoxLinkAm.Size = new System.Drawing.Size(220, 76);
+            this.groupBoxLinkAm.TabIndex = 23;
+            this.groupBoxLinkAm.TabStop = false;
+            this.groupBoxLinkAm.Visible = false;
+            // 
+            // linkLabelAm2
+            // 
+            this.linkLabelAm2.AutoSize = true;
+            this.linkLabelAm2.Location = new System.Drawing.Point(5, 15);
+            this.linkLabelAm2.Name = "linkLabelAm2";
+            this.linkLabelAm2.Size = new System.Drawing.Size(76, 15);
+            this.linkLabelAm2.TabIndex = 21;
+            this.linkLabelAm2.TabStop = true;
+            this.linkLabelAm2.Text = "Alta materias";
+            this.linkLabelAm2.Visible = false;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(619, 355);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.groupBoxLinkLabelRa);
+            this.Controls.Add(this.groupBoxLinkAm);
             this.Controls.Add(this.groupBoxGeneral);
+            this.Controls.Add(this.menuStrip1);
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sesion: Admin";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBoxRa.ResumeLayout(false);
-            this.groupBoxAltaULinkLabel.ResumeLayout(false);
-            this.groupBoxAltaULinkLabel.PerformLayout();
-            this.groupBoxLinkLabelRa.ResumeLayout(false);
-            this.groupBoxLinkLabelRa.PerformLayout();
+            this.groupBoxAm.ResumeLayout(false);
+            this.groupBoxAm.PerformLayout();
             this.groupBoxAlta.ResumeLayout(false);
             this.groupBoxAlta.PerformLayout();
+            this.groupBoxLinkLabelAltaU.ResumeLayout(false);
+            this.groupBoxLinkLabelAltaU.PerformLayout();
+            this.groupBoxLinkLabelRa.ResumeLayout(false);
+            this.groupBoxLinkLabelRa.PerformLayout();
             this.groupBoxGeneral.ResumeLayout(false);
             this.groupBoxGeneral.PerformLayout();
+            this.groupBoxLinkAm.ResumeLayout(false);
+            this.groupBoxLinkAm.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -427,25 +564,35 @@
         public System.Windows.Forms.LinkLabel linkLabelAu;
         public System.Windows.Forms.GroupBox groupBoxRa;
         public System.Windows.Forms.Button buttonCerrarRa;
-        public System.Windows.Forms.CheckedListBox checkedListBox1;
-        public System.Windows.Forms.GroupBox groupBoxAltaULinkLabel;
+        public System.Windows.Forms.GroupBox groupBoxLinkLabelAltaU;
         public System.Windows.Forms.GroupBox groupBoxLinkLabelRa;
         public System.Windows.Forms.LinkLabel linkLabelRa2;
         public System.Windows.Forms.LinkLabel linkLabelAu2;
         public System.Windows.Forms.GroupBox groupBoxAlta;
         public System.Windows.Forms.Button buttonAgregarAlta;
         public System.Windows.Forms.Button buttonCerrarAlta;
-        private System.Windows.Forms.Label labelUser;
-        private System.Windows.Forms.Label labelPasswd;
+        public System.Windows.Forms.Label labelUser;
+        public System.Windows.Forms.Label labelPasswd;
         public System.Windows.Forms.TextBox AltaTextBoxUserPasswd;
-        private System.Windows.Forms.Label labelLastName;
+        public System.Windows.Forms.Label labelLastName;
         public System.Windows.Forms.TextBox AltaTextBoxUserDni;
         public System.Windows.Forms.TextBox AltaTextBoxUserSureName;
         public System.Windows.Forms.TextBox AltaTextBoxUserName;
         public System.Windows.Forms.ComboBox AltaUserComboBox;
-        private System.Windows.Forms.Label labelDni;
-        private System.Windows.Forms.Label labelName;
+        public System.Windows.Forms.Label labelDni;
+        public System.Windows.Forms.Label labelName;
         public System.Windows.Forms.GroupBox groupBoxGeneral;
-        public System.Windows.Forms.Button buttonAgregarRA;
+        public System.Windows.Forms.Button buttonAgregarRa;
+        public System.Windows.Forms.ComboBox comboBoxRegularRa;
+        public System.Windows.Forms.ComboBox comboBoxMateriasRa;
+        public System.Windows.Forms.ComboBox comboBoxAlumnosRa;
+        public System.Windows.Forms.GroupBox groupBoxAm;
+        public System.Windows.Forms.Button buttonCerrarAm;
+        public System.Windows.Forms.Button buttonAgregarAm;
+        public System.Windows.Forms.TextBox textBoxNombreAm;
+        public System.Windows.Forms.GroupBox groupBoxLinkAm;
+        public System.Windows.Forms.LinkLabel linkLabelAm2;
+        public System.Windows.Forms.Label labelNombreMateriaAm;
+        public System.Windows.Forms.ComboBox comboBoxSeleccionarMateriaAm;
     }
 }
