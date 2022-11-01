@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Luciano Miralles\\.nuget\\packages\\": {}
+    "C:\\Users\\MCvitani\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Materias\\Materias.csproj",
+      "projectUniqueName": "C:\\Users\\MCvitani\\Desktop\\Pro\\tps_laboratorio_ii-main\\TP1\\Materias\\Materias.csproj",
       "projectName": "Materias",
-      "projectPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Materias\\Materias.csproj",
-      "packagesPath": "C:\\Users\\Luciano Miralles\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Materias\\obj\\",
+      "projectPath": "C:\\Users\\MCvitani\\Desktop\\Pro\\tps_laboratorio_ii-main\\TP1\\Materias\\Materias.csproj",
+      "packagesPath": "C:\\Users\\MCvitani\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MCvitani\\Desktop\\Pro\\tps_laboratorio_ii-main\\TP1\\Materias\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Luciano Miralles\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MCvitani\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

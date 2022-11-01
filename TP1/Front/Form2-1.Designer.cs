@@ -28,110 +28,110 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBoxAm = new System.Windows.Forms.GroupBox();
-            this.groupBoxLinkAm = new System.Windows.Forms.GroupBox();
-            this.linkLabelAm = new System.Windows.Forms.LinkLabel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.buttonAgregarAm = new System.Windows.Forms.Button();
-            this.buttonCerrarAm = new System.Windows.Forms.Button();
-            this.groupBoxAm.SuspendLayout();
-            this.groupBoxLinkAm.SuspendLayout();
+            this.groupBoxAp = new System.Windows.Forms.GroupBox();
+            this.buttonCerrarAp = new System.Windows.Forms.Button();
+            this.buttonAgregarAp = new System.Windows.Forms.Button();
+            this.comboBoxSeleccionarMateriaAp = new System.Windows.Forms.ComboBox();
+            this.groupBoxLinkAp = new System.Windows.Forms.GroupBox();
+            this.linkLabelAp = new System.Windows.Forms.LinkLabel();
+            this.comboBoxSeleccionarProfesorAp = new System.Windows.Forms.ComboBox();
+            this.groupBoxAp.SuspendLayout();
+            this.groupBoxLinkAp.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBoxAm
+            // groupBoxAp
             // 
-            this.groupBoxAm.Controls.Add(this.buttonCerrarAm);
-            this.groupBoxAm.Controls.Add(this.buttonAgregarAm);
-            this.groupBoxAm.Controls.Add(this.comboBox1);
-            this.groupBoxAm.Controls.Add(this.textBox1);
-            this.groupBoxAm.Location = new System.Drawing.Point(467, 82);
-            this.groupBoxAm.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.groupBoxAm.Name = "groupBoxAm";
-            this.groupBoxAm.Size = new System.Drawing.Size(256, 300);
-            this.groupBoxAm.TabIndex = 20;
-            this.groupBoxAm.TabStop = false;
-            this.groupBoxAm.Visible = false;
+            this.groupBoxAp.Controls.Add(this.comboBoxSeleccionarProfesorAp);
+            this.groupBoxAp.Controls.Add(this.buttonCerrarAp);
+            this.groupBoxAp.Controls.Add(this.buttonAgregarAp);
+            this.groupBoxAp.Controls.Add(this.comboBoxSeleccionarMateriaAp);
+            this.groupBoxAp.Location = new System.Drawing.Point(467, 82);
+            this.groupBoxAp.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.groupBoxAp.Name = "groupBoxAp";
+            this.groupBoxAp.Size = new System.Drawing.Size(256, 300);
+            this.groupBoxAp.TabIndex = 20;
+            this.groupBoxAp.TabStop = false;
+            this.groupBoxAp.Visible = false;
             // 
-            // groupBoxLinkAm
+            // buttonCerrarAp
             // 
-            this.groupBoxLinkAm.Controls.Add(this.linkLabelAm);
-            this.groupBoxLinkAm.Location = new System.Drawing.Point(145, 143);
-            this.groupBoxLinkAm.Name = "groupBoxLinkAm";
-            this.groupBoxLinkAm.Size = new System.Drawing.Size(220, 91);
-            this.groupBoxLinkAm.TabIndex = 22;
-            this.groupBoxLinkAm.TabStop = false;
-            this.groupBoxLinkAm.Visible = false;
+            this.buttonCerrarAp.Location = new System.Drawing.Point(175, 260);
+            this.buttonCerrarAp.Name = "buttonCerrarAp";
+            this.buttonCerrarAp.Size = new System.Drawing.Size(75, 23);
+            this.buttonCerrarAp.TabIndex = 3;
+            this.buttonCerrarAp.Text = "Cerrar";
+            this.buttonCerrarAp.UseVisualStyleBackColor = true;
             // 
-            // linkLabelAm
+            // buttonAgregarAp
             // 
-            this.linkLabelAm.AutoSize = true;
-            this.linkLabelAm.Location = new System.Drawing.Point(6, 22);
-            this.linkLabelAm.Name = "linkLabelAm";
-            this.linkLabelAm.Size = new System.Drawing.Size(76, 15);
-            this.linkLabelAm.TabIndex = 21;
-            this.linkLabelAm.TabStop = true;
-            this.linkLabelAm.Text = "Alta materias";
-            this.linkLabelAm.Visible = false;
+            this.buttonAgregarAp.Location = new System.Drawing.Point(19, 260);
+            this.buttonAgregarAp.Name = "buttonAgregarAp";
+            this.buttonAgregarAp.Size = new System.Drawing.Size(75, 23);
+            this.buttonAgregarAp.TabIndex = 2;
+            this.buttonAgregarAp.Text = "Agregar";
+            this.buttonAgregarAp.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // comboBoxSeleccionarMateriaAp
             // 
-            this.textBox1.Location = new System.Drawing.Point(74, 83);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 23);
-            this.textBox1.TabIndex = 0;
+            this.comboBoxSeleccionarMateriaAp.FormattingEnabled = true;
+            this.comboBoxSeleccionarMateriaAp.Location = new System.Drawing.Point(74, 163);
+            this.comboBoxSeleccionarMateriaAp.Name = "comboBoxSeleccionarMateriaAp";
+            this.comboBoxSeleccionarMateriaAp.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxSeleccionarMateriaAp.TabIndex = 1;
             // 
-            // comboBox1
+            // groupBoxLinkAp
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(74, 163);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 1;
+            this.groupBoxLinkAp.Controls.Add(this.linkLabelAp);
+            this.groupBoxLinkAp.Location = new System.Drawing.Point(145, 143);
+            this.groupBoxLinkAp.Name = "groupBoxLinkAp";
+            this.groupBoxLinkAp.Size = new System.Drawing.Size(220, 91);
+            this.groupBoxLinkAp.TabIndex = 22;
+            this.groupBoxLinkAp.TabStop = false;
+            this.groupBoxLinkAp.Visible = false;
             // 
-            // buttonAgregarAm
+            // linkLabelAp
             // 
-            this.buttonAgregarAm.Location = new System.Drawing.Point(19, 260);
-            this.buttonAgregarAm.Name = "buttonAgregarAm";
-            this.buttonAgregarAm.Size = new System.Drawing.Size(75, 23);
-            this.buttonAgregarAm.TabIndex = 2;
-            this.buttonAgregarAm.Text = "Agregar";
-            this.buttonAgregarAm.UseVisualStyleBackColor = true;
+            this.linkLabelAp.AutoSize = true;
+            this.linkLabelAp.Location = new System.Drawing.Point(6, 22);
+            this.linkLabelAp.Name = "linkLabelAp";
+            this.linkLabelAp.Size = new System.Drawing.Size(113, 15);
+            this.linkLabelAp.TabIndex = 21;
+            this.linkLabelAp.TabStop = true;
+            this.linkLabelAp.Text = "Asignacion profesor";
+            this.linkLabelAp.Visible = false;
             // 
-            // buttonCerrarAm
+            // comboBoxSeleccionarProfesorAp
             // 
-            this.buttonCerrarAm.Location = new System.Drawing.Point(175, 260);
-            this.buttonCerrarAm.Name = "buttonCerrarAm";
-            this.buttonCerrarAm.Size = new System.Drawing.Size(75, 23);
-            this.buttonCerrarAm.TabIndex = 3;
-            this.buttonCerrarAm.Text = "Cerrar";
-            this.buttonCerrarAm.UseVisualStyleBackColor = true;
+            this.comboBoxSeleccionarProfesorAp.FormattingEnabled = true;
+            this.comboBoxSeleccionarProfesorAp.Location = new System.Drawing.Point(74, 83);
+            this.comboBoxSeleccionarProfesorAp.Name = "comboBoxSeleccionarProfesorAp";
+            this.comboBoxSeleccionarProfesorAp.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxSeleccionarProfesorAp.TabIndex = 4;
             // 
             // Form2_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBoxLinkAm);
-            this.Controls.Add(this.groupBoxAm);
+            this.Controls.Add(this.groupBoxLinkAp);
+            this.Controls.Add(this.groupBoxAp);
             this.Name = "Form2_1";
             this.Text = "Form2_1";
-            this.groupBoxAm.ResumeLayout(false);
-            this.groupBoxAm.PerformLayout();
-            this.groupBoxLinkAm.ResumeLayout(false);
-            this.groupBoxLinkAm.PerformLayout();
+            this.groupBoxAp.ResumeLayout(false);
+            this.groupBoxLinkAp.ResumeLayout(false);
+            this.groupBoxLinkAp.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        public System.Windows.Forms.GroupBox groupBoxAm;
-        public System.Windows.Forms.GroupBox groupBoxLinkAm;
-        public System.Windows.Forms.LinkLabel linkLabelAm;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button buttonCerrarAm;
-        private System.Windows.Forms.Button buttonAgregarAm;
+        public System.Windows.Forms.GroupBox groupBoxAp;
+        public System.Windows.Forms.GroupBox groupBoxLinkAp;
+        public System.Windows.Forms.LinkLabel linkLabelAp;
+        private System.Windows.Forms.Button buttonCerrarAp;
+        private System.Windows.Forms.Button buttonAgregarAp;
+        public System.Windows.Forms.ComboBox comboBoxSeleccionarProfesorAp;
+        public System.Windows.Forms.ComboBox comboBoxSeleccionarMateriaAp;
     }
 }
