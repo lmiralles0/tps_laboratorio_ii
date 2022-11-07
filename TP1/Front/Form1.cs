@@ -26,8 +26,7 @@ namespace Front
             {
                 Admin ad = new Admin(37882165, "Luciano", "Miralles");
                 ad.Passwd = "123";
-                ad.AddUsuario(administradores, ad);
-;                
+                ad.AddUsuario(administradores, ad);                
                 ad = ad.LookUp(administradores, int.Parse(txtBoxDNI.Text), txtBoxPasswd.Text);
                 
                 if(ad != null)

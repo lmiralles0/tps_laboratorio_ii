@@ -152,5 +152,43 @@ namespace Front
 
         }
 
+        private void linkLabelAp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.linkLabelRa.Visible = false;
+            this.linkLabelAu.Visible = false;
+            this.linkLabelAp.Visible = false;
+            this.linkLabelAm.Visible = false;
+            this.groupBoxAp.Visible = true;
+            this.groupBoxLinkAp.Visible = true;
+            this.linkLabelAp2.Visible = true;
+            this.buttonAgregarAp.Visible = true;
+            this.buttonCerrarAp.Visible = true;
+            this.comboBoxMateriasAp.Visible = true;
+            this.comboBoxProfesorAp.Visible = true;
+
+
+        }
+
+        private void buttonCerrarAp_Click(object sender, EventArgs e)
+        {
+            this.linkLabelRa.Visible = true;
+            this.linkLabelAu.Visible = true;
+            this.linkLabelAp.Visible = true;
+            this.linkLabelAm.Visible = true;
+            this.groupBoxAp.Visible = false;
+            this.groupBoxLinkAp.Visible = false;
+            this.linkLabelAp2.Visible = false;
+            this.buttonAgregarAp.Visible = false;
+            this.buttonCerrarAp.Visible = false;
+            this.comboBoxMateriasAp.Visible = false;
+            this.comboBoxProfesorAp.Visible = false;
+
+        }
+
+        private void buttonAgregarAp_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
