@@ -524,7 +524,11 @@
             this.groupBoxLinkLabelRa.Controls.Add(this.linkLabelRa2);
             this.groupBoxLinkLabelRa.Location = new System.Drawing.Point(0, 71);
             this.groupBoxLinkLabelRa.Name = "groupBoxLinkLabelRa";
+<<<<<<< HEAD
             this.groupBoxLinkLabelRa.Size = new System.Drawing.Size(220, 93);
+=======
+            this.groupBoxLinkLabelRa.Size = new System.Drawing.Size(220, 81);
+>>>>>>> 7fe213bb3d217ab4d7a8c6fb13c610c29523f5f7
             this.groupBoxLinkLabelRa.TabIndex = 23;
             this.groupBoxLinkLabelRa.TabStop = false;
             this.groupBoxLinkLabelRa.Text = " ";
@@ -600,7 +604,11 @@
             // linkLabelAm2
             // 
             this.linkLabelAm2.AutoSize = true;
+<<<<<<< HEAD
             this.linkLabelAm2.Location = new System.Drawing.Point(5, 29);
+=======
+            this.linkLabelAm2.Location = new System.Drawing.Point(6, 29);
+>>>>>>> 7fe213bb3d217ab4d7a8c6fb13c610c29523f5f7
             this.linkLabelAm2.Name = "linkLabelAm2";
             this.linkLabelAm2.Size = new System.Drawing.Size(76, 15);
             this.linkLabelAm2.TabIndex = 21;
