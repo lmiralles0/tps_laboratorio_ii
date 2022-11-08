@@ -14,15 +14,19 @@ namespace Front
     public partial class Ingreso : Form
     {
         public List<Admin> administradores;
+        public List<Alumno> alumnos;
+        public List<Profesor> profesores;
         public Ingreso()
         {
             InitializeComponent();
             administradores = new List<Admin>();
+            profesores = new List<Profesor>();
+            alumnos = new List<Alumno>();
         }
         
         private void Acceder_Click(object sender, EventArgs e)
         {
-            if (KindUser.Text == "Administrador" &&  !(string.IsNullOrEmpty(txtBoxDNI.Text)) && !(string.IsNullOrEmpty(txtBoxPasswd.Text)))
+            if(KindUser.Text == "Administrador" &&  !(string.IsNullOrEmpty(txtBoxDNI.Text)) && !(string.IsNullOrEmpty(txtBoxPasswd.Text)))
             {
                 Admin ad = new Admin(37882165, "Luciano", "Miralles");
                 ad.Passwd = "123";
@@ -40,19 +44,29 @@ namespace Front
                         this.KindUser.ResetText();
                         this.txtBoxDNI.Text = "";
                         this.txtBoxPasswd.Text = "";
-                        this.ShowDialog();
+                        this.Show();
                     }
                                         
-                    Close();
+                    
                 }
                 else
                 {
                     MessageBox.Show("Error", " holass", MessageBoxButtons.OK);
+                    this.KindUser.ResetText();
+                    this.txtBoxDNI.Text = "";
+                    this.txtBoxPasswd.Text = "";
                 }
             }
             else
             {
                 MessageBox.Show("Error", "Atencio", MessageBoxButtons.OKCancel);
+                this.KindUser.ResetText();
+                this.txtBoxDNI.Text = "";
+                this.txtBoxPasswd.Text = "";
+            }
+            if(KindUser.Text == "Alumno" && !(string.IsNullOrEmpty(txtBoxDNI.Text)) && !(string.IsNullOrEmpty(txtBoxPasswd.Text)))
+            {
+
             }
         }
     }

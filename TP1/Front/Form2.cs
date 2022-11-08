@@ -147,9 +147,15 @@ namespace Front
 
         }
 
-        private void buttonAgregarAm_Click(object sender, EventArgs e)
+        public void buttonAgregarAm_Click(object sender, EventArgs e)
         {
+            if((this.AltaUserComboBox.Text == "Administrativo" || this.AltaUserComboBox.Text == "Alumno" || this.AltaUserComboBox.Text == "Profesor") && !(string.IsNullOrEmpty(this.AltaTextBoxUserName.Text)) && !(string.IsNullOrEmpty(this.AltaTextBoxUserName.Text)) 
+                && !(string.IsNullOrEmpty(this.AltaTextBoxUserDni.Text))) 
+            {
+                
 
+
+            }
         }
 
         private void linkLabelAp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -187,7 +193,7 @@ namespace Front
 
         private void buttonAgregarAp_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         public void toolStripMenuItem3_Click(object sender, EventArgs e)

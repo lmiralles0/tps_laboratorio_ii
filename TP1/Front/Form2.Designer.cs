@@ -103,13 +103,13 @@
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(167, 22);
             this.toolStripMenuItem2.Text = "Modificar usuario";
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(167, 22);
             this.toolStripMenuItem3.Text = "Cerrar sesion";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
@@ -323,7 +323,7 @@
             this.buttonCerrarAlta.Location = new System.Drawing.Point(158, 270);
             this.buttonCerrarAlta.Name = "buttonCerrarAlta";
             this.buttonCerrarAlta.Size = new System.Drawing.Size(86, 23);
-            this.buttonCerrarAlta.TabIndex = 19;
+            this.buttonCerrarAlta.TabIndex = 8;
             this.buttonCerrarAlta.Text = "Cerrar";
             this.buttonCerrarAlta.UseVisualStyleBackColor = true;
             this.buttonCerrarAlta.Visible = false;
@@ -433,7 +433,7 @@
             this.buttonAgregarAlta.Location = new System.Drawing.Point(6, 270);
             this.buttonAgregarAlta.Name = "buttonAgregarAlta";
             this.buttonAgregarAlta.Size = new System.Drawing.Size(91, 23);
-            this.buttonAgregarAlta.TabIndex = 20;
+            this.buttonAgregarAlta.TabIndex = 7;
             this.buttonAgregarAlta.Text = "Agregar ";
             this.buttonAgregarAlta.UseVisualStyleBackColor = true;
             this.buttonAgregarAlta.Visible = false;
@@ -444,6 +444,7 @@
             this.groupBoxLinkLabelAltaU.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxLinkLabelAltaU.Controls.Add(this.groupBoxAp);
             this.groupBoxLinkLabelAltaU.Controls.Add(this.linkLabelAu2);
             this.groupBoxLinkLabelAltaU.Location = new System.Drawing.Point(0, 0);
             this.groupBoxLinkLabelAltaU.Name = "groupBoxLinkLabelAltaU";
@@ -547,10 +548,11 @@
             this.groupBoxGeneral.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxGeneral.Controls.Add(this.groupBoxAp);
             this.groupBoxGeneral.Controls.Add(this.groupBoxAlta);
             this.groupBoxGeneral.Controls.Add(this.groupBoxAm);
             this.groupBoxGeneral.Controls.Add(this.groupBoxRa);
+            this.groupBoxGeneral.Controls.Add(this.groupBoxAp);
+            this.groupBoxGeneral.Controls.Add(this.groupBoxLinkAm);
             this.groupBoxGeneral.Controls.Add(this.groupBoxLinkAp);
             this.groupBoxGeneral.Controls.Add(this.groupBoxLinkLabelAltaU);
             this.groupBoxGeneral.Controls.Add(this.groupBoxLinkLabelRa);
