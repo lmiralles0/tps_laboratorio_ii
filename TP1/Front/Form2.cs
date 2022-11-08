@@ -190,5 +190,9 @@ namespace Front
 
         }
 
+        public void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

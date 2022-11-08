@@ -71,10 +71,10 @@
             this.groupBoxLinkLabelRa = new System.Windows.Forms.GroupBox();
             this.linkLabelRa2 = new System.Windows.Forms.LinkLabel();
             this.groupBoxGeneral = new System.Windows.Forms.GroupBox();
-            this.groupBoxLinkAp = new System.Windows.Forms.GroupBox();
-            this.linkLabelAp2 = new System.Windows.Forms.LinkLabel();
             this.groupBoxLinkAm = new System.Windows.Forms.GroupBox();
             this.linkLabelAm2 = new System.Windows.Forms.LinkLabel();
+            this.groupBoxLinkAp = new System.Windows.Forms.GroupBox();
+            this.linkLabelAp2 = new System.Windows.Forms.LinkLabel();
             this.menuStrip1.SuspendLayout();
             this.groupBoxRa.SuspendLayout();
             this.groupBoxAm.SuspendLayout();
@@ -83,8 +83,8 @@
             this.groupBoxAp.SuspendLayout();
             this.groupBoxLinkLabelRa.SuspendLayout();
             this.groupBoxGeneral.SuspendLayout();
-            this.groupBoxLinkAp.SuspendLayout();
             this.groupBoxLinkAm.SuspendLayout();
+            this.groupBoxLinkAp.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripMenuItem1
@@ -103,14 +103,15 @@
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(167, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem2.Text = "Modificar usuario";
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(167, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem3.Text = "Cerrar sesion";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // menuStrip1
             // 
@@ -524,8 +525,7 @@
             this.groupBoxLinkLabelRa.Controls.Add(this.linkLabelRa2);
             this.groupBoxLinkLabelRa.Location = new System.Drawing.Point(0, 71);
             this.groupBoxLinkLabelRa.Name = "groupBoxLinkLabelRa";
-            this.groupBoxLinkLabelRa.Size = new System.Drawing.Size(220, 93);
-            this.groupBoxLinkLabelRa.Size = new System.Drawing.Size(220, 81);
+            this.groupBoxLinkLabelRa.Size = new System.Drawing.Size(220, 94);
             this.groupBoxLinkLabelRa.TabIndex = 23;
             this.groupBoxLinkLabelRa.TabStop = false;
             this.groupBoxLinkLabelRa.Text = " ";
@@ -564,6 +564,30 @@
             this.groupBoxGeneral.TabIndex = 5;
             this.groupBoxGeneral.TabStop = false;
             // 
+            // groupBoxLinkAm
+            // 
+            this.groupBoxLinkAm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxLinkAm.Controls.Add(this.linkLabelAm2);
+            this.groupBoxLinkAm.Location = new System.Drawing.Point(91, 183);
+            this.groupBoxLinkAm.Name = "groupBoxLinkAm";
+            this.groupBoxLinkAm.Size = new System.Drawing.Size(220, 78);
+            this.groupBoxLinkAm.TabIndex = 23;
+            this.groupBoxLinkAm.TabStop = false;
+            this.groupBoxLinkAm.Visible = false;
+            // 
+            // linkLabelAm2
+            // 
+            this.linkLabelAm2.AutoSize = true;
+            this.linkLabelAm2.Location = new System.Drawing.Point(6, 29);
+            this.linkLabelAm2.Name = "linkLabelAm2";
+            this.linkLabelAm2.Size = new System.Drawing.Size(76, 15);
+            this.linkLabelAm2.TabIndex = 21;
+            this.linkLabelAm2.TabStop = true;
+            this.linkLabelAm2.Text = "Alta materias";
+            this.linkLabelAm2.Visible = false;
+            // 
             // groupBoxLinkAp
             // 
             this.groupBoxLinkAp.Controls.Add(this.linkLabelAp2);
@@ -584,31 +608,6 @@
             this.linkLabelAp2.TabStop = true;
             this.linkLabelAp2.Text = "Asignacion profesores";
             this.linkLabelAp2.Visible = false;
-            // 
-            // groupBoxLinkAm
-            // 
-            this.groupBoxLinkAm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxLinkAm.Controls.Add(this.linkLabelAm2);
-            this.groupBoxLinkAm.Location = new System.Drawing.Point(91, 183);
-            this.groupBoxLinkAm.Name = "groupBoxLinkAm";
-            this.groupBoxLinkAm.Size = new System.Drawing.Size(220, 78);
-            this.groupBoxLinkAm.TabIndex = 23;
-            this.groupBoxLinkAm.TabStop = false;
-            this.groupBoxLinkAm.Visible = false;
-            // 
-            // linkLabelAm2
-            // 
-            this.linkLabelAm2.AutoSize = true;
-            this.linkLabelAm2.Location = new System.Drawing.Point(5, 29);
-            this.linkLabelAm2.Location = new System.Drawing.Point(6, 29);
-            this.linkLabelAm2.Name = "linkLabelAm2";
-            this.linkLabelAm2.Size = new System.Drawing.Size(76, 15);
-            this.linkLabelAm2.TabIndex = 21;
-            this.linkLabelAm2.TabStop = true;
-            this.linkLabelAm2.Text = "Alta materias";
-            this.linkLabelAm2.Visible = false;
             // 
             // Form2
             // 
@@ -637,10 +636,10 @@
             this.groupBoxLinkLabelRa.PerformLayout();
             this.groupBoxGeneral.ResumeLayout(false);
             this.groupBoxGeneral.PerformLayout();
-            this.groupBoxLinkAp.ResumeLayout(false);
-            this.groupBoxLinkAp.PerformLayout();
             this.groupBoxLinkAm.ResumeLayout(false);
             this.groupBoxLinkAm.PerformLayout();
+            this.groupBoxLinkAp.ResumeLayout(false);
+            this.groupBoxLinkAp.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

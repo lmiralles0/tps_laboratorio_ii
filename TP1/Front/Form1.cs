@@ -35,6 +35,14 @@ namespace Front
                     Form2 form2 = new Form2();
                     form2.toolStripMenuItem1.Text = ($"{ad.Apellido}  {ad.Nombre}");
                     form2.ShowDialog();
+                    if(form2.Validate())
+                    {
+                        this.KindUser.ResetText();
+                        this.txtBoxDNI.Text = "";
+                        this.txtBoxPasswd.Text = "";
+                        this.ShowDialog();
+                    }
+                                        
                     Close();
                 }
                 else
