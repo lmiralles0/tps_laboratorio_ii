@@ -8,7 +8,11 @@ namespace Persona
 {
     public sealed class Profesor : Persona
     {
-        internal Profesor(int dni, string nombre, string apellido) : base()
+        public Profesor(): base()
+        {
+
+        }
+        public Profesor(int dni, string nombre, string apellido) : base()
         {
             if (dni > 999999 && !(string.IsNullOrEmpty(nombre)) && !(string.IsNullOrEmpty(apellido)))
             {

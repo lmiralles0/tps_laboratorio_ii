@@ -23,31 +23,39 @@ namespace Front
             profesores = new List<Profesor>();
             alumnos = new List<Alumno>();
         }
+
         
         private void Acceder_Click(object sender, EventArgs e)
         {
             if(KindUser.Text == "Administrador" &&  !(string.IsNullOrEmpty(txtBoxDNI.Text)) && !(string.IsNullOrEmpty(txtBoxPasswd.Text)))
             {
+                
                 Admin ad = new Admin(37882165, "Luciano", "Miralles");
                 ad.Passwd = "123";
                 ad.AddUsuario(administradores, ad);                
                 ad = ad.LookUp(administradores, int.Parse(txtBoxDNI.Text), txtBoxPasswd.Text);
-                
-                if(ad != null)
+
+                if (ad != null)
                 {
                     Hide();
                     Form2 form2 = new Form2();
                     form2.toolStripMenuItem1.Text = ($"{ad.Apellido}  {ad.Nombre}");
                     form2.ShowDialog();
+                    if(form2.buttonAgregarAlta.DialogResult == DialogResult.OK)
+                    {
+                        MessageBox.Show("entramos");
+                        Admin aux = new Admin(int.Parse(form2.AltaTextBoxUserDni.Text), form2.AltaTextBoxUserName.Text, form2.AltaTextBoxUserSureName.Text);
+                        aux.Passwd = form2.AltaTextBoxUserPasswd.Text;
+                        aux.AddUsuario(administradores, aux);
+                    }
+                    
                     if(form2.Validate())
                     {
                         this.KindUser.ResetText();
                         this.txtBoxDNI.Text = "";
                         this.txtBoxPasswd.Text = "";
-                        this.Show();
+                        this.Show();   
                     }
-                                        
-                    
                 }
                 else
                 {

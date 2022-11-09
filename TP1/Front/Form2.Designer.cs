@@ -353,6 +353,7 @@
             // 
             this.AltaTextBoxUserPasswd.Location = new System.Drawing.Point(102, 228);
             this.AltaTextBoxUserPasswd.Name = "AltaTextBoxUserPasswd";
+            this.AltaTextBoxUserPasswd.PasswordChar = '*';
             this.AltaTextBoxUserPasswd.Size = new System.Drawing.Size(136, 23);
             this.AltaTextBoxUserPasswd.TabIndex = 6;
             this.AltaTextBoxUserPasswd.Visible = false;
@@ -394,13 +395,13 @@
             // AltaUserComboBox
             // 
             this.AltaUserComboBox.AutoCompleteCustomSource.AddRange(new string[] {
-            "Adminitrativo ",
+            "Administrativo ",
             "Alumno ",
             "Profesor"});
             this.AltaUserComboBox.FormattingEnabled = true;
             this.AltaUserComboBox.Items.AddRange(new object[] {
-            "Adminitrativo ",
-            "Alumno ",
+            "Administrativo",
+            "Alumno",
             "Profesor"});
             this.AltaUserComboBox.Location = new System.Drawing.Point(102, 31);
             this.AltaUserComboBox.Name = "AltaUserComboBox";
@@ -444,7 +445,6 @@
             this.groupBoxLinkLabelAltaU.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxLinkLabelAltaU.Controls.Add(this.groupBoxAp);
             this.groupBoxLinkLabelAltaU.Controls.Add(this.linkLabelAu2);
             this.groupBoxLinkLabelAltaU.Location = new System.Drawing.Point(0, 0);
             this.groupBoxLinkLabelAltaU.Name = "groupBoxLinkLabelAltaU";

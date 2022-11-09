@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,11 +21,12 @@ namespace Front
             InitializeComponent();
 
         }
-
+ 
         private void toolStripMenuItem1_MouseHover(object sender, EventArgs e)
         {
             this.toolStripMenuItem1.ShowDropDown() ;
         }
+
         private void linkLabelAu_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.groupBoxLinkLabelAltaU.Visible = true;
@@ -48,7 +50,7 @@ namespace Front
             this.buttonAgregarAlta.Visible = true;
         }
 
-        private void buttonCerrarAlta_Click(object sender, EventArgs e)
+        public void buttonCerrarAlta_Click(object sender, EventArgs e)
         {
             this.groupBoxLinkLabelAltaU.Visible = false;
             this.groupBoxAlta.Visible = false;
@@ -70,9 +72,25 @@ namespace Front
             this.buttonAgregarAlta.Visible = false;
 
         }
-        private void buttonAgregarAlta_Click(object sender, EventArgs e)
-        {
 
+        
+
+        public void buttonAgregarAlta_Click(object sender, EventArgs e)
+        {
+            
+            if ((this.AltaUserComboBox.Text == "Administrativo" || this.AltaUserComboBox.Text == "Alumno" || this.AltaUserComboBox.Text == "Profesor") &&
+                !(string.IsNullOrEmpty(this.AltaTextBoxUserName.Text)) && !(string.IsNullOrEmpty(this.AltaTextBoxUserSureName.Text))
+                && !(string.IsNullOrEmpty(this.AltaTextBoxUserDni.Text)))
+            {
+                buttonAgregarAlta.DialogResult = DialogResult.OK;
+                MessageBox.Show("Ok");
+                InvokeOnClick(buttonCerrarAlta, e);
+            }
+            else
+            {
+                MessageBox.Show("No");
+                InvokeOnClick(buttonCerrarAlta, e);
+            }
         }
 
         private void linkLabelRa_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -109,9 +127,9 @@ namespace Front
 
         }
 
-        private void buttonAgregarRa_Click(object sender, EventArgs e)
+        public void buttonAgregarRa_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void linkLabelAm_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -149,13 +167,7 @@ namespace Front
 
         public void buttonAgregarAm_Click(object sender, EventArgs e)
         {
-            if((this.AltaUserComboBox.Text == "Administrativo" || this.AltaUserComboBox.Text == "Alumno" || this.AltaUserComboBox.Text == "Profesor") && !(string.IsNullOrEmpty(this.AltaTextBoxUserName.Text)) && !(string.IsNullOrEmpty(this.AltaTextBoxUserName.Text)) 
-                && !(string.IsNullOrEmpty(this.AltaTextBoxUserDni.Text))) 
-            {
-                
-
-
-            }
+            
         }
 
         private void linkLabelAp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
