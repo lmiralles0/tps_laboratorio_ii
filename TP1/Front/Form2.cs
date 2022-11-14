@@ -9,18 +9,27 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
 
 namespace Front
 {
     public partial class Form2 : Form
     {
- 
-        public Form2()
+        public List<Admin> administradores;
+        public List<Alumno> alumnos;
+        public List<Profesor> profesores;
+        public Form2(List<Admin> admins, List<Alumno> alumn, List<Profesor> profes)
         {
+            administradores = new List<Admin>();
+            alumnos = new List<Alumno>();
+            profesores = new List<Profesor>();
+            administradores = admins;
+            alumnos = alumn;
+            profesores = profes;
             InitializeComponent();
+        } 
 
-        }
- 
+
         private void toolStripMenuItem1_MouseHover(object sender, EventArgs e)
         {
             this.toolStripMenuItem1.ShowDropDown() ;
@@ -81,6 +90,8 @@ namespace Front
 
         public void buttonAgregarAlta_Click(object sender, EventArgs e)
         {
+
+
             if (this.AltaUserComboBox.Text.Length == 0 || this.AltaTextBoxUserSureName.Text.Length == 0 || this.AltaTextBoxUserName.Text.Length == 0
                 || this.AltaTextBoxUserDni.Text.Length == 0 || this.AltaTextBoxUserPasswd.Text.Length == 0)
             {
@@ -92,19 +103,59 @@ namespace Front
                 this.AltaTextBoxUserPasswd.ResetText();
             }
 
-            if ((this.AltaUserComboBox.Text == "Administrativo" || this.AltaUserComboBox.Text == "Alumno" || this.AltaUserComboBox.Text == "Profesor") &&
-                !(string.IsNullOrEmpty(this.AltaTextBoxUserName.Text)) && !(string.IsNullOrEmpty(this.AltaTextBoxUserSureName.Text))
+            if (this.AltaUserComboBox.Text == "Administrativo" & !(string.IsNullOrEmpty(this.AltaTextBoxUserName.Text)) && !(string.IsNullOrEmpty(this.AltaTextBoxUserSureName.Text))
                 && !(string.IsNullOrEmpty(this.AltaTextBoxUserDni.Text)))
             {
-                buttonAgregarAlta.DialogResult = DialogResult.OK;
+                Admin auxAdmin = new Admin(int.Parse(this.AltaTextBoxUserDni.Text), this.AltaTextBoxUserName.Text, this.AltaTextBoxUserSureName.Text);
+                auxAdmin.Passwd = this.AltaTextBoxUserPasswd.Text;
+                if(auxAdmin.AddUsuario(administradores, auxAdmin))
+                {
+                    buttonAgregarAlta.DialogResult = DialogResult.OK;
+                    MensajeExito();
+                    InvokeOnClick(buttonCerrarAlta, e);
+
+                }
+                else
+                {
+                    MensajeError();
+                    InvokeOnClick(buttonCerrarAlta, e);
+                }
                 
-                MensajeExito();
-                InvokeOnClick(buttonCerrarAlta, e);
             }
-            else
+            if(this.AltaUserComboBox.Text == "Alumno" && !(string.IsNullOrEmpty(this.AltaTextBoxUserName.Text)) && 
+              !(string.IsNullOrEmpty(this.AltaTextBoxUserSureName.Text)) && !(string.IsNullOrEmpty(this.AltaTextBoxUserDni.Text)))
             {
-                MensajeError();
-                InvokeOnClick(buttonCerrarAlta, e);
+                Alumno auxAlumno = new Alumno(int.Parse(this.AltaTextBoxUserDni.Text), this.AltaTextBoxUserName.Text, this.AltaTextBoxUserSureName.Text);
+                auxAlumno.Passwd = this.AltaTextBoxUserPasswd.Text;
+                if (auxAlumno.AddUsuario(alumnos, auxAlumno))
+                {
+                    buttonAgregarAlta.DialogResult = DialogResult.OK;
+                    MensajeExito();
+                    InvokeOnClick(buttonCerrarAlta, e);
+                }
+                else
+                {
+                    MensajeError();
+                    InvokeOnClick(buttonCerrarAlta, e);
+                }
+            }
+            if(this.AltaUserComboBox.Text == "Profesor" && !(string.IsNullOrEmpty(this.AltaTextBoxUserName.Text)) && 
+              !(string.IsNullOrEmpty(this.AltaTextBoxUserSureName.Text)) && !(string.IsNullOrEmpty(this.AltaTextBoxUserDni.Text)))
+            {
+                Profesor auxProfesor = new Profesor(int.Parse(this.AltaTextBoxUserDni.Text), this.AltaTextBoxUserName.Text, this.AltaTextBoxUserSureName.Text);
+                auxProfesor.Passwd = this.AltaTextBoxUserPasswd.Text;
+                if (auxProfesor.AddUsuario(profesores, auxProfesor))
+                {
+                    buttonAgregarAlta.DialogResult = DialogResult.OK;
+                    MensajeExito();
+                    InvokeOnClick(buttonCerrarAlta, e);
+
+                }
+                else
+                {
+                    MensajeError();
+                    InvokeOnClick(buttonCerrarAlta, e);
+                }
             }
         }
 
