@@ -26,5 +26,53 @@ namespace Persona
         public override string Nombre { get => nombre; }
         public override string Apellido { get => apellido; }
         public override string Passwd { get => passwd; set => this.passwd = value; }
+
+
+        public bool Contain(List<Profesor> p, Profesor op)
+        {
+            bool result = false;
+            if (p != null && op != null)
+            {
+                foreach (Profesor a in p)
+                {
+                    if (a.dni == op.dni)
+                    {
+                        result = true;
+                        break;
+                    }
+                }
+            }
+            return result;
+        }
+
+
+        public bool AddUsuario(List<Profesor> p, Profesor op)
+        {
+            bool result = false;
+            if (!(Contain(p, op)))
+            {
+                p.Add(op);
+                result = true;
+            }
+            return result;
+        }
+
+        public Profesor LookUp(List<Profesor> ad, int dni, string passwd)
+        {
+            Profesor result = null;
+            if (ad != null && dni > 999999 && !(string.IsNullOrWhiteSpace(passwd)))
+            {
+                foreach (Profesor a in ad)
+                {
+                    if (a.dni == dni && a.passwd == passwd)
+                    {
+                        result = a;
+                        break;
+                    }
+                }
+
+            }
+            return result;
+        }
     }
 }

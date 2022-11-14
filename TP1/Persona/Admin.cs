@@ -37,34 +37,30 @@ namespace Persona
                 this.passwd = value;
             }
         }
-        
 
-        public bool AddUsuario(List <Alumno> al, Alumno a)
+
+        public bool Contain(List<Admin> p, Admin op)
         {
             bool result = false;
-            if(al != null && !(al.Contains(a)))
+            if(p != null && op != null)
             {
-                al.Add(a);
-                result = true;   
+                foreach(Admin a in p) 
+                {
+                    if(a.dni == op.dni) 
+                    {
+                        result = true;
+                        break;
+                    }
+                }
             }
             return result;
         }
 
-        public bool AddUsuario(List<Profesor> la, Profesor pa)
-        {
-            bool result = false;
-            if(la != null && !(la.Contains(pa)))
-            {
-                la.Add(pa);
-                result = true;
-            }
-            return result;
-        }
 
         public bool AddUsuario(List<Admin> p, Admin op)
         {
             bool result = false;
-            if(p != null && !(p.Contains(op)))
+            if(!(Contain(p,op)))
             {
                 p.Add(op);
                 result = true;

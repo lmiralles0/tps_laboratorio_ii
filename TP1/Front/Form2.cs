@@ -9,7 +9,6 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Menu;
 
 namespace Front
 {
@@ -70,6 +69,11 @@ namespace Front
             this.linkLabelAp.Visible = true;
             this.buttonCerrarAlta.Visible = false;
             this.buttonAgregarAlta.Visible = false;
+            this.AltaUserComboBox.ResetText();
+            this.AltaTextBoxUserSureName.ResetText();
+            this.AltaTextBoxUserName.ResetText();
+            this.AltaTextBoxUserDni.ResetText();
+            this.AltaTextBoxUserPasswd.ResetText();
 
         }
 
@@ -77,18 +81,29 @@ namespace Front
 
         public void buttonAgregarAlta_Click(object sender, EventArgs e)
         {
-            
+            if (this.AltaUserComboBox.Text.Length == 0 || this.AltaTextBoxUserSureName.Text.Length == 0 || this.AltaTextBoxUserName.Text.Length == 0
+                || this.AltaTextBoxUserDni.Text.Length == 0 || this.AltaTextBoxUserPasswd.Text.Length == 0)
+            {
+                MessageBox.Show("Error, campos incompletos ", "Faltal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.AltaUserComboBox.ResetText();
+                this.AltaTextBoxUserSureName.ResetText();
+                this.AltaTextBoxUserName.ResetText();
+                this.AltaTextBoxUserDni.ResetText();
+                this.AltaTextBoxUserPasswd.ResetText();
+            }
+
             if ((this.AltaUserComboBox.Text == "Administrativo" || this.AltaUserComboBox.Text == "Alumno" || this.AltaUserComboBox.Text == "Profesor") &&
                 !(string.IsNullOrEmpty(this.AltaTextBoxUserName.Text)) && !(string.IsNullOrEmpty(this.AltaTextBoxUserSureName.Text))
                 && !(string.IsNullOrEmpty(this.AltaTextBoxUserDni.Text)))
             {
                 buttonAgregarAlta.DialogResult = DialogResult.OK;
-                MessageBox.Show("Ok");
+                
+                MensajeExito();
                 InvokeOnClick(buttonCerrarAlta, e);
             }
             else
             {
-                MessageBox.Show("No");
+                MensajeError();
                 InvokeOnClick(buttonCerrarAlta, e);
             }
         }
@@ -211,6 +226,16 @@ namespace Front
         public void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public void MensajeError()
+        {
+            MessageBox.Show("Error usuario ya registrado.", "ATENCION!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        public void MensajeExito()
+        {
+            MessageBox.Show("Alta exitosa.", "AVISO: ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     }
 }

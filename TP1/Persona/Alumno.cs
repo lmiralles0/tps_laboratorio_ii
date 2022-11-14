@@ -38,7 +38,56 @@ namespace Persona
             }
         }
 
-        
+
+        public bool Contain(List<Alumno> p, Alumno op)
+        {
+            bool result = false;
+            if (p != null && op != null)
+            {
+                foreach (Alumno a in p)
+                {
+                    if (a.dni == op.dni)
+                    {
+                        result = true;
+                        break;
+                    }
+                }
+            }
+            return result;
+        }
+
+
+        public bool AddUsuario(List<Alumno> p, Alumno op)
+        {
+            bool result = false;
+            if (!(Contain(p, op)))
+            {
+                p.Add(op);
+                result = true;
+            }
+            return result;
+        }
+
+
+        public Alumno LookUp(List<Alumno> ad, int dni, string passwd)
+        {
+            Alumno result = null;
+            if (ad != null && dni > 999999 && !(string.IsNullOrWhiteSpace(passwd)))
+            {
+                foreach (Alumno a in ad)
+                {
+                    if (a.dni == dni && a.passwd == passwd)
+                    {
+                        result = a;
+                        break;
+                    }
+                }
+
+            }
+            return result;
+        }
+
+
     }
 
 

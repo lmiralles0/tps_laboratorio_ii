@@ -27,7 +27,17 @@ namespace Front
         
         private void Acceder_Click(object sender, EventArgs e)
         {
-            if(KindUser.Text == "Administrador" &&  !(string.IsNullOrEmpty(txtBoxDNI.Text)) && !(string.IsNullOrEmpty(txtBoxPasswd.Text)))
+            if(this.KindUser.Text.Length == 0 || this.txtBoxPasswd.Text.Length == 0 || this.txtBoxDNI.Text.Length == 0)
+            {
+                MessageBox.Show("Error, campos incompletos ", "Faltal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.KindUser.ResetText();
+                this.txtBoxDNI.ResetText();
+                this.txtBoxPasswd.ResetText();
+            }
+
+
+            ///ADMIN 
+            if (KindUser.Text == "Administrador" &&  !(string.IsNullOrEmpty(txtBoxDNI.Text)) && !(string.IsNullOrEmpty(txtBoxPasswd.Text)))
             {
                 
                 Admin ad = new Admin(37882165, "Luciano", "Miralles");
@@ -41,40 +51,78 @@ namespace Front
                     Form2 form2 = new Form2();
                     form2.toolStripMenuItem1.Text = ($"{ad.Apellido}  {ad.Nombre}");
                     form2.ShowDialog();
-                    if(form2.buttonAgregarAlta.DialogResult == DialogResult.OK)
+                    
+                    if(form2.buttonAgregarAlta.DialogResult == DialogResult.OK && form2.AltaUserComboBox.Text == "Administrativo")
                     {
-                        MessageBox.Show("entramos");
                         Admin aux = new Admin(int.Parse(form2.AltaTextBoxUserDni.Text), form2.AltaTextBoxUserName.Text, form2.AltaTextBoxUserSureName.Text);
                         aux.Passwd = form2.AltaTextBoxUserPasswd.Text;
                         aux.AddUsuario(administradores, aux);
                     }
-                    
-                    if(form2.Validate())
+
+                    if (form2.buttonAgregarAlta.DialogResult == DialogResult.OK && form2.AltaUserComboBox.Text == "Alumno")
                     {
-                        this.KindUser.ResetText();
-                        this.txtBoxDNI.Text = "";
-                        this.txtBoxPasswd.Text = "";
+                        Alumno auxAlumnos = new Alumno(int.Parse(form2.AltaTextBoxUserDni.Text), form2.AltaTextBoxUserName.Text, form2.AltaTextBoxUserSureName.Text);
+                        auxAlumnos.Passwd = form2.AltaTextBoxUserPasswd.Text;
+                        auxAlumnos.AddUsuario(alumnos, auxAlumnos);
+                    }
+
+                    if (form2.buttonAgregarAlta.DialogResult == DialogResult.OK && form2.AltaUserComboBox.Text == "Profesor")
+                    {
+                        Profesor auxProfesor = new Profesor(int.Parse(form2.AltaTextBoxUserDni.Text), form2.AltaTextBoxUserName.Text, form2.AltaTextBoxUserSureName.Text);
+                        auxProfesor.Passwd = form2.AltaTextBoxUserPasswd.Text;
+                        auxProfesor.AddUsuario(profesores, auxProfesor);
+                    }
+
+
+                    if (form2.Validate())
+                    {
                         this.Show();   
+                        this.KindUser.ResetText();
+                        this.txtBoxDNI.ResetText();
+                        this.txtBoxPasswd.ResetText();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Error", " holass", MessageBoxButtons.OK);
-                    this.KindUser.ResetText();
-                    this.txtBoxDNI.Text = "";
-                    this.txtBoxPasswd.Text = "";
+                    DialogResult result;
+                    result = MessageBox.Show("Error usuario no logueado.", "ATENCION!!!", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                    if(result == System.Windows.Forms.DialogResult.Cancel)
+                    {
+                        this.KindUser.ResetText();
+                        this.txtBoxDNI.ResetText();
+                        this.txtBoxPasswd.ResetText();
+                    }
                 }
             }
-            else
-            {
-                MessageBox.Show("Error", "Atencio", MessageBoxButtons.OKCancel);
-                this.KindUser.ResetText();
-                this.txtBoxDNI.Text = "";
-                this.txtBoxPasswd.Text = "";
-            }
+
+            ///ALUMNO
             if(KindUser.Text == "Alumno" && !(string.IsNullOrEmpty(txtBoxDNI.Text)) && !(string.IsNullOrEmpty(txtBoxPasswd.Text)))
             {
+                Alumno aux = new Alumno();
+                aux.LookUp(alumnos, int.Parse(txtBoxDNI.Text), txtBoxPasswd.Text);
 
+                if (aux != null)
+                {
+                    Hide();
+                    Form2_1 form3 = new Form2_1();
+                    form3.ShowDialog();
+                    if (form3.Validate())
+                    {
+                        this.Show();
+                        this.KindUser.ResetText();
+                        this.txtBoxDNI.ResetText();
+                        this.txtBoxPasswd.ResetText();
+                    }
+
+                }
+
+                else
+                {
+                    MessageBox.Show("Error usuario no logeado", "ATENCION!!", MessageBoxButtons.RetryCancel);
+                    this.KindUser.ResetText();
+                    this.txtBoxDNI.ResetText();
+                    this.txtBoxPasswd.ResetText();
+                }
             }
         }
     }
