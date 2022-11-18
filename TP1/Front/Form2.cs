@@ -1,4 +1,5 @@
 ﻿using Persona;
+using Materias;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,21 +19,26 @@ namespace Front
         public List<Admin> administradores;
         public List<Alumno> alumnos;
         public List<Profesor> profesores;
-        public Form2(List<Admin> admins, List<Alumno> alumn, List<Profesor> profes)
+        public List<Materia> materias;
+
+
+        public Form2(List<Admin> admins, List<Alumno> alumn, List<Profesor> profes, List<Materia> mate)
         {
             administradores = new List<Admin>();
             alumnos = new List<Alumno>();
             profesores = new List<Profesor>();
+            materias = new List<Materia>();
             administradores = admins;
             alumnos = alumn;
             profesores = profes;
+            materias = mate;
             InitializeComponent();
-        } 
+        }
 
 
         private void toolStripMenuItem1_MouseHover(object sender, EventArgs e)
         {
-            this.toolStripMenuItem1.ShowDropDown() ;
+            this.toolStripMenuItem1.ShowDropDown();
         }
 
         private void linkLabelAu_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
@@ -86,11 +92,10 @@ namespace Front
 
         }
 
-        
+
 
         public void buttonAgregarAlta_Click(object sender, EventArgs e)
         {
-
 
             if (this.AltaUserComboBox.Text.Length == 0 || this.AltaTextBoxUserSureName.Text.Length == 0 || this.AltaTextBoxUserName.Text.Length == 0
                 || this.AltaTextBoxUserDni.Text.Length == 0 || this.AltaTextBoxUserPasswd.Text.Length == 0)
@@ -108,7 +113,7 @@ namespace Front
             {
                 Admin auxAdmin = new Admin(int.Parse(this.AltaTextBoxUserDni.Text), this.AltaTextBoxUserName.Text, this.AltaTextBoxUserSureName.Text);
                 auxAdmin.Passwd = this.AltaTextBoxUserPasswd.Text;
-                if(auxAdmin.AddUsuario(administradores, auxAdmin))
+                if (auxAdmin.AddUsuario(administradores, auxAdmin) && (!(Persona.Profesor.Contain(profesores, auxAdmin)) && !(Persona.Alumno.Contain(alumnos, auxAdmin))))
                 {
                     buttonAgregarAlta.DialogResult = DialogResult.OK;
                     MensajeExito();
@@ -120,14 +125,14 @@ namespace Front
                     MensajeError();
                     InvokeOnClick(buttonCerrarAlta, e);
                 }
-                
+
             }
-            if(this.AltaUserComboBox.Text == "Alumno" && !(string.IsNullOrEmpty(this.AltaTextBoxUserName.Text)) && 
+            if (this.AltaUserComboBox.Text == "Alumno" && !(string.IsNullOrEmpty(this.AltaTextBoxUserName.Text)) &&
               !(string.IsNullOrEmpty(this.AltaTextBoxUserSureName.Text)) && !(string.IsNullOrEmpty(this.AltaTextBoxUserDni.Text)))
             {
                 Alumno auxAlumno = new Alumno(int.Parse(this.AltaTextBoxUserDni.Text), this.AltaTextBoxUserName.Text, this.AltaTextBoxUserSureName.Text);
                 auxAlumno.Passwd = this.AltaTextBoxUserPasswd.Text;
-                if (auxAlumno.AddUsuario(alumnos, auxAlumno))
+                if (auxAlumno.AddUsuario(alumnos, auxAlumno) && (!(Persona.Profesor.Contain(profesores, auxAlumno)) && !(Persona.Admin.Contain(administradores, auxAlumno))))
                 {
                     buttonAgregarAlta.DialogResult = DialogResult.OK;
                     MensajeExito();
@@ -139,12 +144,12 @@ namespace Front
                     InvokeOnClick(buttonCerrarAlta, e);
                 }
             }
-            if(this.AltaUserComboBox.Text == "Profesor" && !(string.IsNullOrEmpty(this.AltaTextBoxUserName.Text)) && 
+            if (this.AltaUserComboBox.Text == "Profesor" && !(string.IsNullOrEmpty(this.AltaTextBoxUserName.Text)) &&
               !(string.IsNullOrEmpty(this.AltaTextBoxUserSureName.Text)) && !(string.IsNullOrEmpty(this.AltaTextBoxUserDni.Text)))
             {
                 Profesor auxProfesor = new Profesor(int.Parse(this.AltaTextBoxUserDni.Text), this.AltaTextBoxUserName.Text, this.AltaTextBoxUserSureName.Text);
                 auxProfesor.Passwd = this.AltaTextBoxUserPasswd.Text;
-                if (auxProfesor.AddUsuario(profesores, auxProfesor))
+                if (auxProfesor.AddUsuario(profesores, auxProfesor) && (!(Persona.Admin.Contain(administradores, auxProfesor)) && !(Persona.Alumno.Contain(alumnos, auxProfesor))))
                 {
                     buttonAgregarAlta.DialogResult = DialogResult.OK;
                     MensajeExito();
@@ -173,7 +178,9 @@ namespace Front
             this.comboBoxAlumnosRa.Visible = true;
             this.comboBoxMateriasRa.Visible = true;
             this.comboBoxRegularRa.Visible = true;
-            
+            this.labelRa.Visible = true;
+            this.comboBoxAlumnosRa.Text = "Seleccione alumno...";
+            this.comboBoxMateriasRa.Text = "Seleccione materia...";
         }
 
         private void buttonCerrarRa_Click(object sender, EventArgs e)
@@ -190,12 +197,12 @@ namespace Front
             this.comboBoxAlumnosRa.Visible = false;
             this.comboBoxMateriasRa.Visible = false;
             this.comboBoxRegularRa.Visible = false;
-
+            this.labelRa.Visible = true;
         }
 
         public void buttonAgregarRa_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void linkLabelAm_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -233,7 +240,7 @@ namespace Front
 
         public void buttonAgregarAm_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void linkLabelAp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -271,7 +278,7 @@ namespace Front
 
         private void buttonAgregarAp_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         public void toolStripMenuItem3_Click(object sender, EventArgs e)
@@ -281,12 +288,44 @@ namespace Front
 
         public void MensajeError()
         {
-            MessageBox.Show("Error usuario ya registrado.", "ATENCION!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("Error DNI ya registrado.", "ATENCION!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         public void MensajeExito()
         {
             MessageBox.Show("Alta exitosa.", "AVISO: ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
+        private void comboBoxAlumnosRa_Enter(object sender, EventArgs e)
+        {
+            
+            comboBoxAlumnosRa.ForeColor = Color.Black;
+            if (alumnos.Count > 0 && alumnos != null)
+            {
+                foreach (Alumno a in alumnos)
+                {
+                    alumnoBindingSource.Add(a);
+                }
+            }
+            comboBoxAlumnosRa.DataSource= alumnos;
+            
+            comboBoxMateriasRa.Enabled = true;
+
+        }
+
+        private void comboBoxMateriasRa_Enter(object sender, EventArgs e)
+        {
+            comboBoxMateriasRa.DataSource = materias;
+            comboBoxMateriasRa.ForeColor = Color.Black;
+            string aux = comboBoxAlumnosRa.Text;
+            foreach(Alumno a in alumnos)
+            {
+
+            }
+            foreach (Materia b in materias)
+            {
+                materiaBindingSource.Add(b);
+            }
         }
     }
 }

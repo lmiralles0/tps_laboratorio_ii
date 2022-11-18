@@ -1,13 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Persona
 {
+    
+
     public sealed class Alumno : Persona
     {
+        
         public Alumno(): base()
         {
 
@@ -17,6 +22,7 @@ namespace Persona
         {
             if (dni > 999999 && !(string.IsNullOrEmpty(nombre)) && !(string.IsNullOrEmpty(apellido)))
             {
+
                 this.dni = dni;
                 this.apellido = apellido;
                 this.nombre = nombre;
@@ -37,9 +43,25 @@ namespace Persona
                 this.passwd = value;
             }
         }
+        public string SelectedAlumno
+        {
+            get 
+            {
+                StringBuilder sb = new StringBuilder();
+                sb.Append(Dni.ToString());
+                sb.Append(" - ");   
+                sb.Append(Apellido);
+                sb.Append(" ");
+                sb.Append(Nombre);
+                return sb.ToString();
+            }
+        }
 
 
-        public bool Contain(List<Alumno> p, Alumno op)
+
+
+
+        public static bool Contain(List<Alumno> p, Persona op)
         {
             bool result = false;
             if (p != null && op != null)

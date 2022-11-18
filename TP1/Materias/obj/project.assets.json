@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "Persona/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Persona.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Persona.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Persona/1.0.0": {
+      "type": "project",
+      "path": "../Persona/Persona.csproj",
+      "msbuildProject": "../Persona/Persona.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "Persona >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Luciano Miralles\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Persona\\Persona.csproj": {
+              "projectPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Persona\\Persona.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -39,7 +39,7 @@ namespace Persona
         }
 
 
-        public bool Contain(List<Admin> p, Admin op)
+        public static bool Contain(List<Admin> p, Persona op)
         {
             bool result = false;
             if(p != null && op != null)

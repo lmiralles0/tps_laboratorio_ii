@@ -28,7 +28,7 @@ namespace Persona
         public override string Passwd { get => passwd; set => this.passwd = value; }
 
 
-        public bool Contain(List<Profesor> p, Profesor op)
+        public static bool Contain(List<Profesor> p, Persona op)
         {
             bool result = false;
             if (p != null && op != null)

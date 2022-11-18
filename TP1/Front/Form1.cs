@@ -1,4 +1,5 @@
 ﻿using Persona;
+using Materias;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Front
 {
@@ -16,12 +18,16 @@ namespace Front
         public List<Admin> administradores;
         public List<Alumno> alumnos;
         public List<Profesor> profesores;
+        public List<Materia> materias;   
+
         public Ingreso()
         {
             InitializeComponent();
             administradores = new List<Admin>();
             profesores = new List<Profesor>();
             alumnos = new List<Alumno>();
+            materias= new List<Materia>();
+            Harcodeo();
         }
 
         
@@ -37,18 +43,16 @@ namespace Front
 
 
             ///ADMIN 
-            if (KindUser.Text == "Administrador" &&  !(string.IsNullOrEmpty(txtBoxDNI.Text)) && !(string.IsNullOrEmpty(txtBoxPasswd.Text)))
+            if (KindUser.Text == "Administrador" && !(string.IsNullOrEmpty(txtBoxDNI.Text)) && !(string.IsNullOrEmpty(txtBoxPasswd.Text)))
             {
-                
-                Admin ad = new Admin(37882165, "Luciano", "Miralles");
-                ad.Passwd = "123";
-                ad.AddUsuario(administradores, ad);                
+
+                Admin ad = new Admin();           
                 ad = ad.LookUp(administradores, int.Parse(txtBoxDNI.Text), txtBoxPasswd.Text);
 
                 if (ad != null)
                 {
                     Hide();
-                    Form2 form2 = new Form2(this.administradores,this.alumnos, this.profesores);
+                    Form2 form2 = new Form2(this.administradores,this.alumnos, this.profesores, this.materias);
                     form2.toolStripMenuItem1.Text = ($"{ad.Apellido}  {ad.Nombre}");
                     form2.ShowDialog();
                     
@@ -66,6 +70,8 @@ namespace Front
                     {
                         profesores = form2.profesores;
                     }
+
+                    
 
 
                     if (form2.Validate())
@@ -92,14 +98,20 @@ namespace Front
             ///ALUMNO
             if(KindUser.Text == "Alumno" && !(string.IsNullOrEmpty(txtBoxDNI.Text)) && !(string.IsNullOrEmpty(txtBoxPasswd.Text)))
             {
+                
                 Alumno aux = new Alumno();
                 aux = aux.LookUp(alumnos, int.Parse(txtBoxDNI.Text), txtBoxPasswd.Text);
 
                 if(aux != null)
                 {
                     Hide();
-                    Form2_1 form3 = new Form2_1();
+                    Form2_1 form3 = new Form2_1(this.materias, this.alumnos);
                     form3.ShowDialog();
+                    
+                    
+                    
+                    
+                    
                     if (form3.Validate())
                     {
                         this.Show();
@@ -154,6 +166,36 @@ namespace Front
                     }
                 }
             }
+
+        }
+
+        public void Harcodeo()
+        {
+            Materia mat1 = new Materia("Matematica", 100);
+            Materia mat2 = new Materia("Programacion II", 115);
+            Materia mat3 = new Materia("Laboratorio II", 116);
+            Materia mat4 = new Materia("Programacion", 110, mat2);
+            Materia mat5 = new Materia("Laboratorio", 111, mat3);
+            Materia mat6 = new Materia("SPD", 109);
+
+            materias.Add(mat1);
+            materias.Add(mat2);
+            materias.Add(mat3);
+            materias.Add(mat4);
+            materias.Add(mat5);
+            materias.Add(mat6);
+
+            Alumno auxa = new Alumno(17042552, "Horacio", "Miralles");
+            auxa.Passwd = "456";
+            auxa.AddUsuario(alumnos, auxa);
+
+            Admin ad = new Admin(37882165, "Luciano", "Miralles");
+            ad.Passwd = "123";
+            ad.AddUsuario(administradores, ad);
+
+
+            mat1.alumnos.Add(auxa);
+           
 
         }
     }

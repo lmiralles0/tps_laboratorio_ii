@@ -46,3 +46,5 @@ C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-
 C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\ref\Front.dll
 C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\Front.Form2_1.resources
 C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Front\obj\Debug\net5.0-windows\Front.Form2_1.resources
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Materias.dll
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Materias.pdb

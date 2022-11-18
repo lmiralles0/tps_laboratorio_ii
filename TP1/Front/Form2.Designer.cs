@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,17 +38,14 @@
             this.linkLabelAp = new System.Windows.Forms.LinkLabel();
             this.linkLabelAu = new System.Windows.Forms.LinkLabel();
             this.groupBoxRa = new System.Windows.Forms.GroupBox();
+            this.labelRa = new System.Windows.Forms.Label();
             this.comboBoxMateriasRa = new System.Windows.Forms.ComboBox();
+            this.materiaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxRegularRa = new System.Windows.Forms.ComboBox();
             this.comboBoxAlumnosRa = new System.Windows.Forms.ComboBox();
             this.buttonAgregarRa = new System.Windows.Forms.Button();
             this.buttonCerrarRa = new System.Windows.Forms.Button();
-            this.groupBoxAm = new System.Windows.Forms.GroupBox();
-            this.comboBoxSeleccionarMateriaAm = new System.Windows.Forms.ComboBox();
-            this.labelNombreMateriaAm = new System.Windows.Forms.Label();
-            this.buttonCerrarAm = new System.Windows.Forms.Button();
-            this.buttonAgregarAm = new System.Windows.Forms.Button();
-            this.textBoxNombreAm = new System.Windows.Forms.TextBox();
+            this.alumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBoxAlta = new System.Windows.Forms.GroupBox();
             this.buttonCerrarAlta = new System.Windows.Forms.Button();
             this.labelUser = new System.Windows.Forms.Label();
@@ -61,6 +59,12 @@
             this.labelDni = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.buttonAgregarAlta = new System.Windows.Forms.Button();
+            this.groupBoxAm = new System.Windows.Forms.GroupBox();
+            this.comboBoxSeleccionarMateriaAm = new System.Windows.Forms.ComboBox();
+            this.labelNombreMateriaAm = new System.Windows.Forms.Label();
+            this.buttonCerrarAm = new System.Windows.Forms.Button();
+            this.buttonAgregarAm = new System.Windows.Forms.Button();
+            this.textBoxNombreAm = new System.Windows.Forms.TextBox();
             this.groupBoxLinkLabelAltaU = new System.Windows.Forms.GroupBox();
             this.linkLabelAu2 = new System.Windows.Forms.LinkLabel();
             this.groupBoxAp = new System.Windows.Forms.GroupBox();
@@ -77,8 +81,10 @@
             this.linkLabelAm2 = new System.Windows.Forms.LinkLabel();
             this.menuStrip1.SuspendLayout();
             this.groupBoxRa.SuspendLayout();
-            this.groupBoxAm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.materiaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource)).BeginInit();
             this.groupBoxAlta.SuspendLayout();
+            this.groupBoxAm.SuspendLayout();
             this.groupBoxLinkLabelAltaU.SuspendLayout();
             this.groupBoxAp.SuspendLayout();
             this.groupBoxLinkLabelRa.SuspendLayout();
@@ -170,6 +176,7 @@
             // 
             // groupBoxRa
             // 
+            this.groupBoxRa.Controls.Add(this.labelRa);
             this.groupBoxRa.Controls.Add(this.comboBoxMateriasRa);
             this.groupBoxRa.Controls.Add(this.comboBoxRegularRa);
             this.groupBoxRa.Controls.Add(this.comboBoxAlumnosRa);
@@ -183,32 +190,66 @@
             this.groupBoxRa.TabStop = false;
             this.groupBoxRa.Visible = false;
             // 
+            // labelRa
+            // 
+            this.labelRa.AutoSize = true;
+            this.labelRa.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.labelRa.Location = new System.Drawing.Point(33, 19);
+            this.labelRa.Name = "labelRa";
+            this.labelRa.Size = new System.Drawing.Size(209, 17);
+            this.labelRa.TabIndex = 22;
+            this.labelRa.Text = "Regularidad alumno por materia";
+            this.labelRa.Visible = false;
+            // 
             // comboBoxMateriasRa
             // 
+            this.comboBoxMateriasRa.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materiaBindingSource, "SelectedMateria", true));
+            this.comboBoxMateriasRa.DataSource = this.materiaBindingSource;
+            this.comboBoxMateriasRa.DisplayMember = "SelectedMateria";
+            this.comboBoxMateriasRa.Enabled = false;
+            this.comboBoxMateriasRa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.comboBoxMateriasRa.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.comboBoxMateriasRa.FormattingEnabled = true;
-            this.comboBoxMateriasRa.Location = new System.Drawing.Point(33, 101);
+            this.comboBoxMateriasRa.Location = new System.Drawing.Point(33, 118);
             this.comboBoxMateriasRa.Name = "comboBoxMateriasRa";
             this.comboBoxMateriasRa.Size = new System.Drawing.Size(200, 23);
             this.comboBoxMateriasRa.TabIndex = 4;
+            this.comboBoxMateriasRa.ValueMember = "SelectedMateria";
             this.comboBoxMateriasRa.Visible = false;
+            this.comboBoxMateriasRa.Enter += new System.EventHandler(this.comboBoxMateriasRa_Enter);
+            // 
+            // materiaBindingSource
+            // 
+            this.materiaBindingSource.DataSource = typeof(Materias.Materia);
             // 
             // comboBoxRegularRa
             // 
+            this.comboBoxRegularRa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.comboBoxRegularRa.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.comboBoxRegularRa.FormattingEnabled = true;
+            this.comboBoxRegularRa.Items.AddRange(new object[] {
+            "Libre",
+            "Regular"});
             this.comboBoxRegularRa.Location = new System.Drawing.Point(33, 185);
             this.comboBoxRegularRa.Name = "comboBoxRegularRa";
             this.comboBoxRegularRa.Size = new System.Drawing.Size(200, 23);
             this.comboBoxRegularRa.TabIndex = 5;
+            this.comboBoxRegularRa.Text = "Condicion...";
             this.comboBoxRegularRa.Visible = false;
             // 
             // comboBoxAlumnosRa
             // 
-            this.comboBoxAlumnosRa.FormattingEnabled = true;
-            this.comboBoxAlumnosRa.Location = new System.Drawing.Point(33, 28);
+            this.comboBoxAlumnosRa.BackColor = System.Drawing.SystemColors.Window;
+            this.comboBoxAlumnosRa.DataSource = this.alumnoBindingSource;
+            this.comboBoxAlumnosRa.DisplayMember = "SelectedAlumno";
+            this.comboBoxAlumnosRa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.comboBoxAlumnosRa.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.comboBoxAlumnosRa.Location = new System.Drawing.Point(33, 54);
             this.comboBoxAlumnosRa.Name = "comboBoxAlumnosRa";
             this.comboBoxAlumnosRa.Size = new System.Drawing.Size(200, 23);
             this.comboBoxAlumnosRa.TabIndex = 3;
             this.comboBoxAlumnosRa.Visible = false;
+            this.comboBoxAlumnosRa.Enter += new System.EventHandler(this.comboBoxAlumnosRa_Enter);
             // 
             // buttonAgregarRa
             // 
@@ -232,69 +273,10 @@
             this.buttonCerrarRa.Visible = false;
             this.buttonCerrarRa.Click += new System.EventHandler(this.buttonCerrarRa_Click);
             // 
-            // groupBoxAm
+            // alumnoBindingSource
             // 
-            this.groupBoxAm.Controls.Add(this.comboBoxSeleccionarMateriaAm);
-            this.groupBoxAm.Controls.Add(this.labelNombreMateriaAm);
-            this.groupBoxAm.Controls.Add(this.buttonCerrarAm);
-            this.groupBoxAm.Controls.Add(this.buttonAgregarAm);
-            this.groupBoxAm.Controls.Add(this.textBoxNombreAm);
-            this.groupBoxAm.Location = new System.Drawing.Point(220, 0);
-            this.groupBoxAm.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.groupBoxAm.Name = "groupBoxAm";
-            this.groupBoxAm.Size = new System.Drawing.Size(256, 300);
-            this.groupBoxAm.TabIndex = 21;
-            this.groupBoxAm.TabStop = false;
-            this.groupBoxAm.Visible = false;
-            // 
-            // comboBoxSeleccionarMateriaAm
-            // 
-            this.comboBoxSeleccionarMateriaAm.FormattingEnabled = true;
-            this.comboBoxSeleccionarMateriaAm.Location = new System.Drawing.Point(56, 156);
-            this.comboBoxSeleccionarMateriaAm.Name = "comboBoxSeleccionarMateriaAm";
-            this.comboBoxSeleccionarMateriaAm.Size = new System.Drawing.Size(159, 23);
-            this.comboBoxSeleccionarMateriaAm.TabIndex = 5;
-            this.comboBoxSeleccionarMateriaAm.Visible = false;
-            // 
-            // labelNombreMateriaAm
-            // 
-            this.labelNombreMateriaAm.AutoSize = true;
-            this.labelNombreMateriaAm.Location = new System.Drawing.Point(56, 54);
-            this.labelNombreMateriaAm.Name = "labelNombreMateriaAm";
-            this.labelNombreMateriaAm.Size = new System.Drawing.Size(100, 15);
-            this.labelNombreMateriaAm.TabIndex = 4;
-            this.labelNombreMateriaAm.Text = "Nombre Materia: ";
-            this.labelNombreMateriaAm.Visible = false;
-            // 
-            // buttonCerrarAm
-            // 
-            this.buttonCerrarAm.Location = new System.Drawing.Point(175, 260);
-            this.buttonCerrarAm.Name = "buttonCerrarAm";
-            this.buttonCerrarAm.Size = new System.Drawing.Size(75, 23);
-            this.buttonCerrarAm.TabIndex = 3;
-            this.buttonCerrarAm.Text = "Cerrar";
-            this.buttonCerrarAm.UseVisualStyleBackColor = true;
-            this.buttonCerrarAm.Visible = false;
-            this.buttonCerrarAm.Click += new System.EventHandler(this.buttonCerrarAm_Click);
-            // 
-            // buttonAgregarAm
-            // 
-            this.buttonAgregarAm.Location = new System.Drawing.Point(19, 260);
-            this.buttonAgregarAm.Name = "buttonAgregarAm";
-            this.buttonAgregarAm.Size = new System.Drawing.Size(75, 23);
-            this.buttonAgregarAm.TabIndex = 2;
-            this.buttonAgregarAm.Text = "Agregar";
-            this.buttonAgregarAm.UseVisualStyleBackColor = true;
-            this.buttonAgregarAm.Visible = false;
-            this.buttonAgregarAm.Click += new System.EventHandler(this.buttonAgregarAm_Click);
-            // 
-            // textBoxNombreAm
-            // 
-            this.textBoxNombreAm.Location = new System.Drawing.Point(56, 80);
-            this.textBoxNombreAm.Name = "textBoxNombreAm";
-            this.textBoxNombreAm.Size = new System.Drawing.Size(159, 23);
-            this.textBoxNombreAm.TabIndex = 0;
-            this.textBoxNombreAm.Visible = false;
+            this.alumnoBindingSource.AllowNew = false;
+            this.alumnoBindingSource.DataSource = typeof(Persona.Alumno);
             // 
             // groupBoxAlta
             // 
@@ -440,6 +422,70 @@
             this.buttonAgregarAlta.Visible = false;
             this.buttonAgregarAlta.Click += new System.EventHandler(this.buttonAgregarAlta_Click);
             // 
+            // groupBoxAm
+            // 
+            this.groupBoxAm.Controls.Add(this.comboBoxSeleccionarMateriaAm);
+            this.groupBoxAm.Controls.Add(this.labelNombreMateriaAm);
+            this.groupBoxAm.Controls.Add(this.buttonCerrarAm);
+            this.groupBoxAm.Controls.Add(this.buttonAgregarAm);
+            this.groupBoxAm.Controls.Add(this.textBoxNombreAm);
+            this.groupBoxAm.Location = new System.Drawing.Point(220, 0);
+            this.groupBoxAm.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.groupBoxAm.Name = "groupBoxAm";
+            this.groupBoxAm.Size = new System.Drawing.Size(256, 300);
+            this.groupBoxAm.TabIndex = 21;
+            this.groupBoxAm.TabStop = false;
+            this.groupBoxAm.Visible = false;
+            // 
+            // comboBoxSeleccionarMateriaAm
+            // 
+            this.comboBoxSeleccionarMateriaAm.FormattingEnabled = true;
+            this.comboBoxSeleccionarMateriaAm.Location = new System.Drawing.Point(56, 156);
+            this.comboBoxSeleccionarMateriaAm.Name = "comboBoxSeleccionarMateriaAm";
+            this.comboBoxSeleccionarMateriaAm.Size = new System.Drawing.Size(159, 23);
+            this.comboBoxSeleccionarMateriaAm.TabIndex = 5;
+            this.comboBoxSeleccionarMateriaAm.Visible = false;
+            // 
+            // labelNombreMateriaAm
+            // 
+            this.labelNombreMateriaAm.AutoSize = true;
+            this.labelNombreMateriaAm.Location = new System.Drawing.Point(56, 54);
+            this.labelNombreMateriaAm.Name = "labelNombreMateriaAm";
+            this.labelNombreMateriaAm.Size = new System.Drawing.Size(100, 15);
+            this.labelNombreMateriaAm.TabIndex = 4;
+            this.labelNombreMateriaAm.Text = "Nombre Materia: ";
+            this.labelNombreMateriaAm.Visible = false;
+            // 
+            // buttonCerrarAm
+            // 
+            this.buttonCerrarAm.Location = new System.Drawing.Point(175, 260);
+            this.buttonCerrarAm.Name = "buttonCerrarAm";
+            this.buttonCerrarAm.Size = new System.Drawing.Size(75, 23);
+            this.buttonCerrarAm.TabIndex = 3;
+            this.buttonCerrarAm.Text = "Cerrar";
+            this.buttonCerrarAm.UseVisualStyleBackColor = true;
+            this.buttonCerrarAm.Visible = false;
+            this.buttonCerrarAm.Click += new System.EventHandler(this.buttonCerrarAm_Click);
+            // 
+            // buttonAgregarAm
+            // 
+            this.buttonAgregarAm.Location = new System.Drawing.Point(19, 260);
+            this.buttonAgregarAm.Name = "buttonAgregarAm";
+            this.buttonAgregarAm.Size = new System.Drawing.Size(75, 23);
+            this.buttonAgregarAm.TabIndex = 2;
+            this.buttonAgregarAm.Text = "Agregar";
+            this.buttonAgregarAm.UseVisualStyleBackColor = true;
+            this.buttonAgregarAm.Visible = false;
+            this.buttonAgregarAm.Click += new System.EventHandler(this.buttonAgregarAm_Click);
+            // 
+            // textBoxNombreAm
+            // 
+            this.textBoxNombreAm.Location = new System.Drawing.Point(56, 80);
+            this.textBoxNombreAm.Name = "textBoxNombreAm";
+            this.textBoxNombreAm.Size = new System.Drawing.Size(159, 23);
+            this.textBoxNombreAm.TabIndex = 0;
+            this.textBoxNombreAm.Visible = false;
+            // 
             // groupBoxLinkLabelAltaU
             // 
             this.groupBoxLinkLabelAltaU.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -548,13 +594,12 @@
             this.groupBoxGeneral.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxGeneral.Controls.Add(this.groupBoxAlta);
-            this.groupBoxGeneral.Controls.Add(this.groupBoxAm);
             this.groupBoxGeneral.Controls.Add(this.groupBoxRa);
             this.groupBoxGeneral.Controls.Add(this.groupBoxAp);
-            this.groupBoxGeneral.Controls.Add(this.groupBoxLinkAm);
-            this.groupBoxGeneral.Controls.Add(this.groupBoxLinkAp);
+            this.groupBoxGeneral.Controls.Add(this.groupBoxAlta);
+            this.groupBoxGeneral.Controls.Add(this.groupBoxAm);
             this.groupBoxGeneral.Controls.Add(this.groupBoxLinkLabelAltaU);
+            this.groupBoxGeneral.Controls.Add(this.groupBoxLinkAp);
             this.groupBoxGeneral.Controls.Add(this.groupBoxLinkLabelRa);
             this.groupBoxGeneral.Controls.Add(this.linkLabelAu);
             this.groupBoxGeneral.Controls.Add(this.linkLabelAp);
@@ -628,10 +673,13 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBoxRa.ResumeLayout(false);
-            this.groupBoxAm.ResumeLayout(false);
-            this.groupBoxAm.PerformLayout();
+            this.groupBoxRa.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.materiaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource)).EndInit();
             this.groupBoxAlta.ResumeLayout(false);
             this.groupBoxAlta.PerformLayout();
+            this.groupBoxAm.ResumeLayout(false);
+            this.groupBoxAm.PerformLayout();
             this.groupBoxLinkLabelAltaU.ResumeLayout(false);
             this.groupBoxLinkLabelAltaU.PerformLayout();
             this.groupBoxAp.ResumeLayout(false);
@@ -696,5 +744,8 @@
         public System.Windows.Forms.Button buttonCerrarAp;
         private System.Windows.Forms.Button buttonAgregarAp;
         public System.Windows.Forms.ComboBox comboBoxMateriasAp;
+        public System.Windows.Forms.Label labelRa;
+        public System.Windows.Forms.BindingSource alumnoBindingSource;
+        public System.Windows.Forms.BindingSource materiaBindingSource;
     }
 }
