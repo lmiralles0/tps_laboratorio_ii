@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Front", "Front\Front.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Test\Test.csproj", "{DBB11C8C-DFC3-4244-AA09-9E81195919DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Materias", "Materias\Materias.csproj", "{07D1544E-1D7B-42B0-B188-1684ECEE4953}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Materias", "Materias\Materias.csproj", "{07D1544E-1D7B-42B0-B188-1684ECEE4953}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Condicion-Notas", "Condicion-Notas\Condicion-Notas.csproj", "{60C5D4FB-7543-4AFF-BDB8-89E05C0F48C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{07D1544E-1D7B-42B0-B188-1684ECEE4953}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07D1544E-1D7B-42B0-B188-1684ECEE4953}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07D1544E-1D7B-42B0-B188-1684ECEE4953}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60C5D4FB-7543-4AFF-BDB8-89E05C0F48C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60C5D4FB-7543-4AFF-BDB8-89E05C0F48C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60C5D4FB-7543-4AFF-BDB8-89E05C0F48C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60C5D4FB-7543-4AFF-BDB8-89E05C0F48C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -49,7 +49,37 @@ namespace Materias
             }
         }
 
+        public static bool Contain(List<Materia> p, Materia op)
+        {
+            bool result = false;
+            if (p != null && op != null)
+            {
+                foreach (Materia a in p)
+                {
+                    if (a.Codigo == op.Codigo && a.Asignatura == op.Asignatura) 
+                    {
+                        result = true;
+                        break;
+                    }
+                }
+            }
+            return result;
+        }
 
+
+        public bool AddMateria(List<Materia> p, Materia op)
+        {
+            bool result = false;
+            if (!(Contain(p, op)))
+            {
+                p.Add(op);
+                result = true;
+            }
+            return result;
+        }
+
+
+        
 
 
     }

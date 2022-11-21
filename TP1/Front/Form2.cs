@@ -20,6 +20,8 @@ namespace Front
         public List<Alumno> alumnos;
         public List<Profesor> profesores;
         public List<Materia> materias;
+        public List<Materia> materiasAux;
+        public Alumno alumnoAux;
 
 
         public Form2(List<Admin> admins, List<Alumno> alumn, List<Profesor> profes, List<Materia> mate)
@@ -32,6 +34,8 @@ namespace Front
             alumnos = alumn;
             profesores = profes;
             materias = mate;
+            materiasAux = new List<Materia>();
+            alumnoAux = new Alumno();
             InitializeComponent();
         }
 
@@ -296,10 +300,11 @@ namespace Front
             MessageBox.Show("Alta exitosa.", "AVISO: ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
+
+        #region RA
+
         private void comboBoxAlumnosRa_Enter(object sender, EventArgs e)
         {
-            
-            comboBoxAlumnosRa.ForeColor = Color.Black;
             if (alumnos.Count > 0 && alumnos != null)
             {
                 foreach (Alumno a in alumnos)
@@ -307,25 +312,65 @@ namespace Front
                     alumnoBindingSource.Add(a);
                 }
             }
-            comboBoxAlumnosRa.DataSource= alumnos;
-            
-            comboBoxMateriasRa.Enabled = true;
+            comboBoxAlumnosRa.ForeColor = Color.Black;
+
 
         }
 
         private void comboBoxMateriasRa_Enter(object sender, EventArgs e)
         {
-            comboBoxMateriasRa.DataSource = materias;
             comboBoxMateriasRa.ForeColor = Color.Black;
-            string aux = comboBoxAlumnosRa.Text;
-            foreach(Alumno a in alumnos)
-            {
-
-            }
-            foreach (Materia b in materias)
+            foreach (Materia b in materiasAux)
             {
                 materiaBindingSource.Add(b);
             }
+            comboBoxMateriasRa.DataSource = materiasAux;
+        }
+
+
+        public void LoadComboBoxMateria()
+        {
+            comboBoxMateriasRa.DataSource = materias;
+            string buffer = comboBoxAlumnosRa.Text;
+  
+            foreach (Alumno a in alumnos)
+            {
+                if (buffer.Contains(a.Dni.ToString()))
+                {
+                    alumnoAux = a;
+                    MessageBox.Show(alumnoAux.SelectedAlumno, "Se selecciono: ", MessageBoxButtons.OK);
+                    break;
+                }
+            }
+            foreach (Materia a in materias)
+            {
+                if ((Persona.Alumno.Contain(a.alumnos, alumnoAux)))
+                {
+                    materiasAux.Add(a);
+                }
+            }
+        }
+
+
+        #endregion
+
+        private void comboBoxAlumnosRa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBoxAlumnosRa.ResetText();
+            comboBoxAlumnosRa.Text = "Seleccione alumno...";
+            comboBoxMateriasRa.ResetText();
+            comboBoxMateriasRa.Text = "Seleccione materias...";
+            materiasAux.Clear();
+
+
+        }
+
+        private void comboBoxAlumnosRa_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            comboBoxAlumnosRa.ForeColor = Color.Black;
+            comboBoxAlumnosRa.DataSource = alumnos;
+            comboBoxMateriasRa.Enabled = true;
+            LoadComboBoxMateria();
         }
     }
 }

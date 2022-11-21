@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "JNXOrw3NXP2kio2GJKmXmJHaQg081ZLbVHn3BfROSq8b7UOKwaT1Rua5aWLSuqm+pyW4bn/xEV5FWNuvbAnrEw==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Materias\\Materias.csproj",
+  "dgSpecHash": "esSy0eTIkvhEYyc8dFVyh5VuscEyTv3cSXZ/6IWC+vOgDj8CT2sCNX4mt4ueCZxQLwO4yGtY7k25k7J1kaPCHA==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Materias\\Materias.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "El proyecto Front no es compatible con net5.0 (.NETCoreApp,Version=v5.0). El proyecto Front admite: net5.0-windows7.0 (.NETCoreApp,Version=v5.0)",
+      "libraryId": "Front",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }

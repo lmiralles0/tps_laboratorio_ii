@@ -192,8 +192,9 @@ namespace Front
             Admin ad = new Admin(37882165, "Luciano", "Miralles");
             ad.Passwd = "123";
             ad.AddUsuario(administradores, ad);
-
-
+            Alumno auxas = new Alumno(4267148, "Oscar", "Miralles");
+            auxas.Passwd = "456";
+            auxas.AddUsuario(alumnos, auxas);
             mat1.alumnos.Add(auxa);
            
 

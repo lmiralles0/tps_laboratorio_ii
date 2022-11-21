@@ -43,9 +43,9 @@
             this.materiaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxRegularRa = new System.Windows.Forms.ComboBox();
             this.comboBoxAlumnosRa = new System.Windows.Forms.ComboBox();
+            this.alumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonAgregarRa = new System.Windows.Forms.Button();
             this.buttonCerrarRa = new System.Windows.Forms.Button();
-            this.alumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBoxAlta = new System.Windows.Forms.GroupBox();
             this.buttonCerrarAlta = new System.Windows.Forms.Button();
             this.labelUser = new System.Windows.Forms.Label();
@@ -67,18 +67,18 @@
             this.textBoxNombreAm = new System.Windows.Forms.TextBox();
             this.groupBoxLinkLabelAltaU = new System.Windows.Forms.GroupBox();
             this.linkLabelAu2 = new System.Windows.Forms.LinkLabel();
+            this.groupBoxLinkLabelRa = new System.Windows.Forms.GroupBox();
+            this.linkLabelRa2 = new System.Windows.Forms.LinkLabel();
             this.groupBoxAp = new System.Windows.Forms.GroupBox();
             this.comboBoxProfesorAp = new System.Windows.Forms.ComboBox();
             this.buttonCerrarAp = new System.Windows.Forms.Button();
             this.buttonAgregarAp = new System.Windows.Forms.Button();
             this.comboBoxMateriasAp = new System.Windows.Forms.ComboBox();
-            this.groupBoxLinkLabelRa = new System.Windows.Forms.GroupBox();
-            this.linkLabelRa2 = new System.Windows.Forms.LinkLabel();
+            this.groupBoxLinkAm = new System.Windows.Forms.GroupBox();
+            this.linkLabelAm2 = new System.Windows.Forms.LinkLabel();
             this.groupBoxGeneral = new System.Windows.Forms.GroupBox();
             this.groupBoxLinkAp = new System.Windows.Forms.GroupBox();
             this.linkLabelAp2 = new System.Windows.Forms.LinkLabel();
-            this.groupBoxLinkAm = new System.Windows.Forms.GroupBox();
-            this.linkLabelAm2 = new System.Windows.Forms.LinkLabel();
             this.menuStrip1.SuspendLayout();
             this.groupBoxRa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.materiaBindingSource)).BeginInit();
@@ -86,11 +86,11 @@
             this.groupBoxAlta.SuspendLayout();
             this.groupBoxAm.SuspendLayout();
             this.groupBoxLinkLabelAltaU.SuspendLayout();
-            this.groupBoxAp.SuspendLayout();
             this.groupBoxLinkLabelRa.SuspendLayout();
+            this.groupBoxAp.SuspendLayout();
+            this.groupBoxLinkAm.SuspendLayout();
             this.groupBoxGeneral.SuspendLayout();
             this.groupBoxLinkAp.SuspendLayout();
-            this.groupBoxLinkAm.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripMenuItem1
@@ -249,7 +249,14 @@
             this.comboBoxAlumnosRa.Size = new System.Drawing.Size(200, 23);
             this.comboBoxAlumnosRa.TabIndex = 3;
             this.comboBoxAlumnosRa.Visible = false;
+            this.comboBoxAlumnosRa.SelectedIndexChanged += new System.EventHandler(this.comboBoxAlumnosRa_SelectedIndexChanged);
+            this.comboBoxAlumnosRa.SelectionChangeCommitted += new System.EventHandler(this.comboBoxAlumnosRa_SelectionChangeCommitted);
             this.comboBoxAlumnosRa.Enter += new System.EventHandler(this.comboBoxAlumnosRa_Enter);
+            // 
+            // alumnoBindingSource
+            // 
+            this.alumnoBindingSource.AllowNew = false;
+            this.alumnoBindingSource.DataSource = typeof(Persona.Alumno);
             // 
             // buttonAgregarRa
             // 
@@ -272,11 +279,6 @@
             this.buttonCerrarRa.UseVisualStyleBackColor = true;
             this.buttonCerrarRa.Visible = false;
             this.buttonCerrarRa.Click += new System.EventHandler(this.buttonCerrarRa_Click);
-            // 
-            // alumnoBindingSource
-            // 
-            this.alumnoBindingSource.AllowNew = false;
-            this.alumnoBindingSource.DataSource = typeof(Persona.Alumno);
             // 
             // groupBoxAlta
             // 
@@ -510,6 +512,31 @@
             this.linkLabelAu2.Text = "Alta usuarios";
             this.linkLabelAu2.Visible = false;
             // 
+            // groupBoxLinkLabelRa
+            // 
+            this.groupBoxLinkLabelRa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxLinkLabelRa.Controls.Add(this.linkLabelRa2);
+            this.groupBoxLinkLabelRa.Location = new System.Drawing.Point(0, 70);
+            this.groupBoxLinkLabelRa.Name = "groupBoxLinkLabelRa";
+            this.groupBoxLinkLabelRa.Size = new System.Drawing.Size(220, 100);
+            this.groupBoxLinkLabelRa.TabIndex = 23;
+            this.groupBoxLinkLabelRa.TabStop = false;
+            this.groupBoxLinkLabelRa.Text = " ";
+            this.groupBoxLinkLabelRa.Visible = false;
+            // 
+            // linkLabelRa2
+            // 
+            this.linkLabelRa2.AutoSize = true;
+            this.linkLabelRa2.Location = new System.Drawing.Point(6, 38);
+            this.linkLabelRa2.Name = "linkLabelRa2";
+            this.linkLabelRa2.Size = new System.Drawing.Size(119, 15);
+            this.linkLabelRa2.TabIndex = 21;
+            this.linkLabelRa2.TabStop = true;
+            this.linkLabelRa2.Text = "Regularidad alumnos";
+            this.linkLabelRa2.Visible = false;
+            // 
             // groupBoxAp
             // 
             this.groupBoxAp.Controls.Add(this.comboBoxProfesorAp);
@@ -564,30 +591,29 @@
             this.comboBoxMateriasAp.TabIndex = 1;
             this.comboBoxMateriasAp.Visible = false;
             // 
-            // groupBoxLinkLabelRa
+            // groupBoxLinkAm
             // 
-            this.groupBoxLinkLabelRa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.groupBoxLinkAm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxLinkLabelRa.Controls.Add(this.linkLabelRa2);
-            this.groupBoxLinkLabelRa.Location = new System.Drawing.Point(0, 71);
-            this.groupBoxLinkLabelRa.Name = "groupBoxLinkLabelRa";
-            this.groupBoxLinkLabelRa.Size = new System.Drawing.Size(220, 94);
-            this.groupBoxLinkLabelRa.TabIndex = 23;
-            this.groupBoxLinkLabelRa.TabStop = false;
-            this.groupBoxLinkLabelRa.Text = " ";
-            this.groupBoxLinkLabelRa.Visible = false;
+            this.groupBoxLinkAm.Controls.Add(this.linkLabelAm2);
+            this.groupBoxLinkAm.Location = new System.Drawing.Point(0, 156);
+            this.groupBoxLinkAm.Name = "groupBoxLinkAm";
+            this.groupBoxLinkAm.Size = new System.Drawing.Size(220, 78);
+            this.groupBoxLinkAm.TabIndex = 23;
+            this.groupBoxLinkAm.TabStop = false;
+            this.groupBoxLinkAm.Visible = false;
             // 
-            // linkLabelRa2
+            // linkLabelAm2
             // 
-            this.linkLabelRa2.AutoSize = true;
-            this.linkLabelRa2.Location = new System.Drawing.Point(6, 38);
-            this.linkLabelRa2.Name = "linkLabelRa2";
-            this.linkLabelRa2.Size = new System.Drawing.Size(119, 15);
-            this.linkLabelRa2.TabIndex = 21;
-            this.linkLabelRa2.TabStop = true;
-            this.linkLabelRa2.Text = "Regularidad alumnos";
-            this.linkLabelRa2.Visible = false;
+            this.linkLabelAm2.AutoSize = true;
+            this.linkLabelAm2.Location = new System.Drawing.Point(6, 29);
+            this.linkLabelAm2.Name = "linkLabelAm2";
+            this.linkLabelAm2.Size = new System.Drawing.Size(76, 15);
+            this.linkLabelAm2.TabIndex = 21;
+            this.linkLabelAm2.TabStop = true;
+            this.linkLabelAm2.Text = "Alta materias";
+            this.linkLabelAm2.Visible = false;
             // 
             // groupBoxGeneral
             // 
@@ -598,14 +624,15 @@
             this.groupBoxGeneral.Controls.Add(this.groupBoxAp);
             this.groupBoxGeneral.Controls.Add(this.groupBoxAlta);
             this.groupBoxGeneral.Controls.Add(this.groupBoxAm);
-            this.groupBoxGeneral.Controls.Add(this.groupBoxLinkLabelAltaU);
-            this.groupBoxGeneral.Controls.Add(this.groupBoxLinkAp);
             this.groupBoxGeneral.Controls.Add(this.groupBoxLinkLabelRa);
+            this.groupBoxGeneral.Controls.Add(this.groupBoxLinkLabelAltaU);
+            this.groupBoxGeneral.Controls.Add(this.groupBoxLinkAm);
+            this.groupBoxGeneral.Controls.Add(this.groupBoxLinkAp);
             this.groupBoxGeneral.Controls.Add(this.linkLabelAu);
             this.groupBoxGeneral.Controls.Add(this.linkLabelAp);
             this.groupBoxGeneral.Controls.Add(this.linkLabelAm);
             this.groupBoxGeneral.Controls.Add(this.linkLabelRa);
-            this.groupBoxGeneral.Location = new System.Drawing.Point(91, 27);
+            this.groupBoxGeneral.Location = new System.Drawing.Point(68, 27);
             this.groupBoxGeneral.Name = "groupBoxGeneral";
             this.groupBoxGeneral.Size = new System.Drawing.Size(476, 299);
             this.groupBoxGeneral.TabIndex = 5;
@@ -632,37 +659,12 @@
             this.linkLabelAp2.Text = "Asignacion profesores";
             this.linkLabelAp2.Visible = false;
             // 
-            // groupBoxLinkAm
-            // 
-            this.groupBoxLinkAm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxLinkAm.Controls.Add(this.linkLabelAm2);
-            this.groupBoxLinkAm.Location = new System.Drawing.Point(91, 183);
-            this.groupBoxLinkAm.Name = "groupBoxLinkAm";
-            this.groupBoxLinkAm.Size = new System.Drawing.Size(220, 78);
-            this.groupBoxLinkAm.TabIndex = 23;
-            this.groupBoxLinkAm.TabStop = false;
-            this.groupBoxLinkAm.Visible = false;
-            // 
-            // linkLabelAm2
-            // 
-            this.linkLabelAm2.AutoSize = true;
-            this.linkLabelAm2.Location = new System.Drawing.Point(6, 29);
-            this.linkLabelAm2.Name = "linkLabelAm2";
-            this.linkLabelAm2.Size = new System.Drawing.Size(76, 15);
-            this.linkLabelAm2.TabIndex = 21;
-            this.linkLabelAm2.TabStop = true;
-            this.linkLabelAm2.Text = "Alta materias";
-            this.linkLabelAm2.Visible = false;
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(619, 355);
-            this.Controls.Add(this.groupBoxLinkAm);
             this.Controls.Add(this.groupBoxGeneral);
             this.Controls.Add(this.menuStrip1);
             this.KeyPreview = true;
@@ -682,15 +684,15 @@
             this.groupBoxAm.PerformLayout();
             this.groupBoxLinkLabelAltaU.ResumeLayout(false);
             this.groupBoxLinkLabelAltaU.PerformLayout();
-            this.groupBoxAp.ResumeLayout(false);
             this.groupBoxLinkLabelRa.ResumeLayout(false);
             this.groupBoxLinkLabelRa.PerformLayout();
+            this.groupBoxAp.ResumeLayout(false);
+            this.groupBoxLinkAm.ResumeLayout(false);
+            this.groupBoxLinkAm.PerformLayout();
             this.groupBoxGeneral.ResumeLayout(false);
             this.groupBoxGeneral.PerformLayout();
             this.groupBoxLinkAp.ResumeLayout(false);
             this.groupBoxLinkAp.PerformLayout();
-            this.groupBoxLinkAm.ResumeLayout(false);
-            this.groupBoxLinkAm.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
