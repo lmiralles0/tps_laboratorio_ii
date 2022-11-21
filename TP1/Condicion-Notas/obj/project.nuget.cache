@@ -1,18 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EwKFMwTQwZGbxboQbIyM7miRyVlreWHMfWnB35zMpsrEE6875beW4hpCXteMmsWU0gTDxPF+PjxgaF1qdpzlCQ==",
-  "success": false,
+  "dgSpecHash": "dy/lnnJnrmXPgv9AVkxjzktbsCVDW04+M5uUJhARXmYkGl6yt9NwiLHirUwI45MGAZGxLc4COkQ0gUt4qCTKGQ==",
+  "success": true,
   "projectFilePath": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Condicion-Notas\\Condicion-Notas.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "El proyecto Front no es compatible con net6.0 (.NETCoreApp,Version=v6.0). El proyecto Front admite: net5.0-windows7.0 (.NETCoreApp,Version=v5.0)",
-      "libraryId": "Front",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }

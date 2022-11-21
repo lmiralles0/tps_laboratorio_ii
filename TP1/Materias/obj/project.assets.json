@@ -2,20 +2,20 @@
   "version": 3,
   "targets": {
     "net5.0": {
-      "Front/1.0.0": {
+      "Persona/1.0.0": {
         "type": "project",
-        "framework": "Unsupported,Version=v0.0",
+        "framework": ".NETCoreApp,Version=v5.0",
         "compile": {
-          "bin/placeholder/Front.dll": {}
+          "bin/placeholder/Persona.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Front.dll": {}
+          "bin/placeholder/Persona.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Front/1.0.0": {
+    "Persona/1.0.0": {
       "type": "project",
       "path": "../Persona/Persona.csproj",
       "msbuildProject": "../Persona/Persona.csproj"
@@ -23,7 +23,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Front >= 1.0.0"
+      "Persona >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -87,16 +87,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "El proyecto Front no es compatible con net5.0 (.NETCoreApp,Version=v5.0). El proyecto Front admite: net5.0-windows7.0 (.NETCoreApp,Version=v5.0)",
-      "libraryId": "Front",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    }
-  ]
+  }
 }
