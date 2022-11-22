@@ -195,6 +195,7 @@ namespace Front
             Alumno auxas = new Alumno(4267148, "Oscar", "Miralles");
             auxas.Passwd = "456";
             auxas.AddUsuario(alumnos, auxas);
+            
             mat1.alumnos.Add(auxa);
            
 

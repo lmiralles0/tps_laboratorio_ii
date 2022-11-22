@@ -185,6 +185,8 @@ namespace Front
             this.labelRa.Visible = true;
             this.comboBoxAlumnosRa.Text = "Seleccione alumno...";
             this.comboBoxMateriasRa.Text = "Seleccione materia...";
+            this.comboBoxAlumnosRa.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+
         }
 
         private void buttonCerrarRa_Click(object sender, EventArgs e)
@@ -201,7 +203,9 @@ namespace Front
             this.comboBoxAlumnosRa.Visible = false;
             this.comboBoxMateriasRa.Visible = false;
             this.comboBoxRegularRa.Visible = false;
-            this.labelRa.Visible = true;
+            this.labelRa.Visible = true; 
+            this.comboBoxMateriasRa.Enabled = false;
+            
         }
 
         public void buttonAgregarRa_Click(object sender, EventArgs e)
@@ -305,6 +309,11 @@ namespace Front
 
         private void comboBoxAlumnosRa_Enter(object sender, EventArgs e)
         {
+            
+            comboBoxAlumnosRa.ForeColor = Color.Black;
+            comboBoxAlumnosRa.DataSource = alumnos;
+           
+            comboBoxMateriasRa.Enabled = false;
             if (alumnos.Count > 0 && alumnos != null)
             {
                 foreach (Alumno a in alumnos)
@@ -312,19 +321,18 @@ namespace Front
                     alumnoBindingSource.Add(a);
                 }
             }
-            comboBoxAlumnosRa.ForeColor = Color.Black;
-
-
+           
         }
 
         private void comboBoxMateriasRa_Enter(object sender, EventArgs e)
         {
+            comboBoxMateriasRa.ResetText();
+            comboBoxMateriasRa.DataSource = materiasAux;
             comboBoxMateriasRa.ForeColor = Color.Black;
             foreach (Materia b in materiasAux)
             {
                 materiaBindingSource.Add(b);
             }
-            comboBoxMateriasRa.DataSource = materiasAux;
         }
 
 
@@ -338,7 +346,6 @@ namespace Front
                 if (buffer.Contains(a.Dni.ToString()))
                 {
                     alumnoAux = a;
-                    MessageBox.Show(alumnoAux.SelectedAlumno, "Se selecciono: ", MessageBoxButtons.OK);
                     break;
                 }
             }
@@ -351,26 +358,22 @@ namespace Front
             }
         }
 
-
-        #endregion
-
         private void comboBoxAlumnosRa_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBoxAlumnosRa.ResetText();
-            comboBoxAlumnosRa.Text = "Seleccione alumno...";
-            comboBoxMateriasRa.ResetText();
             comboBoxMateriasRa.Text = "Seleccione materias...";
-            materiasAux.Clear();
-
-
+            
         }
 
         private void comboBoxAlumnosRa_SelectionChangeCommitted(object sender, EventArgs e)
         {
+            materiasAux.Clear();
             comboBoxAlumnosRa.ForeColor = Color.Black;
-            comboBoxAlumnosRa.DataSource = alumnos;
             comboBoxMateriasRa.Enabled = true;
             LoadComboBoxMateria();
+
         }
+
+        #endregion
+
     }
 }

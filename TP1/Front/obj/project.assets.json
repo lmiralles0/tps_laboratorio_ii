@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net5.0-windows7.0": {
+      "Condicion-Notas/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Materias": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Condicion-Notas.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Condicion-Notas.dll": {}
+        }
+      },
       "Materias/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -28,6 +41,11 @@
     }
   },
   "libraries": {
+    "Condicion-Notas/1.0.0": {
+      "type": "project",
+      "path": "../Condicion-Notas/Condicion-Notas.csproj",
+      "msbuildProject": "../Condicion-Notas/Condicion-Notas.csproj"
+    },
     "Materias/1.0.0": {
       "type": "project",
       "path": "../Materias/Materias.csproj",
@@ -41,6 +59,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
+      "Condicion-Notas >= 1.0.0",
       "Materias >= 1.0.0",
       "Persona >= 1.0.0"
     ]
@@ -72,6 +91,9 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
+            "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Condicion-Notas\\Condicion-Notas.csproj": {
+              "projectPath": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Condicion-Notas\\Condicion-Notas.csproj"
+            },
             "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Materias\\Materias.csproj": {
               "projectPath": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Materias\\Materias.csproj"
             },

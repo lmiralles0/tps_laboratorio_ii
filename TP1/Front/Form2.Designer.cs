@@ -507,7 +507,7 @@
             this.linkLabelAu2.Location = new System.Drawing.Point(6, 28);
             this.linkLabelAu2.Name = "linkLabelAu2";
             this.linkLabelAu2.Size = new System.Drawing.Size(75, 15);
-            this.linkLabelAu2.TabIndex = 6;
+            this.linkLabelAu2.TabIndex = 1;
             this.linkLabelAu2.TabStop = true;
             this.linkLabelAu2.Text = "Alta usuarios";
             this.linkLabelAu2.Visible = false;
@@ -532,7 +532,7 @@
             this.linkLabelRa2.Location = new System.Drawing.Point(6, 38);
             this.linkLabelRa2.Name = "linkLabelRa2";
             this.linkLabelRa2.Size = new System.Drawing.Size(119, 15);
-            this.linkLabelRa2.TabIndex = 21;
+            this.linkLabelRa2.TabIndex = 2;
             this.linkLabelRa2.TabStop = true;
             this.linkLabelRa2.Text = "Regularidad alumnos";
             this.linkLabelRa2.Visible = false;
@@ -610,7 +610,7 @@
             this.linkLabelAm2.Location = new System.Drawing.Point(6, 29);
             this.linkLabelAm2.Name = "linkLabelAm2";
             this.linkLabelAm2.Size = new System.Drawing.Size(76, 15);
-            this.linkLabelAm2.TabIndex = 21;
+            this.linkLabelAm2.TabIndex = 4;
             this.linkLabelAm2.TabStop = true;
             this.linkLabelAm2.Text = "Alta materias";
             this.linkLabelAm2.Visible = false;
@@ -654,7 +654,7 @@
             this.linkLabelAp2.Location = new System.Drawing.Point(6, 27);
             this.linkLabelAp2.Name = "linkLabelAp2";
             this.linkLabelAp2.Size = new System.Drawing.Size(124, 15);
-            this.linkLabelAp2.TabIndex = 21;
+            this.linkLabelAp2.TabIndex = 5;
             this.linkLabelAp2.TabStop = true;
             this.linkLabelAp2.Text = "Asignacion profesores";
             this.linkLabelAp2.Visible = false;
