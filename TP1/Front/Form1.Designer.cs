@@ -35,6 +35,9 @@
             this.TagPasswd = new System.Windows.Forms.Label();
             this.TagType = new System.Windows.Forms.Label();
             this.Acceder = new System.Windows.Forms.Button();
+            this.buttonAdminSession = new System.Windows.Forms.Button();
+            this.buttonSessionAlumno = new System.Windows.Forms.Button();
+            this.buttonSessionTeacher = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtBoxPasswd
@@ -101,12 +104,45 @@
             this.Acceder.UseVisualStyleBackColor = true;
             this.Acceder.Click += new System.EventHandler(this.Acceder_Click);
             // 
+            // buttonAdminSession
+            // 
+            this.buttonAdminSession.Location = new System.Drawing.Point(12, 316);
+            this.buttonAdminSession.Name = "buttonAdminSession";
+            this.buttonAdminSession.Size = new System.Drawing.Size(97, 23);
+            this.buttonAdminSession.TabIndex = 6;
+            this.buttonAdminSession.Text = "Administrador";
+            this.buttonAdminSession.UseVisualStyleBackColor = true;
+            this.buttonAdminSession.Click += new System.EventHandler(this.buttonAdminSession_Click);
+            // 
+            // buttonSessionAlumno
+            // 
+            this.buttonSessionAlumno.Location = new System.Drawing.Point(115, 316);
+            this.buttonSessionAlumno.Name = "buttonSessionAlumno";
+            this.buttonSessionAlumno.Size = new System.Drawing.Size(75, 23);
+            this.buttonSessionAlumno.TabIndex = 7;
+            this.buttonSessionAlumno.Text = "Alumno";
+            this.buttonSessionAlumno.UseVisualStyleBackColor = true;
+            this.buttonSessionAlumno.Click += new System.EventHandler(this.buttonSessionAlumno_Click);
+            // 
+            // buttonSessionTeacher
+            // 
+            this.buttonSessionTeacher.Location = new System.Drawing.Point(196, 316);
+            this.buttonSessionTeacher.Name = "buttonSessionTeacher";
+            this.buttonSessionTeacher.Size = new System.Drawing.Size(75, 23);
+            this.buttonSessionTeacher.TabIndex = 8;
+            this.buttonSessionTeacher.Text = "Profesor";
+            this.buttonSessionTeacher.UseVisualStyleBackColor = true;
+            this.buttonSessionTeacher.Click += new System.EventHandler(this.buttonSessionTeacher_Click);
+            // 
             // Ingreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(615, 351);
+            this.Controls.Add(this.buttonSessionTeacher);
+            this.Controls.Add(this.buttonSessionAlumno);
+            this.Controls.Add(this.buttonAdminSession);
             this.Controls.Add(this.Acceder);
             this.Controls.Add(this.TagType);
             this.Controls.Add(this.TagPasswd);
@@ -132,5 +168,8 @@
         private System.Windows.Forms.Label TagPasswd;
         private System.Windows.Forms.Label TagType;
         private System.Windows.Forms.Button Acceder;
+        public System.Windows.Forms.Button buttonAdminSession;
+        public System.Windows.Forms.Button buttonSessionAlumno;
+        public System.Windows.Forms.Button buttonSessionTeacher;
     }
 }

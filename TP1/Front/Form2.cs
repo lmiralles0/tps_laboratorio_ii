@@ -204,7 +204,7 @@ namespace Front
             this.comboBoxRegularRa.Visible = false;
             this.labelRa.Visible = true; 
             this.comboBoxMateriasRa.Enabled = false;
-            
+            comboBoxAlumnosRa.DataSource = null;
         }
 
         public void buttonAgregarRa_Click(object sender, EventArgs e)
@@ -308,10 +308,10 @@ namespace Front
 
         private void comboBoxAlumnosRa_Enter(object sender, EventArgs e)
         {
-            
+
             comboBoxAlumnosRa.ForeColor = Color.Black;
             comboBoxAlumnosRa.DataSource = alumnos;
-           
+            
             comboBoxMateriasRa.Enabled = false;
             if (alumnos.Count > 0 && alumnos != null)
             {

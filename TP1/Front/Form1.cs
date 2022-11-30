@@ -36,14 +36,14 @@ namespace Front
             if(this.KindUser.Text.Length == 0 || this.txtBoxPasswd.Text.Length == 0 || this.txtBoxDNI.Text.Length == 0)
             {
                 MessageBox.Show("Error, campos incompletos ", "Faltal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                this.KindUser.ResetText();
+                this.KindUser.SelectedIndex = -1;
                 this.txtBoxDNI.ResetText();
                 this.txtBoxPasswd.ResetText();
             }
 
 
             ///ADMIN 
-            if (KindUser.Text == "Administrador" && !(string.IsNullOrEmpty(txtBoxDNI.Text)) && !(string.IsNullOrEmpty(txtBoxPasswd.Text)))
+            if(KindUser.Text == "Administrador" && !(string.IsNullOrEmpty(txtBoxDNI.Text)) && !(string.IsNullOrEmpty(txtBoxPasswd.Text)))
             {
 
                 Admin ad = new Admin();           
@@ -76,8 +76,8 @@ namespace Front
 
                     if (form2.Validate())
                     {
-                        this.Show();   
-                        this.KindUser.ResetText();
+                        this.Show();
+                        this.KindUser.SelectedIndex = -1;
                         this.txtBoxDNI.ResetText();
                         this.txtBoxPasswd.ResetText();
                     }
@@ -88,7 +88,7 @@ namespace Front
                     result = MessageBox.Show("Error usuario no logueado.", "ATENCION!!!", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
                     if(result == System.Windows.Forms.DialogResult.Cancel)
                     {
-                        this.KindUser.ResetText();
+                        this.KindUser.SelectedIndex = -1;
                         this.txtBoxDNI.ResetText();
                         this.txtBoxPasswd.ResetText();
                     }
@@ -115,7 +115,7 @@ namespace Front
                     if (form3.Validate())
                     {
                         this.Show();
-                        this.KindUser.ResetText();
+                        this.KindUser.SelectedIndex = -1;
                         this.txtBoxDNI.ResetText();
                         this.txtBoxPasswd.ResetText();
                     }
@@ -127,7 +127,7 @@ namespace Front
                     result = MessageBox.Show("Error usuario no logueado.", "ATENCION!!!", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
                     if (result == System.Windows.Forms.DialogResult.Cancel)
                     {
-                        this.KindUser.ResetText();
+                        this.KindUser.SelectedIndex = -1;
                         this.txtBoxDNI.ResetText();
                         this.txtBoxPasswd.ResetText();
                     }
@@ -148,7 +148,7 @@ namespace Front
                     /*if (form3.Validate())
                     {
                         this.Show();
-                        this.KindUser.ResetText();
+                        this.KindUser.SelectedIndex = -1;
                         this.txtBoxDNI.ResetText();
                         this.txtBoxPasswd.ResetText();
                     }*/
@@ -160,7 +160,7 @@ namespace Front
                     result = MessageBox.Show("Error usuario no logueado.", "ATENCION!!!", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
                     if (result == System.Windows.Forms.DialogResult.Cancel)
                     {
-                        this.KindUser.ResetText();
+                        this.KindUser.SelectedIndex = -1;
                         this.txtBoxDNI.ResetText();
                         this.txtBoxPasswd.ResetText();
                     }
@@ -198,6 +198,39 @@ namespace Front
             
             mat1.alumnos.Add(auxa);
            
+
+        }
+
+        private void buttonAdminSession_Click(object sender, EventArgs e)
+        {
+            if(administradores != null)
+            {
+                KindUser.SelectedIndex = 0;
+                txtBoxDNI.Text = administradores[0].Dni.ToString();
+                txtBoxPasswd.Text = administradores[0].Passwd;
+
+            }
+        }
+
+        private void buttonSessionAlumno_Click(object sender, EventArgs e)
+        {
+            if (alumnos != null)
+            {
+                KindUser.SelectedIndex = 1;
+                txtBoxDNI.Text = alumnos[0].Dni.ToString();
+                txtBoxPasswd.Text = alumnos[0].Passwd;
+
+            }
+        }
+
+        private void buttonSessionTeacher_Click(object sender, EventArgs e)
+        {
+            if(profesores != null)
+            {
+                KindUser.SelectedIndex = 2;
+                txtBoxDNI.Text = profesores[0].Dni.ToString();
+                txtBoxPasswd.Text = profesores[0].Passwd;
+            }
 
         }
     }
