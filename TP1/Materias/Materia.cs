@@ -6,6 +6,12 @@ using System.Text;
 
 namespace Materias
 {
+    public enum Condicion
+    {
+        Libre,
+        Regular,
+    }
+
     public class Materia
     {
         private string _nombre;

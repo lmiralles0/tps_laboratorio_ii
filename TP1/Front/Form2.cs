@@ -22,18 +22,20 @@ namespace Front
         public List<Materia> materias;
         public List<Materia> materiasAux;
         public Alumno alumnoAux;
+        public Dictionary<(Alumno, Materia), (Condicion, int)> condiciones;
 
-
-        public Form2(List<Admin> admins, List<Alumno> alumn, List<Profesor> profes, List<Materia> mate)
+        public Form2(List<Admin> admins, List<Alumno> alumn, List<Profesor> profes, List<Materia> mate, Dictionary<(Alumno, Materia), (Condicion, int)> condi)
         {
             administradores = new List<Admin>();
             alumnos = new List<Alumno>();
             profesores = new List<Profesor>();
             materias = new List<Materia>();
+            condiciones = new Dictionary<(Alumno, Materia), (Condicion, int)>();
             administradores = admins;
             alumnos = alumn;
             profesores = profes;
             materias = mate;
+            condiciones = condi;
             materiasAux = new List<Materia>();
             alumnoAux = new Alumno();
             InitializeComponent();
@@ -209,7 +211,7 @@ namespace Front
 
         public void buttonAgregarRa_Click(object sender, EventArgs e)
         {
-
+            condiciones.Add((alumnos[comboBoxAlumnosRa.SelectedIndex], materiasAux[comboBoxMateriasRa.SelectedIndex]), );
         }
 
         private void linkLabelAm_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

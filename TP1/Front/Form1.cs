@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Diagnostics.CodeAnalysis;
 
 namespace Front
 {
@@ -18,7 +17,8 @@ namespace Front
         public List<Admin> administradores;
         public List<Alumno> alumnos;
         public List<Profesor> profesores;
-        public List<Materia> materias;   
+        public List<Materia> materias;
+        public Dictionary<(Alumno, Materia),(Condicion, int) > condiciones;
 
         public Ingreso()
         {
@@ -27,6 +27,7 @@ namespace Front
             profesores = new List<Profesor>();
             alumnos = new List<Alumno>();
             materias= new List<Materia>();
+            condiciones = new Dictionary<(Alumno, Materia), (Condicion, int)>();            
             Harcodeo();
         }
 
@@ -52,7 +53,7 @@ namespace Front
                 if (ad != null)
                 {
                     Hide();
-                    Form2 form2 = new Form2(this.administradores,this.alumnos, this.profesores, this.materias);
+                    Form2 form2 = new Form2(this.administradores,this.alumnos, this.profesores, this.materias, this.condiciones);
                     form2.toolStripMenuItem1.Text = ($"{ad.Apellido}  {ad.Nombre}");
                     form2.ShowDialog();
                     
