@@ -186,7 +186,6 @@ namespace Front
             this.comboBoxAlumnosRa.Text = "Seleccione alumno...";
             this.comboBoxMateriasRa.Text = "Seleccione materia...";
             this.comboBoxAlumnosRa.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-
         }
 
         private void buttonCerrarRa_Click(object sender, EventArgs e)

@@ -260,9 +260,9 @@
             // 
             // buttonAgregarRa
             // 
-            this.buttonAgregarRa.Location = new System.Drawing.Point(33, 270);
+            this.buttonAgregarRa.Location = new System.Drawing.Point(19, 270);
             this.buttonAgregarRa.Name = "buttonAgregarRa";
-            this.buttonAgregarRa.Size = new System.Drawing.Size(75, 23);
+            this.buttonAgregarRa.Size = new System.Drawing.Size(89, 23);
             this.buttonAgregarRa.TabIndex = 2;
             this.buttonAgregarRa.Text = "Modificar";
             this.buttonAgregarRa.UseVisualStyleBackColor = true;
@@ -271,9 +271,9 @@
             // 
             // buttonCerrarRa
             // 
-            this.buttonCerrarRa.Location = new System.Drawing.Point(158, 270);
+            this.buttonCerrarRa.Location = new System.Drawing.Point(152, 270);
             this.buttonCerrarRa.Name = "buttonCerrarRa";
-            this.buttonCerrarRa.Size = new System.Drawing.Size(75, 23);
+            this.buttonCerrarRa.Size = new System.Drawing.Size(89, 23);
             this.buttonCerrarRa.TabIndex = 1;
             this.buttonCerrarRa.Text = "Cerrar";
             this.buttonCerrarRa.UseVisualStyleBackColor = true;

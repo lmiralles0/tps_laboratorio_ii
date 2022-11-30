@@ -10,18 +10,6 @@ C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Persona\obj\Debug\net5
 C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Persona\obj\Debug\net5.0\refint\Persona.dll
 C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Persona\obj\Debug\net5.0\Persona.pdb
 C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Persona\obj\Debug\net5.0\ref\Persona.dll
-C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Persona\bin\Debug\net5.0\Persona.deps.json
-C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Persona\bin\Debug\net5.0\Persona.dll
-C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Persona\bin\Debug\net5.0\Persona.pdb
-C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Persona\obj\Debug\net5.0\Persona.csproj.AssemblyReference.cache
-C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Persona\obj\Debug\net5.0\Persona.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Persona\obj\Debug\net5.0\Persona.AssemblyInfoInputs.cache
-C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Persona\obj\Debug\net5.0\Persona.AssemblyInfo.cs
-C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Persona\obj\Debug\net5.0\Persona.csproj.CoreCompileInputs.cache
-C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Persona\obj\Debug\net5.0\Persona.dll
-C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Persona\obj\Debug\net5.0\refint\Persona.dll
-C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Persona\obj\Debug\net5.0\Persona.pdb
-C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Persona\obj\Debug\net5.0\ref\Persona.dll
 C:\Users\lulo_\OneDrive\Escritorio\tps_laboratorio_ii\TP1\Persona\bin\Debug\net5.0\Persona.deps.json
 C:\Users\lulo_\OneDrive\Escritorio\tps_laboratorio_ii\TP1\Persona\bin\Debug\net5.0\Persona.dll
 C:\Users\lulo_\OneDrive\Escritorio\tps_laboratorio_ii\TP1\Persona\bin\Debug\net5.0\Persona.pdb
@@ -34,3 +22,15 @@ C:\Users\lulo_\OneDrive\Escritorio\tps_laboratorio_ii\TP1\Persona\obj\Debug\net5
 C:\Users\lulo_\OneDrive\Escritorio\tps_laboratorio_ii\TP1\Persona\obj\Debug\net5.0\refint\Persona.dll
 C:\Users\lulo_\OneDrive\Escritorio\tps_laboratorio_ii\TP1\Persona\obj\Debug\net5.0\Persona.pdb
 C:\Users\lulo_\OneDrive\Escritorio\tps_laboratorio_ii\TP1\Persona\obj\Debug\net5.0\ref\Persona.dll
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Persona\bin\Debug\net5.0\Persona.deps.json
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Persona\bin\Debug\net5.0\Persona.dll
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Persona\bin\Debug\net5.0\Persona.pdb
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Persona\obj\Debug\net5.0\Persona.csproj.AssemblyReference.cache
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Persona\obj\Debug\net5.0\Persona.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Persona\obj\Debug\net5.0\Persona.AssemblyInfoInputs.cache
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Persona\obj\Debug\net5.0\Persona.AssemblyInfo.cs
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Persona\obj\Debug\net5.0\Persona.csproj.CoreCompileInputs.cache
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Persona\obj\Debug\net5.0\Persona.dll
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Persona\obj\Debug\net5.0\refint\Persona.dll
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Persona\obj\Debug\net5.0\Persona.pdb
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Persona\obj\Debug\net5.0\ref\Persona.dll
