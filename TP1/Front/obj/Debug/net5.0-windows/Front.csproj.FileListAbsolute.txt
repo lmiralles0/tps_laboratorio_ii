@@ -48,8 +48,6 @@ C:\Users\lulo_\OneDrive\Escritorio\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0
 C:\Users\lulo_\OneDrive\Escritorio\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\Front.pdb
 C:\Users\lulo_\OneDrive\Escritorio\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\Front.genruntimeconfig.cache
 C:\Users\lulo_\OneDrive\Escritorio\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\ref\Front.dll
-C:\Users\lulo_\OneDrive\Escritorio\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Condicion-Notas.dll
-C:\Users\lulo_\OneDrive\Escritorio\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Condicion-Notas.pdb
 C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Front.exe
 C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Front.deps.json
 C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Front.runtimeconfig.json

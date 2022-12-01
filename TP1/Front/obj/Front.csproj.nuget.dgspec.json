@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Front\\Front.csproj": {}
+    "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Front\\Front.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Condicion-Notas\\Condicion-Notas.csproj": {
+    "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Asignaciones\\Asignaciones.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Condicion-Notas\\Condicion-Notas.csproj",
-        "projectName": "Condicion-Notas",
-        "projectPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Condicion-Notas\\Condicion-Notas.csproj",
-        "packagesPath": "C:\\Users\\Luciano Miralles\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Condicion-Notas\\obj\\",
+        "projectUniqueName": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Asignaciones\\Asignaciones.csproj",
+        "projectName": "Asignaciones",
+        "projectPath": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Asignaciones\\Asignaciones.csproj",
+        "packagesPath": "C:\\Users\\lulo_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Asignaciones\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Luciano Miralles\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lulo_\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Materias\\Materias.csproj": {
-                "projectPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Materias\\Materias.csproj"
+              "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Materias\\Materias.csproj": {
+                "projectPath": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Materias\\Materias.csproj"
+              },
+              "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Persona\\Persona.csproj": {
+                "projectPath": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Persona\\Persona.csproj"
               }
             }
           }
@@ -63,17 +66,17 @@
         }
       }
     },
-    "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Front\\Front.csproj": {
+    "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Front\\Front.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Front\\Front.csproj",
+        "projectUniqueName": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Front\\Front.csproj",
         "projectName": "Front",
-        "projectPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Front\\Front.csproj",
-        "packagesPath": "C:\\Users\\Luciano Miralles\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Front\\obj\\",
+        "projectPath": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Front\\Front.csproj",
+        "packagesPath": "C:\\Users\\lulo_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Front\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Luciano Miralles\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lulo_\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -87,14 +90,14 @@
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
             "projectReferences": {
-              "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Condicion-Notas\\Condicion-Notas.csproj": {
-                "projectPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Condicion-Notas\\Condicion-Notas.csproj"
+              "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Asignaciones\\Asignaciones.csproj": {
+                "projectPath": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Asignaciones\\Asignaciones.csproj"
               },
-              "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Materias\\Materias.csproj": {
-                "projectPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Materias\\Materias.csproj"
+              "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Materias\\Materias.csproj": {
+                "projectPath": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Materias\\Materias.csproj"
               },
-              "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Persona\\Persona.csproj": {
-                "projectPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Persona\\Persona.csproj"
+              "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Persona\\Persona.csproj": {
+                "projectPath": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Persona\\Persona.csproj"
               }
             }
           }
@@ -131,17 +134,17 @@
         }
       }
     },
-    "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Materias\\Materias.csproj": {
+    "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Materias\\Materias.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Materias\\Materias.csproj",
+        "projectUniqueName": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Materias\\Materias.csproj",
         "projectName": "Materias",
-        "projectPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Materias\\Materias.csproj",
-        "packagesPath": "C:\\Users\\Luciano Miralles\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Materias\\obj\\",
+        "projectPath": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Materias\\Materias.csproj",
+        "packagesPath": "C:\\Users\\lulo_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Materias\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Luciano Miralles\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lulo_\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -155,8 +158,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Persona\\Persona.csproj": {
-                "projectPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Persona\\Persona.csproj"
+              "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Persona\\Persona.csproj": {
+                "projectPath": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Persona\\Persona.csproj"
               }
             }
           }
@@ -190,17 +193,17 @@
         }
       }
     },
-    "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Persona\\Persona.csproj": {
+    "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Persona\\Persona.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Persona\\Persona.csproj",
+        "projectUniqueName": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Persona\\Persona.csproj",
         "projectName": "Persona",
-        "projectPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Persona\\Persona.csproj",
-        "packagesPath": "C:\\Users\\Luciano Miralles\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Persona\\obj\\",
+        "projectPath": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Persona\\Persona.csproj",
+        "packagesPath": "C:\\Users\\lulo_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Persona\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Luciano Miralles\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lulo_\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

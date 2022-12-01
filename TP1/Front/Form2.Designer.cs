@@ -236,6 +236,7 @@
             this.comboBoxRegularRa.TabIndex = 5;
             this.comboBoxRegularRa.Text = "Condicion...";
             this.comboBoxRegularRa.Visible = false;
+            this.comboBoxRegularRa.Enter += new System.EventHandler(this.comboBoxRegularRa_Enter);
             // 
             // comboBoxAlumnosRa
             // 

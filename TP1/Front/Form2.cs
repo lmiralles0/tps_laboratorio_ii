@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.DataFormats;
+using Asignaciones;
 
 namespace Front
 {
@@ -20,24 +21,21 @@ namespace Front
         public List<Alumno> alumnos;
         public List<Profesor> profesores;
         public List<Materia> materias;
-        public List<Materia> materiasAux;
-        public Alumno alumnoAux;
-        public Dictionary<(Alumno, Materia), (Condicion, int)> condiciones;
+        public List<Asignacion> asignaciones;
 
-        public Form2(List<Admin> admins, List<Alumno> alumn, List<Profesor> profes, List<Materia> mate, Dictionary<(Alumno, Materia), (Condicion, int)> condi)
+
+        public Form2(List<Admin> admins, List<Alumno> alumn, List<Profesor> profes, List<Materia> mate, List<Asignacion> asig)
         {
             administradores = new List<Admin>();
             alumnos = new List<Alumno>();
             profesores = new List<Profesor>();
             materias = new List<Materia>();
-            condiciones = new Dictionary<(Alumno, Materia), (Condicion, int)>();
+            asignaciones = new List<Asignacion>();
             administradores = admins;
             alumnos = alumn;
             profesores = profes;
             materias = mate;
-            condiciones = condi;
-            materiasAux = new List<Materia>();
-            alumnoAux = new Alumno();
+            asignaciones = asig;
             InitializeComponent();
         }
 
@@ -211,7 +209,12 @@ namespace Front
 
         public void buttonAgregarRa_Click(object sender, EventArgs e)
         {
-            condiciones.Add((alumnos[comboBoxAlumnosRa.SelectedIndex], materiasAux[comboBoxMateriasRa.SelectedIndex]), );
+            if(this.comboBoxRegularRa.SelectedIndex== -1 || this.comboBoxMateriasRa.SelectedIndex == -1 || this.comboBoxRegularRa.SelectedIndex == -1)
+            {
+                MessageBox.Show("Error, campos incompletos ", "Faltal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+           
+            
         }
 
         private void linkLabelAm_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -376,5 +379,9 @@ namespace Front
 
         #endregion
 
+        private void comboBoxRegularRa_Enter(object sender, EventArgs e)
+        {
+            comboBoxRegularRa.ForeColor = Color.Black;
+        }
     }
 }

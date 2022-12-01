@@ -6,22 +6,19 @@ using System.Text;
 
 namespace Materias
 {
-    public enum Condicion
-    {
-        Libre,
-        Regular,
-    }
-
     public class Materia
     {
         private string _nombre;
         private int _codigo;
         private Materia _correlativa;
+        public List<DateTime> examenes;
         public List<Profesor> profesores;
         public List<Alumno> alumnos;
+        
 
         public Materia(string asignatura, int codigo)
         {
+            examenes= new List<DateTime>();
             profesores = new List<Profesor>();
             alumnos = new List<Alumno>();
             Asignatura = asignatura;
@@ -54,6 +51,8 @@ namespace Materias
                 return sb.ToString();
             }
         }
+
+        
 
         public static bool Contain(List<Materia> p, Materia op)
         {
