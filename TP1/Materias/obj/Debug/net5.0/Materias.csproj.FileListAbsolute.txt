@@ -28,3 +28,18 @@ C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Materias\obj\Debug\net5
 C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Materias\obj\Debug\net5.0\refint\Materias.dll
 C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Materias\obj\Debug\net5.0\Materias.pdb
 C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Materias\obj\Debug\net5.0\ref\Materias.dll
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Materias\bin\Debug\net5.0\Materias.deps.json
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Materias\bin\Debug\net5.0\Materias.dll
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Materias\bin\Debug\net5.0\Materias.pdb
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Materias\bin\Debug\net5.0\Persona.dll
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Materias\bin\Debug\net5.0\Persona.pdb
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Materias\obj\Debug\net5.0\Materias.csproj.AssemblyReference.cache
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Materias\obj\Debug\net5.0\Materias.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Materias\obj\Debug\net5.0\Materias.AssemblyInfoInputs.cache
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Materias\obj\Debug\net5.0\Materias.AssemblyInfo.cs
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Materias\obj\Debug\net5.0\Materias.csproj.CoreCompileInputs.cache
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Materias\obj\Debug\net5.0\Materias.csproj.CopyComplete
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Materias\obj\Debug\net5.0\Materias.dll
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Materias\obj\Debug\net5.0\refint\Materias.dll
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Materias\obj\Debug\net5.0\Materias.pdb
+C:\Users\MCvitani\Desktop\Pro\tps_laboratorio_ii-main\TP1\Materias\obj\Debug\net5.0\ref\Materias.dll

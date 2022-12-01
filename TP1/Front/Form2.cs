@@ -22,6 +22,8 @@ namespace Front
         public List<Profesor> profesores;
         public List<Materia> materias;
         public List<Asignacion> asignaciones;
+        public List<Materia> materiasAux;
+        public Alumno alumnoAux;
 
 
         public Form2(List<Admin> admins, List<Alumno> alumn, List<Profesor> profes, List<Materia> mate, List<Asignacion> asig)
@@ -36,6 +38,8 @@ namespace Front
             profesores = profes;
             materias = mate;
             asignaciones = asig;
+            materiasAux = new List<Materia>();
+            alumnoAux = new Alumno();
             InitializeComponent();
         }
 
@@ -119,7 +123,6 @@ namespace Front
                 auxAdmin.Passwd = this.AltaTextBoxUserPasswd.Text;
                 if (auxAdmin.AddUsuario(administradores, auxAdmin) && (!(Persona.Profesor.Contain(profesores, auxAdmin)) && !(Persona.Alumno.Contain(alumnos, auxAdmin))))
                 {
-                    buttonAgregarAlta.DialogResult = DialogResult.OK;
                     MensajeExito();
                     InvokeOnClick(buttonCerrarAlta, e);
 
@@ -138,7 +141,6 @@ namespace Front
                 auxAlumno.Passwd = this.AltaTextBoxUserPasswd.Text;
                 if (auxAlumno.AddUsuario(alumnos, auxAlumno) && (!(Persona.Profesor.Contain(profesores, auxAlumno)) && !(Persona.Admin.Contain(administradores, auxAlumno))))
                 {
-                    buttonAgregarAlta.DialogResult = DialogResult.OK;
                     MensajeExito();
                     InvokeOnClick(buttonCerrarAlta, e);
                 }
@@ -155,7 +157,6 @@ namespace Front
                 auxProfesor.Passwd = this.AltaTextBoxUserPasswd.Text;
                 if (auxProfesor.AddUsuario(profesores, auxProfesor) && (!(Persona.Admin.Contain(administradores, auxProfesor)) && !(Persona.Alumno.Contain(alumnos, auxProfesor))))
                 {
-                    buttonAgregarAlta.DialogResult = DialogResult.OK;
                     MensajeExito();
                     InvokeOnClick(buttonCerrarAlta, e);
 
@@ -185,7 +186,10 @@ namespace Front
             this.labelRa.Visible = true;
             this.comboBoxAlumnosRa.Text = "Seleccione alumno...";
             this.comboBoxMateriasRa.Text = "Seleccione materia...";
+            this.comboBoxRegularRa.Text = "Condicion...";
             this.comboBoxAlumnosRa.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.comboBoxRegularRa.ForeColor = SystemColors.ButtonShadow;
+            this.comboBoxMateriasRa.ForeColor = SystemColors.ButtonShadow;
         }
 
         private void buttonCerrarRa_Click(object sender, EventArgs e)
@@ -204,7 +208,6 @@ namespace Front
             this.comboBoxRegularRa.Visible = false;
             this.labelRa.Visible = true; 
             this.comboBoxMateriasRa.Enabled = false;
-            comboBoxAlumnosRa.DataSource = null;
         }
 
         public void buttonAgregarRa_Click(object sender, EventArgs e)
@@ -213,6 +216,33 @@ namespace Front
             {
                 MessageBox.Show("Error, campos incompletos ", "Faltal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else
+            {
+                Asignacion asignacion = new Asignacion(materiasAux[comboBoxMateriasRa.SelectedIndex], alumnoAux, comboBoxRegularRa.SelectedIndex);
+                bool case1 = Asignacion.ModificarAsignacion(asignaciones, asignacion, comboBoxRegularRa.SelectedIndex);
+                bool case2 = Asignacion.AddAsignaciones(asignaciones, asignacion);
+                if (case1)
+                {
+                    MessageBox.Show("Asignacion realiza", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    InvokeOnClick(buttonCerrarRa, e);
+                }
+                if(case2)
+                {
+                    MessageBox.Show("Asignacion realiza", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    InvokeOnClick(buttonCerrarRa, e);
+                }
+                else if (case1 == false && case2 == false)
+                {
+                    DialogResult result;
+                    result = MessageBox.Show("Error cambio ya realizado.", "Fatal", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    if (result == System.Windows.Forms.DialogResult.Cancel)
+                    {
+                        InvokeOnClick(buttonCerrarRa, e);
+                    }
+                    
+                }
+            }
+
            
             
         }
@@ -227,10 +257,11 @@ namespace Front
             this.linkLabelAm2.Visible = true;
             this.groupBoxAm.Visible = true;
             this.textBoxNombreAm.Visible = true;
-            this.comboBoxSeleccionarMateriaAm.Visible = true;
             this.buttonAgregarAm.Visible = true;
             this.buttonCerrarAm.Visible = true;
             this.labelNombreMateriaAm.Visible = true;
+            this.checkBoxCorrelativa1.Visible = true;
+            this.labelCorrelativaAm.Visible = true;
         }
 
 
@@ -247,11 +278,56 @@ namespace Front
             this.comboBoxSeleccionarMateriaAm.Visible = false;
             this.buttonAgregarAm.Visible = false;
             this.buttonCerrarAm.Visible = false;
+            this.checkBoxCorrelativa1.Visible = false;
+            this.labelCorrelativaAm.Visible = false;
+            this.textBoxNombreAm.ResetText();
+            this.textBoxCodigoAm.ResetText();
+            if(checkBoxCorrelativa1.Checked == true)
+            {
+                checkBoxCorrelativa1.Checked = false;
+            }
 
         }
 
         public void buttonAgregarAm_Click(object sender, EventArgs e)
         {
+            if(this.textBoxNombreAm.Text.Length == 0 || this.textBoxCodigoAm.Text.Length == 0)
+            {
+                MessageBox.Show("Error, campos incompletos ", "Faltal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                Materia materiaAdd;
+                if(this.checkBoxCorrelativa1.Checked == true && this.comboBoxSeleccionarMateriaAm.SelectedIndex >= 0)
+                {
+                    materiaAdd = new Materia(this.textBoxNombreAm.Text, int.Parse(this.textBoxCodigoAm.Text), materias[this.comboBoxSeleccionarMateriaAm.SelectedIndex]);
+                    
+                    if(materiaAdd.AddMateria(materias, materiaAdd))
+                    {
+                        InvokeOnClick(buttonCerrarAm, e);
+                        MessageBox.Show("Alta materia exitosa.", "ATENCION!!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
+                    else
+                    {
+                        InvokeOnClick(buttonCerrarAm, e);
+                        MessageBox.Show("Error al cargar.", "ATENCION!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    materiaAdd = new Materia(this.textBoxNombreAm.Text, int.Parse(this.textBoxCodigoAm.Text));
+                    if(materiaAdd.AddMateria(materias, materiaAdd))
+                    {
+                        InvokeOnClick(buttonCerrarAm, e);
+                        MessageBox.Show("Alta materia exitosa.", "ATENCION!!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
+                    else
+                    {
+                        InvokeOnClick(buttonCerrarAm, e);
+                        MessageBox.Show("Error al cargar.", "ATENCION!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
 
         }
 
@@ -376,12 +452,42 @@ namespace Front
             LoadComboBoxMateria();
 
         }
-
-        #endregion
-
         private void comboBoxRegularRa_Enter(object sender, EventArgs e)
         {
             comboBoxRegularRa.ForeColor = Color.Black;
         }
+
+        #endregion
+
+        #region AM
+        private void checkBoxCorrelativa1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(this.checkBoxCorrelativa1.Checked == true)
+            {
+                this.comboBoxSeleccionarMateriaAm.Visible = true;
+            }
+            if (this.checkBoxCorrelativa1.Checked == false)
+            {
+                this.comboBoxSeleccionarMateriaAm.Visible = false;
+            }
+
+        }
+
+        private void comboBoxSeleccionarMateriaAm_Enter(object sender, EventArgs e)
+        {
+            comboBoxSeleccionarMateriaAm.ForeColor = Color.Black;
+            comboBoxSeleccionarMateriaAm.DataSource = materias;
+
+            if (materias.Count > 0 && materias != null)
+            {
+                foreach (Materia a in materias)
+                {
+                    materiaBindingSource.Add(a);
+                }
+            }
+        }
+
+        #endregion
+
     }
 }

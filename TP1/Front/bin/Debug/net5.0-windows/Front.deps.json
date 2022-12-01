@@ -8,11 +8,21 @@
     ".NETCoreApp,Version=v5.0": {
       "Front/1.0.0": {
         "dependencies": {
+          "Asignaciones": "1.0.0",
           "Materias": "1.0.0",
           "Persona": "1.0.0"
         },
         "runtime": {
           "Front.dll": {}
+        }
+      },
+      "Asignaciones/1.0.0": {
+        "dependencies": {
+          "Materias": "1.0.0",
+          "Persona": "1.0.0"
+        },
+        "runtime": {
+          "Asignaciones.dll": {}
         }
       },
       "Materias/1.0.0": {
@@ -32,6 +42,11 @@
   },
   "libraries": {
     "Front/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Asignaciones/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

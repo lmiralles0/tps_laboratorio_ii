@@ -57,32 +57,43 @@ namespace Front
                     Form2 form2 = new Form2(this.administradores,this.alumnos, this.profesores, this.materias, this.asignaciones);
                     form2.toolStripMenuItem1.Text = ($"{ad.Apellido}  {ad.Nombre}");
                     form2.ShowDialog();
+                    while(form2.Validate())
+                    {
+
+                        if(form2.buttonAgregarAlta.DialogResult == DialogResult.OK && form2.AltaUserComboBox.Text == "Administrativo")
+                        {
+                            administradores = form2.administradores;
+                        }
+
+                        if (form2.buttonAgregarAlta.DialogResult == DialogResult.OK && form2.AltaUserComboBox.Text == "Alumno")
+                        {
+                            alumnos = form2.alumnos;
+                        }
+
+                        if (form2.buttonAgregarAlta.DialogResult == DialogResult.OK && form2.AltaUserComboBox.Text == "Profesor")
+                        {
+                            profesores = form2.profesores;
+                        }
+
+                        if(form2.buttonAgregarRa.DialogResult == DialogResult.OK)
+                        {
+                            asignaciones = form2.asignaciones;
+                        }
                     
-                    if(form2.buttonAgregarAlta.DialogResult == DialogResult.OK && form2.AltaUserComboBox.Text == "Administrativo")
-                    {
-                        administradores = form2.administradores;
+                        if(form2.buttonAgregarAm.DialogResult == DialogResult.OK)
+                        {
+                            materias = form2.materias;
+                        }
                     }
 
-                    if (form2.buttonAgregarAlta.DialogResult == DialogResult.OK && form2.AltaUserComboBox.Text == "Alumno")
-                    {
-                        alumnos = form2.alumnos;
-                    }
 
-                    if (form2.buttonAgregarAlta.DialogResult == DialogResult.OK && form2.AltaUserComboBox.Text == "Profesor")
-                    {
-                        profesores = form2.profesores;
-                    }
-
-                    
-
-
-                    if (form2.Validate())
-                    {
+                    //if (form2.Validate())
+                    //{
                         this.Show();
                         this.KindUser.SelectedIndex = -1;
                         this.txtBoxDNI.ResetText();
                         this.txtBoxPasswd.ResetText();
-                    }
+                    //}
                 }
                 else
                 {
