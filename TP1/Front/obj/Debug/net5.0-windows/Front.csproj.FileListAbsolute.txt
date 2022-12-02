@@ -54,10 +54,8 @@ C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-
 C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Front.runtimeconfig.dev.json
 C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Front.dll
 C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Front.pdb
-C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Condicion-Notas.dll
 C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Materias.dll
 C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Persona.dll
-C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Condicion-Notas.pdb
 C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Materias.pdb
 C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Persona.pdb
 C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\Front.csproj.AssemblyReference.cache
@@ -76,3 +74,5 @@ C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-
 C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\Front.pdb
 C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\Front.genruntimeconfig.cache
 C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\ref\Front.dll
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Asignaciones.dll
+C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Asignaciones.pdb

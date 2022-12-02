@@ -104,7 +104,6 @@ namespace Front
 
         public void buttonAgregarAlta_Click(object sender, EventArgs e)
         {
-
             if (this.AltaUserComboBox.Text.Length == 0 || this.AltaTextBoxUserSureName.Text.Length == 0 || this.AltaTextBoxUserName.Text.Length == 0
                 || this.AltaTextBoxUserDni.Text.Length == 0 || this.AltaTextBoxUserPasswd.Text.Length == 0)
             {
@@ -123,6 +122,7 @@ namespace Front
                 auxAdmin.Passwd = this.AltaTextBoxUserPasswd.Text;
                 if (auxAdmin.AddUsuario(administradores, auxAdmin) && (!(Persona.Profesor.Contain(profesores, auxAdmin)) && !(Persona.Alumno.Contain(alumnos, auxAdmin))))
                 {
+                    buttonAgregarAlta.DialogResult = DialogResult.OK;
                     MensajeExito();
                     InvokeOnClick(buttonCerrarAlta, e);
 
@@ -135,12 +135,13 @@ namespace Front
 
             }
             if (this.AltaUserComboBox.Text == "Alumno" && !(string.IsNullOrEmpty(this.AltaTextBoxUserName.Text)) &&
-              !(string.IsNullOrEmpty(this.AltaTextBoxUserSureName.Text)) && !(string.IsNullOrEmpty(this.AltaTextBoxUserDni.Text)))
+                !(string.IsNullOrEmpty(this.AltaTextBoxUserSureName.Text)) && !(string.IsNullOrEmpty(this.AltaTextBoxUserDni.Text)))
             {
                 Alumno auxAlumno = new Alumno(int.Parse(this.AltaTextBoxUserDni.Text), this.AltaTextBoxUserName.Text, this.AltaTextBoxUserSureName.Text);
                 auxAlumno.Passwd = this.AltaTextBoxUserPasswd.Text;
                 if (auxAlumno.AddUsuario(alumnos, auxAlumno) && (!(Persona.Profesor.Contain(profesores, auxAlumno)) && !(Persona.Admin.Contain(administradores, auxAlumno))))
                 {
+                    buttonAgregarAlta.DialogResult = DialogResult.OK;
                     MensajeExito();
                     InvokeOnClick(buttonCerrarAlta, e);
                 }
@@ -151,12 +152,13 @@ namespace Front
                 }
             }
             if (this.AltaUserComboBox.Text == "Profesor" && !(string.IsNullOrEmpty(this.AltaTextBoxUserName.Text)) &&
-              !(string.IsNullOrEmpty(this.AltaTextBoxUserSureName.Text)) && !(string.IsNullOrEmpty(this.AltaTextBoxUserDni.Text)))
+                !(string.IsNullOrEmpty(this.AltaTextBoxUserSureName.Text)) && !(string.IsNullOrEmpty(this.AltaTextBoxUserDni.Text)))
             {
                 Profesor auxProfesor = new Profesor(int.Parse(this.AltaTextBoxUserDni.Text), this.AltaTextBoxUserName.Text, this.AltaTextBoxUserSureName.Text);
                 auxProfesor.Passwd = this.AltaTextBoxUserPasswd.Text;
                 if (auxProfesor.AddUsuario(profesores, auxProfesor) && (!(Persona.Admin.Contain(administradores, auxProfesor)) && !(Persona.Alumno.Contain(alumnos, auxProfesor))))
                 {
+                    buttonAgregarAlta.DialogResult = DialogResult.OK;
                     MensajeExito();
                     InvokeOnClick(buttonCerrarAlta, e);
 
@@ -167,6 +169,7 @@ namespace Front
                     InvokeOnClick(buttonCerrarAlta, e);
                 }
             }
+            
         }
 
         private void linkLabelRa_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -304,11 +307,13 @@ namespace Front
                     
                     if(materiaAdd.AddMateria(materias, materiaAdd))
                     {
+                        buttonAgregarAm.DialogResult = DialogResult.OK;
                         InvokeOnClick(buttonCerrarAm, e);
                         MessageBox.Show("Alta materia exitosa.", "ATENCION!!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     }
                     else
                     {
+                        buttonAgregarAm.DialogResult = DialogResult.OK;
                         InvokeOnClick(buttonCerrarAm, e);
                         MessageBox.Show("Error al cargar.", "ATENCION!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -318,11 +323,13 @@ namespace Front
                     materiaAdd = new Materia(this.textBoxNombreAm.Text, int.Parse(this.textBoxCodigoAm.Text));
                     if(materiaAdd.AddMateria(materias, materiaAdd))
                     {
+                        buttonAgregarAm.DialogResult = DialogResult.OK;
                         InvokeOnClick(buttonCerrarAm, e);
                         MessageBox.Show("Alta materia exitosa.", "ATENCION!!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     }
                     else
                     {
+                        buttonAgregarAm.DialogResult = DialogResult.OK;
                         InvokeOnClick(buttonCerrarAm, e);
                         MessageBox.Show("Error al cargar.", "ATENCION!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -390,8 +397,10 @@ namespace Front
         private void comboBoxAlumnosRa_Enter(object sender, EventArgs e)
         {
 
+            alumnoBindingSource.Clear();
+
             comboBoxAlumnosRa.ForeColor = Color.Black;
-            comboBoxAlumnosRa.DataSource = alumnos;
+            ////comboBoxAlumnosRa.DataSource = alumnos;
             
             comboBoxMateriasRa.Enabled = false;
             if (alumnos.Count > 0 && alumnos != null)
@@ -400,14 +409,14 @@ namespace Front
                 {
                     alumnoBindingSource.Add(a);
                 }
-            }
+            }   
            
         }
 
         private void comboBoxMateriasRa_Enter(object sender, EventArgs e)
         {
             comboBoxMateriasRa.ResetText();
-            comboBoxMateriasRa.DataSource = materiasAux;
+            materiaBindingSource.Clear();   
             comboBoxMateriasRa.ForeColor = Color.Black;
             foreach (Materia b in materiasAux)
             {
@@ -418,7 +427,7 @@ namespace Front
 
         public void LoadComboBoxMateria()
         {
-            comboBoxMateriasRa.DataSource = materias;
+            
             string buffer = comboBoxAlumnosRa.Text;
   
             foreach (Alumno a in alumnos)
@@ -476,7 +485,7 @@ namespace Front
         private void comboBoxSeleccionarMateriaAm_Enter(object sender, EventArgs e)
         {
             comboBoxSeleccionarMateriaAm.ForeColor = Color.Black;
-            comboBoxSeleccionarMateriaAm.DataSource = materias;
+            materiaBindingSource.Clear();
 
             if (materias.Count > 0 && materias != null)
             {

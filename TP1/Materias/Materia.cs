@@ -61,7 +61,7 @@ namespace Materias
             {
                 foreach (Materia a in p)
                 {
-                    if (a.Codigo == op.Codigo && a.Asignatura == op.Asignatura) 
+                    if (a.Codigo == op.Codigo || a.Asignatura == op.Asignatura) 
                     {
                         result = true;
                         break;
