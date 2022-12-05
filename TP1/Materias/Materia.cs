@@ -1,6 +1,7 @@
 ﻿using Persona;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Net;
 using System.Text;
 
@@ -52,7 +53,19 @@ namespace Materias
             }
         }
 
-        
+        public static int IndexOfMateria(List<Materia> p, Materia op)
+        {
+            int result = -1;
+            for(int i = 0; i < p.Count; i++)
+            {
+                if(p[i].Asignatura == op.Asignatura && p[i].Codigo == op.Codigo)
+                {
+                    result = i;
+                    break;
+                }
+            }
+            return result;
+        }
 
         public static bool Contain(List<Materia> p, Materia op)
         {
@@ -61,7 +74,7 @@ namespace Materias
             {
                 foreach (Materia a in p)
                 {
-                    if (a.Codigo == op.Codigo || a.Asignatura == op.Asignatura) 
+                    if(op.Asignatura == a.Asignatura || op.Codigo == a.Codigo) 
                     {
                         result = true;
                         break;
@@ -82,10 +95,6 @@ namespace Materias
             }
             return result;
         }
-
-
-        
-
 
     }
 }

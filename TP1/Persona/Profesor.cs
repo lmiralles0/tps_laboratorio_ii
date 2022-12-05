@@ -27,6 +27,20 @@ namespace Persona
         public override string Apellido { get => apellido; }
         public override string Passwd { get => passwd; set => this.passwd = value; }
 
+        public string SelectedProfesor
+        {
+            get
+            {
+                StringBuilder sb = new StringBuilder();
+                sb.Append(Dni.ToString());
+                sb.Append(" - ");
+                sb.Append(Apellido);
+                sb.Append(" ");
+                sb.Append(Nombre);
+                return sb.ToString();
+            }
+        }
+
 
         public static bool Contain(List<Profesor> p, Persona op)
         {
@@ -46,7 +60,7 @@ namespace Persona
         }
 
 
-        public bool AddUsuario(List<Profesor> p, Profesor op)
+        public static bool AddUsuario(List<Profesor> p, Profesor op)
         {
             bool result = false;
             if (!(Contain(p, op)))
@@ -70,7 +84,6 @@ namespace Persona
                         break;
                     }
                 }
-
             }
             return result;
         }

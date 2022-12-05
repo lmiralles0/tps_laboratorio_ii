@@ -46,19 +46,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Luciano Miralles\\.nuget\\packages\\": {}
+    "C:\\Users\\lulo_\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Asignaciones\\Asignaciones.csproj",
+      "projectUniqueName": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Asignaciones\\Asignaciones.csproj",
       "projectName": "Asignaciones",
-      "projectPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Asignaciones\\Asignaciones.csproj",
-      "packagesPath": "C:\\Users\\Luciano Miralles\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Asignaciones\\obj\\",
+      "projectPath": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Asignaciones\\Asignaciones.csproj",
+      "packagesPath": "C:\\Users\\lulo_\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Asignaciones\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Luciano Miralles\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lulo_\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -72,11 +72,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Materias\\Materias.csproj": {
-              "projectPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Materias\\Materias.csproj"
+            "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Materias\\Materias.csproj": {
+              "projectPath": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Materias\\Materias.csproj"
             },
-            "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Persona\\Persona.csproj": {
-              "projectPath": "C:\\Users\\Luciano Miralles\\Desktop\\tps_laboratorio_ii\\TP1\\Persona\\Persona.csproj"
+            "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Persona\\Persona.csproj": {
+              "projectPath": "C:\\Users\\lulo_\\OneDrive\\Escritorio\\tps_laboratorio_ii\\TP1\\Persona\\Persona.csproj"
             }
           }
         }

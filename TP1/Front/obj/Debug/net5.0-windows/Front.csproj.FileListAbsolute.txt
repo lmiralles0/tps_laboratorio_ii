@@ -76,3 +76,5 @@ C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-
 C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\obj\Debug\net5.0-windows\ref\Front.dll
 C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Asignaciones.dll
 C:\Users\Luciano Miralles\Desktop\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Asignaciones.pdb
+C:\Users\lulo_\OneDrive\Escritorio\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Asignaciones.dll
+C:\Users\lulo_\OneDrive\Escritorio\tps_laboratorio_ii\TP1\Front\bin\Debug\net5.0-windows\Asignaciones.pdb

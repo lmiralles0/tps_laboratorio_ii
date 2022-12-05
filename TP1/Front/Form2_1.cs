@@ -1,4 +1,5 @@
-﻿using Materias;
+﻿using Asignaciones;
+using Materias;
 using Persona;
 using System;
 using System.Collections.Generic;
@@ -16,17 +17,23 @@ namespace Front
     {
         public List<Materia> materias;
         public List<Alumno> alumnos;
+        public List<Asignacion> asignaciones;
 
-        public Form2_1(List<Materia> mate, List<Alumno> alum)
+        public Form2_1(List<Materia> mate, List<Alumno> alum, List<Asignacion> asig)
         {
             InitializeComponent();
             materias = new List<Materia>();
             alumnos = new List<Alumno>();
+            asignaciones = new List<Asignacion>();
+            materias = mate;
+            alumnos = alum;
+            asignaciones = asig;
+
         }
 
         private void linkLabelInscripcion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.groupBoxAsistencia.Visible = true;
+            this.groupBoxInscripcion.Visible = true;
             this.buttonInscripcionC.Visible= true;
             this.buttonInscripcionI.Visible= true;
             this.comboBoxInscripcion.Visible= true;
@@ -35,7 +42,8 @@ namespace Front
 
         private void buttonInscripcionC_Click(object sender, EventArgs e)
         {
-            this.groupBoxAsistencia.Visible = false;
+
+            this.groupBoxInscripcion.Visible = false;
             this.buttonInscripcionC.Visible = false;
             this.buttonInscripcionI.Visible = false;
             this.comboBoxInscripcion.Visible = false;

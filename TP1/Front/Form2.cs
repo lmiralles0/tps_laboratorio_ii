@@ -24,6 +24,7 @@ namespace Front
         public List<Asignacion> asignaciones;
         public List<Materia> materiasAux;
         public Alumno alumnoAux;
+        public Profesor profesorAux;
 
 
         public Form2(List<Admin> admins, List<Alumno> alumn, List<Profesor> profes, List<Materia> mate, List<Asignacion> asig)
@@ -40,6 +41,7 @@ namespace Front
             asignaciones = asig;
             materiasAux = new List<Materia>();
             alumnoAux = new Alumno();
+            profesorAux = new Profesor();
             InitializeComponent();
         }
 
@@ -156,7 +158,7 @@ namespace Front
             {
                 Profesor auxProfesor = new Profesor(int.Parse(this.AltaTextBoxUserDni.Text), this.AltaTextBoxUserName.Text, this.AltaTextBoxUserSureName.Text);
                 auxProfesor.Passwd = this.AltaTextBoxUserPasswd.Text;
-                if (auxProfesor.AddUsuario(profesores, auxProfesor) && (!(Persona.Admin.Contain(administradores, auxProfesor)) && !(Persona.Alumno.Contain(alumnos, auxProfesor))))
+                if (Profesor.AddUsuario(profesores, auxProfesor) && (!(Persona.Admin.Contain(administradores, auxProfesor)) && !(Persona.Alumno.Contain(alumnos, auxProfesor))))
                 {
                     buttonAgregarAlta.DialogResult = DialogResult.OK;
                     MensajeExito();
@@ -265,6 +267,8 @@ namespace Front
             this.labelNombreMateriaAm.Visible = true;
             this.checkBoxCorrelativa1.Visible = true;
             this.labelCorrelativaAm.Visible = true;
+            this.comboBoxSeleccionarMateriaAm.Text = "Seleccione correlativa...";
+            this.comboBoxSeleccionarMateriaAm.ForeColor = SystemColors.ButtonShadow;
         }
 
 
@@ -351,8 +355,12 @@ namespace Front
             this.buttonCerrarAp.Visible = true;
             this.comboBoxMateriasAp.Visible = true;
             this.comboBoxProfesorAp.Visible = true;
-
-
+            this.labelMateriaSeleccionar.Visible = true;
+            this.labelProfesorSeleccionar.Visible = true; 
+            this.comboBoxProfesorAp.Text = "Seleccione...";
+            this.comboBoxMateriasAp.Text = "Seleccione...";
+            this.comboBoxProfesorAp.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.comboBoxMateriasAp.ForeColor = SystemColors.ButtonShadow;
         }
 
         private void buttonCerrarAp_Click(object sender, EventArgs e)
@@ -368,11 +376,38 @@ namespace Front
             this.buttonCerrarAp.Visible = false;
             this.comboBoxMateriasAp.Visible = false;
             this.comboBoxProfesorAp.Visible = false;
+            this.labelMateriaSeleccionar.Visible = false;
+            this.labelProfesorSeleccionar.Visible = false;
 
         }
-
         private void buttonAgregarAp_Click(object sender, EventArgs e)
         {
+
+            if (this.comboBoxProfesorAp.SelectedIndex == -1 || this.comboBoxMateriasAp.SelectedIndex == -1)
+            {
+                MessageBox.Show("Error, campos incompletos ", "Faltal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                Materia matAux; 
+                matAux = materiasAux[comboBoxMateriasAp.SelectedIndex];
+                int indice = Materia.IndexOfMateria(materias, matAux);
+                if(indice >= 0)
+                {
+                    if(Profesor.AddUsuario(materias[indice].profesores, profesores[comboBoxProfesorAp.SelectedIndex]))
+                    {
+                        MessageBox.Show("Asigancion realiza", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        InvokeOnClick(buttonCerrarAp, e);
+                    }
+                    else
+                    {
+                        buttonAgregarAm.DialogResult = DialogResult.OK;
+                        InvokeOnClick(buttonCerrarAp, e);
+                        MessageBox.Show("Error al cargar.", "ATENCION!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
+                }
+            }
 
         }
 
@@ -392,7 +427,7 @@ namespace Front
         }
 
 
-        #region RA
+        #region Regularidad Alumno
 
         private void comboBoxAlumnosRa_Enter(object sender, EventArgs e)
         {
@@ -400,7 +435,6 @@ namespace Front
             alumnoBindingSource.Clear();
 
             comboBoxAlumnosRa.ForeColor = Color.Black;
-            ////comboBoxAlumnosRa.DataSource = alumnos;
             
             comboBoxMateriasRa.Enabled = false;
             if (alumnos.Count > 0 && alumnos != null)
@@ -425,7 +459,7 @@ namespace Front
         }
 
 
-        public void LoadComboBoxMateria()
+        public void LoadComboBoxMateriaRa()
         {
             
             string buffer = comboBoxAlumnosRa.Text;
@@ -449,8 +483,8 @@ namespace Front
 
         private void comboBoxAlumnosRa_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBoxMateriasRa.Text = "Seleccione materias...";
-            
+            comboBoxMateriasRa.ForeColor = SystemColors.ButtonShadow;
+            comboBoxMateriasRa.Text = "Seleccione materia...";
         }
 
         private void comboBoxAlumnosRa_SelectionChangeCommitted(object sender, EventArgs e)
@@ -458,8 +492,7 @@ namespace Front
             materiasAux.Clear();
             comboBoxAlumnosRa.ForeColor = Color.Black;
             comboBoxMateriasRa.Enabled = true;
-            LoadComboBoxMateria();
-
+            LoadComboBoxMateriaRa();
         }
         private void comboBoxRegularRa_Enter(object sender, EventArgs e)
         {
@@ -468,15 +501,20 @@ namespace Front
 
         #endregion
 
-        #region AM
+        #region Alta Materia
         private void checkBoxCorrelativa1_CheckedChanged(object sender, EventArgs e)
         {
             if(this.checkBoxCorrelativa1.Checked == true)
             {
+                materiaBindingSource.Clear();
+                this.comboBoxSeleccionarMateriaAm.Text = "Seleccione correlativa...";
+                this.comboBoxSeleccionarMateriaAm.ForeColor = SystemColors.ButtonShadow;
                 this.comboBoxSeleccionarMateriaAm.Visible = true;
             }
             if (this.checkBoxCorrelativa1.Checked == false)
             {
+                this.comboBoxSeleccionarMateriaAm.Text = "Seleccione correlativa...";
+                this.comboBoxSeleccionarMateriaAm.ForeColor = SystemColors.ButtonShadow;
                 this.comboBoxSeleccionarMateriaAm.Visible = false;
             }
 
@@ -498,5 +536,72 @@ namespace Front
 
         #endregion
 
+        #region Asiganar Profesor
+
+        private void comboBoxProfesorAp_Enter(object sender, EventArgs e)
+        {
+            profesorBindingSource.Clear();
+
+            comboBoxProfesorAp.ForeColor = Color.Black;
+            
+
+            comboBoxMateriasAp.Enabled = false;
+            if (profesores.Count > 0 && profesores != null)
+            {
+                foreach (Profesor a in profesores)
+                {
+                    profesorBindingSource.Add(a);
+                }
+            }
+        }
+
+        private void comboBoxProfesorAp_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            materiasAux.Clear();
+            materiaBindingSource.Clear();
+            comboBoxProfesorAp.ForeColor = Color.Black;
+            comboBoxMateriasAp.Enabled = true;
+            this.comboBoxMateriasAp.ForeColor = SystemColors.ButtonShadow;
+            comboBoxMateriasAp.Text = "Seleccione...";
+            LoadComboBoxMateriaAp();
+        }
+
+        private void comboBoxMateriasAp_Enter(object sender, EventArgs e)
+        {
+            comboBoxMateriasAp.ResetText();
+            comboBoxMateriasAp.Enabled = true;
+            comboBoxMateriasAp.ForeColor = Color.Black;
+            foreach (Materia b in materiasAux)
+            {
+                materiaBindingSource.Add(b);
+            }
+        }
+
+        public void LoadComboBoxMateriaAp()
+        {
+
+            string buffer = comboBoxProfesorAp.Text;
+
+            foreach (Profesor a in profesores)
+            {
+                if (buffer.Contains(a.Dni.ToString()))
+                {
+                    profesorAux = a;
+                    break;
+                }
+            }
+            foreach (Materia a in materias)
+            {
+                if (!(Persona.Profesor.Contain(a.profesores, profesorAux)))
+                {
+                    materiasAux.Add(a);
+                }
+            }
+        }
+
+        #endregion
     }
+
+    
+
 }

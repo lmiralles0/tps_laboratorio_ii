@@ -117,12 +117,11 @@ namespace Front
                 if(aux != null)
                 {
                     Hide();
-                    Form2_1 form3 = new Form2_1(this.materias, this.alumnos);
+                    Form2_1 form3 = new Form2_1(this.materias, this.alumnos, this.asignaciones);
+                    form3.labelTitle.Text += ($" {aux.Nombre} {aux.Apellido}");
                     form3.ShowDialog();
-                    
-                    
-                    
-                    
+
+
                     
                     if (form3.Validate())
                     {
@@ -189,6 +188,7 @@ namespace Front
             Materia mat4 = new Materia("Programacion", 110, mat2);
             Materia mat5 = new Materia("Laboratorio", 111, mat3);
             Materia mat6 = new Materia("SPD", 109);
+            Materia mat7 = new Materia("Estadistica", 120, mat1);
 
             materias.Add(mat1);
             materias.Add(mat2);
@@ -207,8 +207,14 @@ namespace Front
             Alumno auxas = new Alumno(4267148, "Oscar", "Miralles");
             auxas.Passwd = "456";
             auxas.AddUsuario(alumnos, auxas);
+
+            Profesor adi = new Profesor(17042553, "Maximo", "Miralles");
+            adi.Passwd = "753";
+            Profesor.AddUsuario(profesores, adi);
             
             mat1.alumnos.Add(auxa);
+            mat1.profesores.Add(adi);
+            mat7.profesores.Add(adi);
            
 
         }
