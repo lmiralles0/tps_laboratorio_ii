@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.linkLabelInscripcion = new System.Windows.Forms.LinkLabel();
             this.linkLabelAsistencia = new System.Windows.Forms.LinkLabel();
             this.labelTitle = new System.Windows.Forms.Label();
             this.comboBoxInscripcion = new System.Windows.Forms.ComboBox();
-            this.checkBoxPresenre = new System.Windows.Forms.CheckBox();
-            this.checkBoxAusente = new System.Windows.Forms.CheckBox();
+            this.checkBoxPresente = new System.Windows.Forms.CheckBox();
             this.monthCalendar = new System.Windows.Forms.MonthCalendar();
             this.groupBoxAsistencia = new System.Windows.Forms.GroupBox();
             this.groupBoxInscripcion = new System.Windows.Forms.GroupBox();
@@ -41,8 +41,10 @@
             this.buttonAsistenciaConfirmar = new System.Windows.Forms.Button();
             this.buttonAsistenciaC = new System.Windows.Forms.Button();
             this.buttonInscripcionC = new System.Windows.Forms.Button();
+            this.materiaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBoxAsistencia.SuspendLayout();
             this.groupBoxInscripcion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.materiaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // linkLabelInscripcion
@@ -81,36 +83,27 @@
             // 
             // comboBoxInscripcion
             // 
+            this.comboBoxInscripcion.DataSource = this.materiaBindingSource;
+            this.comboBoxInscripcion.DisplayMember = "SelectedMateria";
             this.comboBoxInscripcion.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.comboBoxInscripcion.FormattingEnabled = true;
             this.comboBoxInscripcion.Location = new System.Drawing.Point(22, 35);
             this.comboBoxInscripcion.Name = "comboBoxInscripcion";
             this.comboBoxInscripcion.Size = new System.Drawing.Size(230, 23);
             this.comboBoxInscripcion.TabIndex = 2;
-            this.comboBoxInscripcion.Text = "Seleccione materia...";
             this.comboBoxInscripcion.Visible = false;
+            this.comboBoxInscripcion.Enter += new System.EventHandler(this.comboBoxInscripcion_Enter);
             // 
-            // checkBoxPresenre
+            // checkBoxPresente
             // 
-            this.checkBoxPresenre.AutoSize = true;
-            this.checkBoxPresenre.Location = new System.Drawing.Point(21, 35);
-            this.checkBoxPresenre.Name = "checkBoxPresenre";
-            this.checkBoxPresenre.Size = new System.Drawing.Size(71, 19);
-            this.checkBoxPresenre.TabIndex = 5;
-            this.checkBoxPresenre.Text = "Presente";
-            this.checkBoxPresenre.UseVisualStyleBackColor = true;
-            this.checkBoxPresenre.Visible = false;
-            // 
-            // checkBoxAusente
-            // 
-            this.checkBoxAusente.AutoSize = true;
-            this.checkBoxAusente.Location = new System.Drawing.Point(200, 35);
-            this.checkBoxAusente.Name = "checkBoxAusente";
-            this.checkBoxAusente.Size = new System.Drawing.Size(69, 19);
-            this.checkBoxAusente.TabIndex = 6;
-            this.checkBoxAusente.Text = "Ausente";
-            this.checkBoxAusente.UseVisualStyleBackColor = true;
-            this.checkBoxAusente.Visible = false;
+            this.checkBoxPresente.AutoSize = true;
+            this.checkBoxPresente.Location = new System.Drawing.Point(21, 35);
+            this.checkBoxPresente.Name = "checkBoxPresente";
+            this.checkBoxPresente.Size = new System.Drawing.Size(71, 19);
+            this.checkBoxPresente.TabIndex = 5;
+            this.checkBoxPresente.Text = "Presente";
+            this.checkBoxPresente.UseVisualStyleBackColor = true;
+            this.checkBoxPresente.Visible = false;
             // 
             // monthCalendar
             // 
@@ -124,8 +117,7 @@
             // groupBoxAsistencia
             // 
             this.groupBoxAsistencia.Controls.Add(this.monthCalendar);
-            this.groupBoxAsistencia.Controls.Add(this.checkBoxAusente);
-            this.groupBoxAsistencia.Controls.Add(this.checkBoxPresenre);
+            this.groupBoxAsistencia.Controls.Add(this.checkBoxPresente);
             this.groupBoxAsistencia.Location = new System.Drawing.Point(326, 83);
             this.groupBoxAsistencia.Name = "groupBoxAsistencia";
             this.groupBoxAsistencia.Size = new System.Drawing.Size(281, 237);
@@ -187,6 +179,10 @@
             this.buttonInscripcionC.Visible = false;
             this.buttonInscripcionC.Click += new System.EventHandler(this.buttonInscripcionC_Click);
             // 
+            // materiaBindingSource
+            // 
+            this.materiaBindingSource.DataSource = typeof(Materias.Materia);
+            // 
             // Form2_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -207,6 +203,7 @@
             this.groupBoxAsistencia.ResumeLayout(false);
             this.groupBoxAsistencia.PerformLayout();
             this.groupBoxInscripcion.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.materiaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,10 +219,10 @@
         public System.Windows.Forms.Button buttonInscripcionI;
         public System.Windows.Forms.Button buttonInscripcionC;
         public System.Windows.Forms.LinkLabel linkLabelAsistencia;
-        public System.Windows.Forms.CheckBox checkBoxPresenre;
-        public System.Windows.Forms.CheckBox checkBoxAusente;
+        public System.Windows.Forms.CheckBox checkBoxPresente;
         public System.Windows.Forms.GroupBox groupBoxAsistencia;
         public System.Windows.Forms.Button buttonAsistenciaC;
         public System.Windows.Forms.Button buttonAsistenciaConfirmar;
+        private System.Windows.Forms.BindingSource materiaBindingSource;
     }
 }

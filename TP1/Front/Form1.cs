@@ -117,7 +117,7 @@ namespace Front
                 if(aux != null)
                 {
                     Hide();
-                    Form2_1 form3 = new Form2_1(this.materias, this.alumnos, this.asignaciones);
+                    Form2_1 form3 = new Form2_1(this.materias, this.alumnos, this.asignaciones, aux);
                     form3.labelTitle.Text += ($" {aux.Nombre} {aux.Apellido}");
                     form3.ShowDialog();
 

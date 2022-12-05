@@ -15,19 +15,23 @@ namespace Front
 {
     public partial class Form2_1 : Form
     {
-        public List<Materia> materias;
         public List<Alumno> alumnos;
         public List<Asignacion> asignaciones;
+        public Alumno alumno;
+        public List<Materia> materias;
+        public List<Materia> materiasAux;
 
-        public Form2_1(List<Materia> mate, List<Alumno> alum, List<Asignacion> asig)
+        public Form2_1(List<Materia> mate, List<Alumno> alum, List<Asignacion> asig, Alumno al)
         {
             InitializeComponent();
-            materias = new List<Materia>();
             alumnos = new List<Alumno>();
             asignaciones = new List<Asignacion>();
+            materias = new List<Materia>();
+            materiasAux = new List<Materia>();
             materias = mate;
             alumnos = alum;
             asignaciones = asig;
+            alumno = al;
 
         }
 
@@ -57,16 +61,45 @@ namespace Front
 
         private void linkLabelAsistencia_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            this.groupBoxAsistencia.Visible = true;
+            this.checkBoxPresente.Visible = true;
+            this.monthCalendar.Visible = true;
+            this.buttonAsistenciaC.Visible = true;
+            this.buttonAsistenciaConfirmar.Visible = true;
+            
         }
 
         private void buttonAsistenciaC_Click(object sender, EventArgs e)
         {
-
+            this.groupBoxAsistencia.Visible = false;
+            this.checkBoxPresente.Visible = false;
+            this.monthCalendar.Visible = false;
+            this.buttonAsistenciaC.Visible = false;
+            this.buttonAsistenciaConfirmar.Visible = false;
         }
 
         private void buttonAsistenciaConfirmar_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void comboBoxInscripcion_Enter(object sender, EventArgs e)
+        {
+            materiaBindingSource.Clear();
+            this.comboBoxInscripcion.ForeColor = Color.Black;
+
+            foreach(Materia a in materias)
+            {
+                if (!(Persona.Alumno.Contain(a.alumnos, alumno)))
+                {
+                    materiasAux.Add(a);
+                }
+            }
+
+            foreach(Materia b in materiasAux)
+            {
+                materiaBindingSource.Add(b);
+            }
 
         }
     }
