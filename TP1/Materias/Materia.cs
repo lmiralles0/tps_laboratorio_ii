@@ -16,6 +16,10 @@ namespace Materias
         public List<Profesor> profesores;
         public List<Alumno> alumnos;
         
+        static Materia()
+        {
+
+        }
 
         public Materia(string asignatura, int codigo)
         {
@@ -58,7 +62,7 @@ namespace Materias
             int result = -1;
             for(int i = 0; i < p.Count; i++)
             {
-                if(p[i].Asignatura == op.Asignatura && p[i].Codigo == op.Codigo)
+                if(p[i] == op)
                 {
                     result = i;
                     break;
@@ -85,16 +89,24 @@ namespace Materias
         }
 
 
-        public bool AddMateria(List<Materia> p, Materia op)
+        public bool AddMateria(List<Materia> p, Materia pa)
         {
             bool result = false;
-            if (!(Contain(p, op)))
+            if (!(Contain(p, pa)))
             {
-                p.Add(op);
+                p.Add(pa);
                 result = true;
             }
             return result;
         }
+
+        public static bool operator ==(Materia a, Materia b)
+        {
+            return a.Asignatura == b.Asignatura && a.Asignatura == b.Asignatura;
+        }
+
+        public static bool operator !=(Materia a, Materia b)
+        { return !(a == b); }
 
     }
 }

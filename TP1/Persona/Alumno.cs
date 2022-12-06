@@ -79,7 +79,7 @@ namespace Persona
         }
 
 
-        public bool AddUsuario(List<Alumno> p, Alumno op)
+        public static bool AddUsuario(List<Alumno> p, Alumno op)
         {
             bool result = false;
             if (!(Contain(p, op)))
