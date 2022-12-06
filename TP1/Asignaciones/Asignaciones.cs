@@ -185,5 +185,14 @@ namespace Asignaciones
             }
             return result;
         }
+
+        public static bool MateriaAprobada(List<Asignacion> asig, Materia mat, Alumno al)
+        {
+            bool result = false;
+            if(asig != null && mat != null && al != null)
+            {
+
+            }
+        }
     }
 }

@@ -64,12 +64,21 @@ namespace Front
             }
             else 
             {
+                if()
                 if(Asignacion.SimultaniedadMaterias(asignaciones, alumno))
                 {
+                    int indice;
                     Asignacion asig = new Asignacion(materiasAux[comboBoxInscripcion.SelectedIndex], alumno);
                     asig.simultaniedadInscripcion = 1;
                     asignaciones.Add(asig);
-                    //IndexOf
+                    indice = Materia.IndexOfMateria(materias, materiasAux[comboBoxInscripcion.SelectedIndex]);
+                    if(indice > -1)
+                    {
+                        if(Persona.Alumno.AddUsuario(materias[indice].alumnos, alumno))
+                        {
+
+                        }
+                    }
                 }
                 else
                 {
