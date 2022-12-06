@@ -42,6 +42,8 @@ namespace Front
             this.buttonInscripcionI.Visible= true;
             this.comboBoxInscripcion.Visible= true;
             this.linkLabelAsistencia.Visible = false;
+            this.comboBoxInscripcion.Text = "Seleccione materia...";
+            this.comboBoxInscripcion.ForeColor = SystemColors.ButtonShadow;
         }
 
         private void buttonInscripcionC_Click(object sender, EventArgs e)
@@ -56,7 +58,24 @@ namespace Front
 
         private void buttonInscripcionI_Click(object sender, EventArgs e)
         {
-
+            if(comboBoxInscripcion.SelectedIndex < 0)
+            {
+                MessageBox.Show("Seleccione una materia.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else 
+            {
+                if(Asignacion.SimultaniedadMaterias(asignaciones, alumno))
+                {
+                    Asignacion asig = new Asignacion(materiasAux[comboBoxInscripcion.SelectedIndex], alumno);
+                    asig.simultaniedadInscripcion = 1;
+                    asignaciones.Add(asig);
+                    //IndexOf
+                }
+                else
+                {
+                    MessageBox.Show("Alumno supero la simultaniedad para la inscripcion de materias.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void linkLabelAsistencia_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -85,6 +104,7 @@ namespace Front
 
         private void comboBoxInscripcion_Enter(object sender, EventArgs e)
         {
+            materiasAux.Clear();
             materiaBindingSource.Clear();
             this.comboBoxInscripcion.ForeColor = Color.Black;
 
@@ -102,5 +122,6 @@ namespace Front
             }
 
         }
+
     }
 }

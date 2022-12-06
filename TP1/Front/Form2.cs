@@ -568,6 +568,7 @@ namespace Front
 
         private void comboBoxMateriasAp_Enter(object sender, EventArgs e)
         {
+            materiaBindingSource.Clear();
             comboBoxMateriasAp.ResetText();
             comboBoxMateriasAp.Enabled = true;
             comboBoxMateriasAp.ForeColor = Color.Black;

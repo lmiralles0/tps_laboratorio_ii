@@ -18,6 +18,7 @@ namespace Asignaciones
         private Alumno _alumno;
         private Regularidad _regularidad;
         public Dictionary<DateTime, int> parciales;
+        public int simultaniedadInscripcion;
 
 
         public Asignacion(Materia materia, Alumno alumno)
@@ -146,6 +147,41 @@ namespace Asignaciones
             {
                 asig[indice].Regularidad = (Regularidad)regularidad;
                 result = true;
+            }
+            return result;
+        }
+
+
+        public static bool SimultaniedadMaterias(List<Asignacion> asignaciones, Alumno al)
+        {
+            bool result = false;
+            int count = 0;
+            if(asignaciones != null && al != null) 
+            {
+                if(asignaciones.Count == 0)
+                {
+                    result = true;
+                }
+                else
+                {
+                    for(int i = 0; i < asignaciones.Count; i++)
+                    {
+                        if(asignaciones[i].Alumno.Dni == al.Dni && asignaciones[i].simultaniedadInscripcion == 1)
+                        {
+                            result = true;
+                            count++;
+                        }
+                        else
+                        {
+                            result = true;
+                        }
+                        if (count == 2)
+                        {
+                            result = false;
+                            break;
+                        }
+                    }
+                }
             }
             return result;
         }

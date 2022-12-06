@@ -33,6 +33,7 @@
             this.linkLabelAsistencia = new System.Windows.Forms.LinkLabel();
             this.labelTitle = new System.Windows.Forms.Label();
             this.comboBoxInscripcion = new System.Windows.Forms.ComboBox();
+            this.materiaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.checkBoxPresente = new System.Windows.Forms.CheckBox();
             this.monthCalendar = new System.Windows.Forms.MonthCalendar();
             this.groupBoxAsistencia = new System.Windows.Forms.GroupBox();
@@ -41,10 +42,9 @@
             this.buttonAsistenciaConfirmar = new System.Windows.Forms.Button();
             this.buttonAsistenciaC = new System.Windows.Forms.Button();
             this.buttonInscripcionC = new System.Windows.Forms.Button();
-            this.materiaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.materiaBindingSource)).BeginInit();
             this.groupBoxAsistencia.SuspendLayout();
             this.groupBoxInscripcion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.materiaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // linkLabelInscripcion
@@ -93,6 +93,10 @@
             this.comboBoxInscripcion.TabIndex = 2;
             this.comboBoxInscripcion.Visible = false;
             this.comboBoxInscripcion.Enter += new System.EventHandler(this.comboBoxInscripcion_Enter);
+            // 
+            // materiaBindingSource
+            // 
+            this.materiaBindingSource.DataSource = typeof(Materias.Materia);
             // 
             // checkBoxPresente
             // 
@@ -179,10 +183,6 @@
             this.buttonInscripcionC.Visible = false;
             this.buttonInscripcionC.Click += new System.EventHandler(this.buttonInscripcionC_Click);
             // 
-            // materiaBindingSource
-            // 
-            this.materiaBindingSource.DataSource = typeof(Materias.Materia);
-            // 
             // Form2_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -200,10 +200,10 @@
             this.Name = "Form2_1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sesion: Alumno";
+            ((System.ComponentModel.ISupportInitialize)(this.materiaBindingSource)).EndInit();
             this.groupBoxAsistencia.ResumeLayout(false);
             this.groupBoxAsistencia.PerformLayout();
             this.groupBoxInscripcion.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.materiaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
