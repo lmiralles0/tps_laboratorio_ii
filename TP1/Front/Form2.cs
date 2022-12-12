@@ -141,7 +141,7 @@ namespace Front
             {
                 Alumno auxAlumno = new Alumno(int.Parse(this.AltaTextBoxUserDni.Text), this.AltaTextBoxUserName.Text, this.AltaTextBoxUserSureName.Text);
                 auxAlumno.Passwd = this.AltaTextBoxUserPasswd.Text;
-                if (auxAlumno.AddUsuario(alumnos, auxAlumno) && (!(Persona.Profesor.Contain(profesores, auxAlumno)) && !(Persona.Admin.Contain(administradores, auxAlumno))))
+                if (Alumno.AddUsuario(alumnos, auxAlumno) && (!(Persona.Profesor.Contain(profesores, auxAlumno)) && !(Persona.Admin.Contain(administradores, auxAlumno))))
                 {
                     buttonAgregarAlta.DialogResult = DialogResult.OK;
                     MensajeExito();

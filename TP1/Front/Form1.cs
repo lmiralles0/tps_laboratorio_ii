@@ -199,14 +199,14 @@ namespace Front
 
             Alumno auxa = new Alumno(17042552, "Horacio", "Miralles");
             auxa.Passwd = "456";
-            auxa.AddUsuario(alumnos, auxa);
+            Alumno.AddUsuario(alumnos, auxa);
 
             Admin ad = new Admin(37882165, "Luciano", "Miralles");
             ad.Passwd = "123";
             ad.AddUsuario(administradores, ad);
             Alumno auxas = new Alumno(4267148, "Oscar", "Miralles");
             auxas.Passwd = "456";
-            auxas.AddUsuario(alumnos, auxas);
+            Alumno.AddUsuario(alumnos, auxas);
 
             Profesor adi = new Profesor(17042553, "Maximo", "Miralles");
             adi.Passwd = "753";

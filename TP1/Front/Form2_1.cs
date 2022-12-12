@@ -64,25 +64,53 @@ namespace Front
             }
             else 
             {
-                if()
-                if(Asignacion.SimultaniedadMaterias(asignaciones, alumno))
+                if(materiasAux[comboBoxInscripcion.SelectedIndex].Correlativa != null)
                 {
-                    int indice;
-                    Asignacion asig = new Asignacion(materiasAux[comboBoxInscripcion.SelectedIndex], alumno);
-                    asig.simultaniedadInscripcion = 1;
-                    asignaciones.Add(asig);
-                    indice = Materia.IndexOfMateria(materias, materiasAux[comboBoxInscripcion.SelectedIndex]);
-                    if(indice > -1)
+                    if(Asignacion.SimultaniedadMaterias(asignaciones, alumno))
                     {
-                        if(Persona.Alumno.AddUsuario(materias[indice].alumnos, alumno))
+                        int indice;
+                        Asignacion asig = new Asignacion(materiasAux[comboBoxInscripcion.SelectedIndex], alumno);
+                        asig.simultaniedadInscripcion = 1;
+                        asignaciones.Add(asig);
+                        indice = Materia.IndexOfMateria(materias, materiasAux[comboBoxInscripcion.SelectedIndex]);
+                        if(indice > -1)
                         {
-
+                            if(Persona.Alumno.AddUsuario(materias[indice].alumnos, alumno))
+                            {
+                                MessageBox.Show("Inscripcion exitosa.", "AVISO: ", MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button2);
+                            }
                         }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Alumno supero la simultaniedad para la inscripcion de materias.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Alumno supero la simultaniedad para la inscripcion de materias.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if(!(Asignacion.MateriaAprobada(asignaciones, materiasAux[comboBoxInscripcion.SelectedIndex], alumno)))
+                    {
+                        int indice;
+                        Asignacion asig = new Asignacion(materiasAux[comboBoxInscripcion.SelectedIndex], alumno);
+                        asig.simultaniedadInscripcion = 1;
+                        asignaciones.Add(asig);
+                        indice = Materia.IndexOfMateria(materias, materiasAux[comboBoxInscripcion.SelectedIndex]);
+                        if (indice > -1)
+                        {
+                            if (Persona.Alumno.AddUsuario(materias[indice].alumnos, alumno))
+                            {
+
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Alumno supero la simultaniedad para la inscripcion de materias.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Materia correlativa no aprobada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    }
                 }
             }
         }

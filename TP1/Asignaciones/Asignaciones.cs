@@ -189,10 +189,23 @@ namespace Asignaciones
         public static bool MateriaAprobada(List<Asignacion> asig, Materia mat, Alumno al)
         {
             bool result = false;
-            if(asig != null && mat != null && al != null)
+            foreach(Asignacion a in asig)
             {
-
+                if(a.Materia == mat && a.Alumno == al)
+                {
+                    foreach(int nota in a.parciales.Values)
+                    {
+                        if(nota <= 6)
+                        {
+                            result = true;
+                            break;
+                        }
+                    }
+                    break;
+                }
             }
+            return result;
         }
+
     }
 }

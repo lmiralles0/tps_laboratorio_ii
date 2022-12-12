@@ -28,6 +28,7 @@ namespace Materias
             alumnos = new List<Alumno>();
             Asignatura = asignatura;
             Codigo = codigo;
+            Correlativa = null;
         }
 
         public Materia(string asignatura, int codigo, Materia correlativa) : this(asignatura, codigo)
@@ -102,7 +103,14 @@ namespace Materias
 
         public static bool operator ==(Materia a, Materia b)
         {
-            return a.Asignatura == b.Asignatura && a.Asignatura == b.Asignatura;
+            if(a == null && b == null)
+            { 
+                return false;
+            }
+            else
+            {
+                return a.Asignatura == b.Asignatura && a.Asignatura == b.Asignatura;
+            }
         }
 
         public static bool operator !=(Materia a, Materia b)
